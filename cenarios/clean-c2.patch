@@ -1,0 +1,540 @@
+diff --git a/a/lib/data/fontes/pedido_fonte.dart b/b/lib/data/fontes/pedido_fonte.dart
+index feab5b1..3cd74fa 100644
+--- a/a/lib/data/fontes/pedido_fonte.dart
++++ b/b/lib/data/fontes/pedido_fonte.dart
+@@ -13,6 +13,8 @@ abstract class PedidoFonte {
+ 
+   Future<void> aceitar(String id, int tempoEstimadoMinutos);
+ 
++  Future<void> marcarSaida(String id);
++
+   Future<void> ampliarTempo(String id, int minutos);
+ 
+   Future<void> recusar(String id, String motivo);
+diff --git a/a/lib/data/modelos/pedido_modelo.dart b/b/lib/data/modelos/pedido_modelo.dart
+index c1babf4..3ec91a1 100644
+--- a/a/lib/data/modelos/pedido_modelo.dart
++++ b/b/lib/data/modelos/pedido_modelo.dart
+@@ -27,6 +27,7 @@ class PedidoModelo {
+       deslocamento: DeslocamentoModelo.fromMap(map),
+       tempoEstimadoMinutos: (map['tempoEstimadoMinutos'] as num?)?.toInt(),
+       motivoRecusa: map['motivoRecusa'] as String?,
++      dataSaida: _data(map['dataSaida']),
+       dataEntrega: _data(map['dataEntrega']),
+     );
+   }
+@@ -45,6 +46,7 @@ class PedidoModelo {
+       if (pedido.tempoEstimadoMinutos != null)
+         'tempoEstimadoMinutos': pedido.tempoEstimadoMinutos,
+       if (pedido.motivoRecusa != null) 'motivoRecusa': pedido.motivoRecusa,
++      if (pedido.dataSaida != null) 'dataSaida': pedido.dataSaida,
+       if (pedido.dataEntrega != null) 'dataEntrega': pedido.dataEntrega,
+     };
+   }
+diff --git a/a/lib/data/repositorios/pedido_repositorio_dados.dart b/b/lib/data/repositorios/pedido_repositorio_dados.dart
+index 6b7ade9..9f7f744 100644
+--- a/a/lib/data/repositorios/pedido_repositorio_dados.dart
++++ b/b/lib/data/repositorios/pedido_repositorio_dados.dart
+@@ -46,6 +46,9 @@ class PedidoRepositorioDados implements PedidoRepositorio {
+     return _fonte.aceitar(id, tempoEstimadoMinutos);
+   }
+ 
++  @override
++  Future<void> marcarSaida(String id) => _fonte.marcarSaida(id);
++
+   @override
+   Future<void> ampliarTempo(String id, int minutos) {
+     return _fonte.ampliarTempo(id, minutos);
+diff --git a/a/lib/domain/casos_de_uso/ampliar_tempo.dart b/b/lib/domain/casos_de_uso/ampliar_tempo.dart
+index 6e9f3db..e3b2cd0 100644
+--- a/a/lib/domain/casos_de_uso/ampliar_tempo.dart
++++ b/b/lib/domain/casos_de_uso/ampliar_tempo.dart
+@@ -10,8 +10,10 @@ class AmpliarTempo {
+   AmpliarTempo(this._pedidos);
+ 
+   String? validar(Pedido? pedido, int? minutos) {
+-    // RN06: só o pedido aceito pode ter o tempo ampliado.
+-    if (pedido == null || pedido.situacao != SituacaoPedido.aceito) {
++    // RN06: só o pedido aceito ou que saiu para entrega tem o tempo ampliado.
++    if (pedido == null ||
++        (pedido.situacao != SituacaoPedido.aceito &&
++            pedido.situacao != SituacaoPedido.saiuParaEntrega)) {
+       return 'Somente pedidos aceitos podem ter o tempo ampliado.';
+     }
+     if (minutos == null || minutos <= 0) {
+diff --git a/a/lib/domain/casos_de_uso/finalizar_entrega.dart b/b/lib/domain/casos_de_uso/finalizar_entrega.dart
+index 48cf8e3..205f7d1 100644
+--- a/a/lib/domain/casos_de_uso/finalizar_entrega.dart
++++ b/b/lib/domain/casos_de_uso/finalizar_entrega.dart
+@@ -12,8 +12,11 @@ class FinalizarEntrega {
+   FinalizarEntrega(this._pedidos, this._produtos);
+ 
+   String? validar(Pedido? pedido, Map<String, int?> quantidades) {
+-    if (pedido == null || pedido.situacao != SituacaoPedido.aceito) {
+-      return 'Somente pedidos aceitos podem ser finalizados.';
++    if (pedido?.situacao == SituacaoPedido.aceito) {
++      return 'Marque a saída para entrega antes de finalizar.';
++    }
++    if (pedido == null || pedido.situacao != SituacaoPedido.saiuParaEntrega) {
++      return 'Somente pedidos que saíram podem ser finalizados.';
+     }
+     if (quantidades.values.any((valor) => valor == null || valor < 0)) {
+       return 'As quantidades entregues não podem ser negativas.';
+diff --git a/b/lib/domain/casos_de_uso/marcar_saida.dart b/b/lib/domain/casos_de_uso/marcar_saida.dart
+new file mode 100644
+index 0000000..77eba90
+--- /dev/null
++++ b/b/lib/domain/casos_de_uso/marcar_saida.dart
+@@ -0,0 +1,24 @@
++import '../entidades/pedido.dart';
++import '../entidades/situacao_pedido.dart';
++import '../falhas.dart';
++import '../repositorios/pedido_repositorio.dart';
++
++/// Saída para entrega: o pedido aceito sai antes de ser finalizado.
++class MarcarSaida {
++  final PedidoRepositorio _pedidos;
++
++  MarcarSaida(this._pedidos);
++
++  String? validar(Pedido? pedido) {
++    if (pedido == null || pedido.situacao != SituacaoPedido.aceito) {
++      return 'Somente pedidos aceitos podem sair para entrega.';
++    }
++    return null;
++  }
++
++  Future<void> executar(Pedido? pedido) async {
++    final problema = validar(pedido);
++    if (problema != null) throw FalhaServico(problema);
++    await _pedidos.marcarSaida(pedido!.id);
++  }
++}
+diff --git a/a/lib/domain/casos_de_uso/observar_pedidos_recebidos.dart b/b/lib/domain/casos_de_uso/observar_pedidos_recebidos.dart
+index 2cff34c..e7a6e3e 100644
+--- a/a/lib/domain/casos_de_uso/observar_pedidos_recebidos.dart
++++ b/b/lib/domain/casos_de_uso/observar_pedidos_recebidos.dart
+@@ -15,14 +15,15 @@ class ObservarPedidosRecebidos {
+   int _grupo(SituacaoPedido situacao) => switch (situacao) {
+     SituacaoPedido.aguardando => 0,
+     SituacaoPedido.aceito => 1,
+-    SituacaoPedido.entregue || SituacaoPedido.recusado => 2,
++    SituacaoPedido.saiuParaEntrega => 2,
++    SituacaoPedido.entregue || SituacaoPedido.recusado => 3,
+   };
+ 
+   int _comparar(Pedido a, Pedido b) {
+     final grupoA = _grupo(a.situacao);
+     final grupoB = _grupo(b.situacao);
+     if (grupoA != grupoB) return grupoA.compareTo(grupoB);
+-    return grupoA == 2
++    return grupoA == 3
+         ? b.dataCriacao.compareTo(a.dataCriacao)
+         : a.dataCriacao.compareTo(b.dataCriacao);
+   }
+diff --git a/a/lib/domain/entidades/pedido.dart b/b/lib/domain/entidades/pedido.dart
+index dd529e7..7653ce9 100644
+--- a/a/lib/domain/entidades/pedido.dart
++++ b/b/lib/domain/entidades/pedido.dart
+@@ -15,6 +15,7 @@ class Pedido {
+   final Deslocamento? deslocamento;
+   final int? tempoEstimadoMinutos;
+   final String? motivoRecusa;
++  final DateTime? dataSaida;
+   final DateTime? dataEntrega;
+ 
+   const Pedido({
+@@ -29,6 +30,7 @@ class Pedido {
+     this.deslocamento,
+     this.tempoEstimadoMinutos,
+     this.motivoRecusa,
++    this.dataSaida,
+     this.dataEntrega,
+   });
+ 
+diff --git a/a/lib/domain/entidades/situacao_pedido.dart b/b/lib/domain/entidades/situacao_pedido.dart
+index b23a48c..3801d8e 100644
+--- a/a/lib/domain/entidades/situacao_pedido.dart
++++ b/b/lib/domain/entidades/situacao_pedido.dart
+@@ -1,6 +1,7 @@
+ enum SituacaoPedido {
+   aguardando('Aguardando'),
+   aceito('Aceito'),
++  saiuParaEntrega('Saiu para entrega'),
+   entregue('Entregue'),
+   recusado('Recusado');
+ 
+diff --git a/a/lib/domain/repositorios/pedido_repositorio.dart b/b/lib/domain/repositorios/pedido_repositorio.dart
+index 57b0c8d..45471b7 100644
+--- a/a/lib/domain/repositorios/pedido_repositorio.dart
++++ b/b/lib/domain/repositorios/pedido_repositorio.dart
+@@ -15,6 +15,8 @@ abstract class PedidoRepositorio {
+ 
+   Future<void> aceitar(String id, int tempoEstimadoMinutos);
+ 
++  Future<void> marcarSaida(String id);
++
+   Future<void> ampliarTempo(String id, int minutos);
+ 
+   Future<void> recusar(String id, String motivo);
+diff --git a/a/lib/infra/pedido_firestore.dart b/b/lib/infra/pedido_firestore.dart
+index aeb38bd..7027701 100644
+--- a/a/lib/infra/pedido_firestore.dart
++++ b/b/lib/infra/pedido_firestore.dart
+@@ -71,6 +71,14 @@ class PedidoFirestore implements PedidoFonte {
+     });
+   }
+ 
++  @override
++  Future<void> marcarSaida(String id) {
++    return _atualizar(id, {
++      'situacao': 'saiuParaEntrega',
++      'dataSaida': Timestamp.now(),
++    });
++  }
++
+   @override
+   Future<void> ampliarTempo(String id, int minutos) {
+     return _atualizar(id, {
+@@ -97,7 +105,7 @@ class PedidoFirestore implements PedidoFonte {
+       await _firestore.runTransaction((transacao) async {
+         final documentoPedido = _pedidos.doc(id);
+         final atual = await transacao.get(documentoPedido);
+-        if (atual.data()?['situacao'] != 'aceito') {
++        if (atual.data()?['situacao'] != 'saiuParaEntrega') {
+           throw const FalhaServico('Este pedido não pode mais ser finalizado.');
+         }
+ 
+diff --git a/a/lib/main/app_router.dart b/b/lib/main/app_router.dart
+index d5c8edb..b52c6d6 100644
+--- a/a/lib/main/app_router.dart
++++ b/b/lib/main/app_router.dart
+@@ -7,6 +7,7 @@ import '../domain/casos_de_uso/buscar_endereco_do_cliente.dart';
+ import '../domain/casos_de_uso/cadastrar_cliente.dart';
+ import '../domain/casos_de_uso/calcular_rota_do_pedido.dart';
+ import '../domain/casos_de_uso/finalizar_entrega.dart';
++import '../domain/casos_de_uso/marcar_saida.dart';
+ import '../domain/casos_de_uso/observar_pedido.dart';
+ import '../domain/casos_de_uso/observar_pedidos_recebidos.dart';
+ import '../domain/casos_de_uso/recusar_pedido.dart';
+@@ -169,6 +170,7 @@ GoRouter criarRotas(SessaoViewModel sessao) {
+                     pedidos,
+                   ),
+                   AceitarPedido(pedidos),
++                  MarcarSaida(pedidos),
+                   AmpliarTempo(pedidos),
+                   RecusarPedido(pedidos),
+                   FinalizarEntrega(pedidos, context.read<ProdutoRepositorio>()),
+diff --git a/a/lib/presentation/detalhe_pedido_viewmodel.dart b/b/lib/presentation/detalhe_pedido_viewmodel.dart
+index 2cdc380..6c9d889 100644
+--- a/a/lib/presentation/detalhe_pedido_viewmodel.dart
++++ b/b/lib/presentation/detalhe_pedido_viewmodel.dart
+@@ -6,6 +6,7 @@ import '../domain/casos_de_uso/aceitar_pedido.dart';
+ import '../domain/casos_de_uso/ampliar_tempo.dart';
+ import '../domain/casos_de_uso/calcular_rota_do_pedido.dart';
+ import '../domain/casos_de_uso/finalizar_entrega.dart';
++import '../domain/casos_de_uso/marcar_saida.dart';
+ import '../domain/casos_de_uso/observar_pedido.dart';
+ import '../domain/casos_de_uso/recusar_pedido.dart';
+ import '../domain/entidades/coordenada.dart';
+@@ -18,6 +19,7 @@ class DetalhePedidoViewModel extends ChangeNotifier {
+   final ObservarPedido _observarPedido;
+   final CalcularRotaDoPedido _calcularRotaDoPedido;
+   final AceitarPedido _aceitarPedido;
++  final MarcarSaida _marcarSaida;
+   final AmpliarTempo _ampliarTempo;
+   final RecusarPedido _recusarPedido;
+   final FinalizarEntrega _finalizarEntrega;
+@@ -36,6 +38,7 @@ class DetalhePedidoViewModel extends ChangeNotifier {
+     this._observarPedido,
+     this._calcularRotaDoPedido,
+     this._aceitarPedido,
++    this._marcarSaida,
+     this._ampliarTempo,
+     this._recusarPedido,
+     this._finalizarEntrega,
+@@ -85,6 +88,13 @@ class DetalhePedidoViewModel extends ChangeNotifier {
+     return _executar(() => _aceitarPedido.executar(atual, tempo));
+   }
+ 
++  Future<bool> marcarSaida() async {
++    final atual = pedido;
++    final problema = _marcarSaida.validar(atual);
++    if (problema != null) return _falhar(problema);
++    return _executar(() => _marcarSaida.executar(atual));
++  }
++
+   Future<bool> ampliarTempo(String minutosTexto) async {
+     final atual = pedido;
+     final minutos = int.tryParse(minutosTexto.trim());
+diff --git a/a/lib/ui/acompanhamento_view.dart b/b/lib/ui/acompanhamento_view.dart
+index efb0f57..f3075a1 100644
+--- a/a/lib/ui/acompanhamento_view.dart
++++ b/b/lib/ui/acompanhamento_view.dart
+@@ -94,12 +94,15 @@ class _CartaoPedido extends StatelessWidget {
+             ],
+           ),
+           if (pedido.situacao == SituacaoPedido.aguardando ||
+-              pedido.situacao == SituacaoPedido.aceito)
++              pedido.situacao == SituacaoPedido.aceito ||
++              pedido.situacao == SituacaoPedido.saiuParaEntrega)
+             Padding(
+               padding: const EdgeInsets.fromLTRB(16, 0, 16, 16),
+               child: _LinhaDoTempo(pedido.situacao),
+             ),
+-          if (pedido.situacao == SituacaoPedido.aceito && tempo != null)
++          if ((pedido.situacao == SituacaoPedido.aceito ||
++                  pedido.situacao == SituacaoPedido.saiuParaEntrega) &&
++              tempo != null)
+             Padding(
+               padding: const EdgeInsets.fromLTRB(16, 0, 16, 16),
+               child: Text.rich(
+@@ -141,6 +144,7 @@ class _LinhaDoTempo extends StatelessWidget {
+     const etapas = [
+       SituacaoPedido.aguardando,
+       SituacaoPedido.aceito,
++      SituacaoPedido.saiuParaEntrega,
+       SituacaoPedido.entregue,
+     ];
+     final atual = etapas.indexOf(situacao);
+diff --git a/a/lib/ui/detalhe_pedido/historico_pedido.dart b/b/lib/ui/detalhe_pedido/historico_pedido.dart
+index 8a5b3a6..4c131c4 100644
+--- a/a/lib/ui/detalhe_pedido/historico_pedido.dart
++++ b/b/lib/ui/detalhe_pedido/historico_pedido.dart
+@@ -22,6 +22,7 @@ class HistoricoPedido extends StatelessWidget {
+   List<_Etapa> get _etapas {
+     final situacao = pedido.situacao;
+     final tempo = pedido.tempoEstimadoMinutos;
++    final saida = pedido.dataSaida;
+     final entrega = pedido.dataEntrega;
+     return [
+       _Etapa(
+@@ -31,15 +32,25 @@ class HistoricoPedido extends StatelessWidget {
+         formatarData(pedido.dataCriacao),
+       ),
+       if (situacao == SituacaoPedido.aceito ||
++          situacao == SituacaoPedido.saiuParaEntrega ||
+           situacao == SituacaoPedido.entregue)
+         _Etapa(
+           Icons.local_shipping_outlined,
+           CoresDiskGas.azulEscuro,
+           'Aceito',
+-          situacao == SituacaoPedido.aceito || tempo == null
++          situacao == SituacaoPedido.aceito ||
++                  situacao == SituacaoPedido.saiuParaEntrega ||
++                  tempo == null
+               ? null
+               : 'Tempo estimado: $tempo min',
+         ),
++      if (saida != null)
++        _Etapa(
++          Icons.delivery_dining_outlined,
++          CoresDiskGas.laranjaEscuro,
++          'Saiu para entrega',
++          formatarData(saida),
++        ),
+       if (situacao == SituacaoPedido.entregue)
+         _Etapa(
+           Icons.check_circle_outline,
+diff --git a/a/lib/ui/detalhe_pedido_view.dart b/b/lib/ui/detalhe_pedido_view.dart
+index 379326f..9a01f06 100644
+--- a/a/lib/ui/detalhe_pedido_view.dart
++++ b/b/lib/ui/detalhe_pedido_view.dart
+@@ -73,6 +73,34 @@ class DetalhePedidoView extends StatelessWidget {
+     );
+   }
+ 
++  Widget _avisoTempo(Pedido pedido) => AvisoDestaque(
++    icone: Icons.timer_outlined,
++    titulo: 'Tempo estimado de entrega',
++    texto: '${pedido.tempoEstimadoMinutos ?? 0} min',
++    cor: CoresDiskGas.azulEscuro,
++  );
++
++  Widget _botaoAmpliar(
++    BuildContext context,
++    DetalhePedidoViewModel viewModel,
++    bool livre,
++  ) => OutlinedButton(
++    onPressed: livre
++        ? () => _abrirDialogo(
++            context,
++            viewModel,
++            DialogoTexto(
++              titulo: 'Ampliar tempo',
++              rotulo: 'Minutos a mais',
++              confirmar: 'Ampliar',
++              numerico: true,
++              acao: viewModel.ampliarTempo,
++            ),
++          )
++        : null,
++    child: const Text('Ampliar tempo'),
++  );
++
+   List<Widget> _acoes(
+     BuildContext context,
+     DetalhePedidoViewModel viewModel,
+@@ -121,12 +149,18 @@ class DetalhePedidoView extends StatelessWidget {
+         ),
+       ],
+       SituacaoPedido.aceito => [
+-        AvisoDestaque(
+-          icone: Icons.timer_outlined,
+-          titulo: 'Tempo estimado de entrega',
+-          texto: '${pedido.tempoEstimadoMinutos ?? 0} min',
+-          cor: CoresDiskGas.azulEscuro,
++        _avisoTempo(pedido),
++        const SizedBox(height: 16),
++        if (viewModel.erro != null) MensagemErro(viewModel.erro),
++        FilledButton(
++          onPressed: livre ? viewModel.marcarSaida : null,
++          child: const Text('Saiu para entrega'),
+         ),
++        const SizedBox(height: 12),
++        _botaoAmpliar(context, viewModel, livre),
++      ],
++      SituacaoPedido.saiuParaEntrega => [
++        _avisoTempo(pedido),
+         const SizedBox(height: 16),
+         FilledButton(
+           onPressed: livre
+@@ -139,22 +173,7 @@ class DetalhePedidoView extends StatelessWidget {
+           child: const Text('Finalizar entrega'),
+         ),
+         const SizedBox(height: 12),
+-        OutlinedButton(
+-          onPressed: livre
+-              ? () => _abrirDialogo(
+-                  context,
+-                  viewModel,
+-                  DialogoTexto(
+-                    titulo: 'Ampliar tempo',
+-                    rotulo: 'Minutos a mais',
+-                    confirmar: 'Ampliar',
+-                    numerico: true,
+-                    acao: viewModel.ampliarTempo,
+-                  ),
+-                )
+-              : null,
+-          child: const Text('Ampliar tempo'),
+-        ),
++        _botaoAmpliar(context, viewModel, livre),
+       ],
+       SituacaoPedido.entregue || SituacaoPedido.recusado => [],
+     };
+diff --git a/a/lib/ui/widgets/selo_situacao.dart b/b/lib/ui/widgets/selo_situacao.dart
+index e256aff..3969d4b 100644
+--- a/a/lib/ui/widgets/selo_situacao.dart
++++ b/b/lib/ui/widgets/selo_situacao.dart
+@@ -19,6 +19,10 @@ class SeloSituacao extends StatelessWidget {
+         CoresDiskGas.azulEscuro,
+         Icons.local_shipping_outlined,
+       ),
++      SituacaoPedido.saiuParaEntrega => (
++        CoresDiskGas.laranjaEscuro,
++        Icons.delivery_dining_outlined,
++      ),
+       SituacaoPedido.entregue => (CoresDiskGas.verde, Icons.check_rounded),
+       SituacaoPedido.recusado => (CoresDiskGas.vermelho, Icons.close_rounded),
+     };
+diff --git a/a/test/domain/casos_de_uso/finalizar_entrega_test.dart b/b/test/domain/casos_de_uso/finalizar_entrega_test.dart
+index 0daac8b..ee6a129 100644
+--- a/a/test/domain/casos_de_uso/finalizar_entrega_test.dart
++++ b/b/test/domain/casos_de_uso/finalizar_entrega_test.dart
+@@ -1,4 +1,5 @@
+ import 'package:diskgas_clean/domain/casos_de_uso/finalizar_entrega.dart';
++import 'package:diskgas_clean/domain/casos_de_uso/marcar_saida.dart';
+ import 'package:diskgas_clean/domain/entidades/deslocamento.dart';
+ import 'package:diskgas_clean/domain/entidades/endereco.dart';
+ import 'package:diskgas_clean/domain/entidades/item_pedido.dart';
+@@ -70,7 +71,7 @@ void main() {
+ 
+   group('RN04: baixa com a quantidade entregue', () {
+     test('entrega maior que a pedida é aceita se houver estoque', () async {
+-      final pedido = pedidoCom(situacao: SituacaoPedido.aceito);
++      final pedido = pedidoCom(situacao: SituacaoPedido.saiuParaEntrega);
+       when(() => produtos.buscarProdutos())
+           .thenAnswer((_) async => [gasCom(5)]);
+ 
+@@ -84,9 +85,10 @@ void main() {
+           .thenAnswer((_) async => [gasCom(1)]);
+ 
+       await expectLater(
+-        casoDeUso.executar(pedidoCom(situacao: SituacaoPedido.aceito), {
+-          'gas': 2,
+-        }),
++        casoDeUso.executar(
++          pedidoCom(situacao: SituacaoPedido.saiuParaEntrega),
++          {'gas': 2},
++        ),
+         throwsA(
+           isA<FalhaServico>().having(
+             (falha) => falha.mensagem,
+@@ -98,4 +100,37 @@ void main() {
+       verifyNever(() => pedidos.finalizarEntrega(any(), any()));
+     });
+   });
++
++  group('Saída para entrega', () {
++    test(
++      'pedido aceito só pode ser finalizado depois de marcar a saída',
++      () async {
++        when(() => pedidos.marcarSaida(any())).thenAnswer((_) async {});
++        when(() => produtos.buscarProdutos())
++            .thenAnswer((_) async => [gasCom(5)]);
++        final aceito = pedidoCom(situacao: SituacaoPedido.aceito);
++
++        await expectLater(
++          casoDeUso.executar(aceito, {'gas': 2}),
++          throwsA(
++            isA<FalhaServico>().having(
++              (falha) => falha.mensagem,
++              'mensagem',
++              'Marque a saída para entrega antes de finalizar.',
++            ),
++          ),
++        );
++        verifyNever(() => pedidos.finalizarEntrega(any(), any()));
++
++        await MarcarSaida(pedidos).executar(aceito);
++        verify(() => pedidos.marcarSaida('pedido-1')).called(1);
++
++        await casoDeUso.executar(
++          pedidoCom(situacao: SituacaoPedido.saiuParaEntrega),
++          {'gas': 2},
++        );
++        verify(() => pedidos.finalizarEntrega(any(), any())).called(1);
++      },
++    );
++  });
+ }
+diff --git a/a/test/presentation/detalhe_pedido_viewmodel_test.dart b/b/test/presentation/detalhe_pedido_viewmodel_test.dart
+index 49f379e..0198cb2 100644
+--- a/a/test/presentation/detalhe_pedido_viewmodel_test.dart
++++ b/b/test/presentation/detalhe_pedido_viewmodel_test.dart
+@@ -2,6 +2,7 @@ import 'package:diskgas_clean/domain/casos_de_uso/aceitar_pedido.dart';
+ import 'package:diskgas_clean/domain/casos_de_uso/ampliar_tempo.dart';
+ import 'package:diskgas_clean/domain/casos_de_uso/calcular_rota_do_pedido.dart';
+ import 'package:diskgas_clean/domain/casos_de_uso/finalizar_entrega.dart';
++import 'package:diskgas_clean/domain/casos_de_uso/marcar_saida.dart';
+ import 'package:diskgas_clean/domain/casos_de_uso/observar_pedido.dart';
+ import 'package:diskgas_clean/domain/casos_de_uso/recusar_pedido.dart';
+ import 'package:diskgas_clean/domain/entidades/deslocamento.dart';
+@@ -20,6 +21,8 @@ class MockCalcularRotaDoPedido extends Mock implements CalcularRotaDoPedido {}
+ 
+ class MockAceitarPedido extends Mock implements AceitarPedido {}
+ 
++class MockMarcarSaida extends Mock implements MarcarSaida {}
++
+ class MockAmpliarTempo extends Mock implements AmpliarTempo {}
+ 
+ class MockRecusarPedido extends Mock implements RecusarPedido {}
+@@ -81,6 +84,7 @@ void main() {
+           observarPedido,
+           calcularRota,
+           aceitarPedido,
++          MockMarcarSaida(),
+           MockAmpliarTempo(),
+           MockRecusarPedido(),
+           MockFinalizarEntrega(),

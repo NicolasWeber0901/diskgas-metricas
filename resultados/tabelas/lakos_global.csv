@@ -1,0 +1,3 @@
+tag,arquivos,dependencias,grau_medio,aciclico,ccd,acd,nccd,sloc_total,sloc_medio,orfaos
+mvvm-v1,74,275,3.72,true,720,9.73,1.83,5976,80.76,/models/administrador.dart
+clean-v1,123,426,3.46,true,1193,9.70,1.61,6841,55.62,/domain/entidades/administrador.dart

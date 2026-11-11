@@ -1,0 +1,2215 @@
+{
+  "pacote": "diskgas_mvvm",
+  "arquivos": [
+    {
+      "caminho": "main.dart",
+      "camada": "montagem",
+      "classes": 0,
+      "classes_abstratas": 0,
+      "enums": 0,
+      "mixins": 0,
+      "extensoes": 0,
+      "internos": [
+        "services/auth_service.dart",
+        "services/cliente_service.dart",
+        "services/pedido_service.dart",
+        "services/produto_service.dart",
+        "services/rota_service.dart",
+        "viewmodels/sessao_viewmodel.dart",
+        "views/app.dart"
+      ],
+      "externos": [
+        "cloud_firestore",
+        "firebase_auth",
+        "firebase_core",
+        "flutter:material",
+        "google_sign_in",
+        "http",
+        "provider"
+      ],
+      "marcas": []
+    },
+    {
+      "caminho": "models/administrador.dart",
+      "camada": "models",
+      "classes": 1,
+      "classes_abstratas": 0,
+      "enums": 0,
+      "mixins": 0,
+      "extensoes": 0,
+      "internos": [],
+      "externos": [],
+      "marcas": []
+    },
+    {
+      "caminho": "models/cliente.dart",
+      "camada": "models",
+      "classes": 1,
+      "classes_abstratas": 0,
+      "enums": 0,
+      "mixins": 0,
+      "extensoes": 0,
+      "internos": [
+        "models/endereco.dart"
+      ],
+      "externos": [],
+      "marcas": []
+    },
+    {
+      "caminho": "models/coordenada.dart",
+      "camada": "models",
+      "classes": 1,
+      "classes_abstratas": 0,
+      "enums": 0,
+      "mixins": 0,
+      "extensoes": 0,
+      "internos": [],
+      "externos": [],
+      "marcas": []
+    },
+    {
+      "caminho": "models/deslocamento.dart",
+      "camada": "models",
+      "classes": 1,
+      "classes_abstratas": 0,
+      "enums": 0,
+      "mixins": 0,
+      "extensoes": 0,
+      "internos": [],
+      "externos": [],
+      "marcas": []
+    },
+    {
+      "caminho": "models/endereco.dart",
+      "camada": "models",
+      "classes": 1,
+      "classes_abstratas": 0,
+      "enums": 0,
+      "mixins": 0,
+      "extensoes": 0,
+      "internos": [],
+      "externos": [],
+      "marcas": []
+    },
+    {
+      "caminho": "models/item_pedido.dart",
+      "camada": "models",
+      "classes": 1,
+      "classes_abstratas": 0,
+      "enums": 0,
+      "mixins": 0,
+      "extensoes": 0,
+      "internos": [],
+      "externos": [],
+      "marcas": []
+    },
+    {
+      "caminho": "models/movimentacao_estoque.dart",
+      "camada": "models",
+      "classes": 1,
+      "classes_abstratas": 0,
+      "enums": 0,
+      "mixins": 0,
+      "extensoes": 0,
+      "internos": [
+        "models/tipo_movimentacao.dart"
+      ],
+      "externos": [
+        "cloud_firestore"
+      ],
+      "marcas": []
+    },
+    {
+      "caminho": "models/pedido.dart",
+      "camada": "models",
+      "classes": 1,
+      "classes_abstratas": 0,
+      "enums": 0,
+      "mixins": 0,
+      "extensoes": 0,
+      "internos": [
+        "models/deslocamento.dart",
+        "models/endereco.dart",
+        "models/item_pedido.dart",
+        "models/situacao_pedido.dart"
+      ],
+      "externos": [
+        "cloud_firestore"
+      ],
+      "marcas": []
+    },
+    {
+      "caminho": "models/perfil.dart",
+      "camada": "models",
+      "classes": 0,
+      "classes_abstratas": 0,
+      "enums": 1,
+      "mixins": 0,
+      "extensoes": 0,
+      "internos": [],
+      "externos": [],
+      "marcas": []
+    },
+    {
+      "caminho": "models/produto.dart",
+      "camada": "models",
+      "classes": 1,
+      "classes_abstratas": 0,
+      "enums": 0,
+      "mixins": 0,
+      "extensoes": 0,
+      "internos": [],
+      "externos": [],
+      "marcas": []
+    },
+    {
+      "caminho": "models/situacao_pedido.dart",
+      "camada": "models",
+      "classes": 0,
+      "classes_abstratas": 0,
+      "enums": 1,
+      "mixins": 0,
+      "extensoes": 0,
+      "internos": [],
+      "externos": [],
+      "marcas": []
+    },
+    {
+      "caminho": "models/tipo_movimentacao.dart",
+      "camada": "models",
+      "classes": 0,
+      "classes_abstratas": 0,
+      "enums": 1,
+      "mixins": 0,
+      "extensoes": 0,
+      "internos": [],
+      "externos": [],
+      "marcas": []
+    },
+    {
+      "caminho": "services/auth_service.dart",
+      "camada": "services",
+      "classes": 1,
+      "classes_abstratas": 0,
+      "enums": 0,
+      "mixins": 0,
+      "extensoes": 0,
+      "internos": [
+        "models/perfil.dart",
+        "services/falhas.dart"
+      ],
+      "externos": [
+        "cloud_firestore",
+        "firebase_auth",
+        "google_sign_in"
+      ],
+      "marcas": []
+    },
+    {
+      "caminho": "services/cliente_service.dart",
+      "camada": "services",
+      "classes": 1,
+      "classes_abstratas": 0,
+      "enums": 0,
+      "mixins": 0,
+      "extensoes": 0,
+      "internos": [
+        "models/cliente.dart",
+        "services/falhas.dart"
+      ],
+      "externos": [
+        "cloud_firestore"
+      ],
+      "marcas": [
+        "US16"
+      ]
+    },
+    {
+      "caminho": "services/falhas.dart",
+      "camada": "services",
+      "classes": 5,
+      "classes_abstratas": 0,
+      "enums": 0,
+      "mixins": 0,
+      "extensoes": 0,
+      "internos": [],
+      "externos": [],
+      "marcas": []
+    },
+    {
+      "caminho": "services/pedido_service.dart",
+      "camada": "services",
+      "classes": 1,
+      "classes_abstratas": 0,
+      "enums": 0,
+      "mixins": 0,
+      "extensoes": 0,
+      "internos": [
+        "models/deslocamento.dart",
+        "models/item_pedido.dart",
+        "models/movimentacao_estoque.dart",
+        "models/pedido.dart",
+        "models/tipo_movimentacao.dart",
+        "services/falhas.dart"
+      ],
+      "externos": [
+        "cloud_firestore",
+        "firebase_auth"
+      ],
+      "marcas": []
+    },
+    {
+      "caminho": "services/produto_service.dart",
+      "camada": "services",
+      "classes": 1,
+      "classes_abstratas": 0,
+      "enums": 0,
+      "mixins": 0,
+      "extensoes": 0,
+      "internos": [
+        "models/movimentacao_estoque.dart",
+        "models/produto.dart",
+        "models/tipo_movimentacao.dart",
+        "services/falhas.dart"
+      ],
+      "externos": [
+        "cloud_firestore",
+        "firebase_auth"
+      ],
+      "marcas": [
+        "US08"
+      ]
+    },
+    {
+      "caminho": "services/rota_service.dart",
+      "camada": "services",
+      "classes": 1,
+      "classes_abstratas": 0,
+      "enums": 0,
+      "mixins": 0,
+      "extensoes": 0,
+      "internos": [
+        "models/coordenada.dart",
+        "models/deslocamento.dart",
+        "services/falhas.dart"
+      ],
+      "externos": [
+        "dart:async",
+        "dart:convert",
+        "dart:io",
+        "http"
+      ],
+      "marcas": [
+        "RF16"
+      ]
+    },
+    {
+      "caminho": "viewmodels/acompanhamento_viewmodel.dart",
+      "camada": "viewmodels",
+      "classes": 1,
+      "classes_abstratas": 0,
+      "enums": 0,
+      "mixins": 0,
+      "extensoes": 0,
+      "internos": [
+        "models/pedido.dart",
+        "services/auth_service.dart",
+        "services/falhas.dart",
+        "services/pedido_service.dart"
+      ],
+      "externos": [
+        "dart:async",
+        "flutter:foundation"
+      ],
+      "marcas": []
+    },
+    {
+      "caminho": "viewmodels/cadastro_viewmodel.dart",
+      "camada": "viewmodels",
+      "classes": 1,
+      "classes_abstratas": 0,
+      "enums": 0,
+      "mixins": 0,
+      "extensoes": 0,
+      "internos": [
+        "models/cliente.dart",
+        "models/endereco.dart",
+        "services/auth_service.dart",
+        "services/cliente_service.dart",
+        "services/falhas.dart"
+      ],
+      "externos": [
+        "flutter:foundation"
+      ],
+      "marcas": [
+        "RN02",
+        "RN03"
+      ]
+    },
+    {
+      "caminho": "viewmodels/carrinho_viewmodel.dart",
+      "camada": "viewmodels",
+      "classes": 1,
+      "classes_abstratas": 0,
+      "enums": 0,
+      "mixins": 0,
+      "extensoes": 0,
+      "internos": [
+        "models/endereco.dart",
+        "models/item_pedido.dart",
+        "models/pedido.dart",
+        "models/produto.dart",
+        "models/situacao_pedido.dart",
+        "services/auth_service.dart",
+        "services/cliente_service.dart",
+        "services/falhas.dart",
+        "services/pedido_service.dart",
+        "services/produto_service.dart",
+        "viewmodels/ordem_produtos.dart"
+      ],
+      "externos": [
+        "dart:async",
+        "flutter:foundation"
+      ],
+      "marcas": [
+        "RN01",
+        "RN02"
+      ]
+    },
+    {
+      "caminho": "viewmodels/clientes_viewmodel.dart",
+      "camada": "viewmodels",
+      "classes": 1,
+      "classes_abstratas": 0,
+      "enums": 0,
+      "mixins": 0,
+      "extensoes": 0,
+      "internos": [
+        "models/cliente.dart",
+        "models/pedido.dart",
+        "services/cliente_service.dart",
+        "services/falhas.dart",
+        "services/pedido_service.dart",
+        "viewmodels/normalizar_busca.dart"
+      ],
+      "externos": [
+        "dart:async",
+        "flutter:foundation"
+      ],
+      "marcas": [
+        "US16"
+      ]
+    },
+    {
+      "caminho": "viewmodels/detalhe_pedido_viewmodel.dart",
+      "camada": "viewmodels",
+      "classes": 1,
+      "classes_abstratas": 0,
+      "enums": 0,
+      "mixins": 0,
+      "extensoes": 0,
+      "internos": [
+        "models/coordenada.dart",
+        "models/pedido.dart",
+        "models/situacao_pedido.dart",
+        "services/falhas.dart",
+        "services/pedido_service.dart",
+        "services/produto_service.dart",
+        "services/rota_service.dart"
+      ],
+      "externos": [
+        "dart:async",
+        "flutter:foundation"
+      ],
+      "marcas": [
+        "RF16",
+        "RN04",
+        "RN05",
+        "RN06"
+      ]
+    },
+    {
+      "caminho": "viewmodels/estoque_viewmodel.dart",
+      "camada": "viewmodels",
+      "classes": 1,
+      "classes_abstratas": 0,
+      "enums": 0,
+      "mixins": 0,
+      "extensoes": 0,
+      "internos": [
+        "models/produto.dart",
+        "services/falhas.dart",
+        "services/produto_service.dart",
+        "viewmodels/ordem_produtos.dart"
+      ],
+      "externos": [
+        "dart:async",
+        "flutter:foundation"
+      ],
+      "marcas": [
+        "US08"
+      ]
+    },
+    {
+      "caminho": "viewmodels/historico_estoque_viewmodel.dart",
+      "camada": "viewmodels",
+      "classes": 1,
+      "classes_abstratas": 0,
+      "enums": 0,
+      "mixins": 0,
+      "extensoes": 0,
+      "internos": [
+        "models/movimentacao_estoque.dart",
+        "services/falhas.dart",
+        "services/produto_service.dart"
+      ],
+      "externos": [
+        "dart:async",
+        "flutter:foundation"
+      ],
+      "marcas": []
+    },
+    {
+      "caminho": "viewmodels/login_viewmodel.dart",
+      "camada": "viewmodels",
+      "classes": 1,
+      "classes_abstratas": 0,
+      "enums": 0,
+      "mixins": 0,
+      "extensoes": 0,
+      "internos": [
+        "services/auth_service.dart",
+        "services/falhas.dart"
+      ],
+      "externos": [
+        "flutter:foundation"
+      ],
+      "marcas": []
+    },
+    {
+      "caminho": "viewmodels/normalizar_busca.dart",
+      "camada": "viewmodels",
+      "classes": 0,
+      "classes_abstratas": 0,
+      "enums": 0,
+      "mixins": 0,
+      "extensoes": 0,
+      "internos": [],
+      "externos": [],
+      "marcas": []
+    },
+    {
+      "caminho": "viewmodels/ordem_produtos.dart",
+      "camada": "viewmodels",
+      "classes": 0,
+      "classes_abstratas": 0,
+      "enums": 0,
+      "mixins": 0,
+      "extensoes": 0,
+      "internos": [
+        "models/produto.dart",
+        "services/produto_service.dart"
+      ],
+      "externos": [],
+      "marcas": []
+    },
+    {
+      "caminho": "viewmodels/pedidos_viewmodel.dart",
+      "camada": "viewmodels",
+      "classes": 1,
+      "classes_abstratas": 0,
+      "enums": 1,
+      "mixins": 0,
+      "extensoes": 0,
+      "internos": [
+        "models/pedido.dart",
+        "models/situacao_pedido.dart",
+        "services/falhas.dart",
+        "services/pedido_service.dart",
+        "services/produto_service.dart",
+        "viewmodels/normalizar_busca.dart"
+      ],
+      "externos": [
+        "dart:async",
+        "flutter:foundation"
+      ],
+      "marcas": [
+        "US17"
+      ]
+    },
+    {
+      "caminho": "viewmodels/perfil_cliente_viewmodel.dart",
+      "camada": "viewmodels",
+      "classes": 1,
+      "classes_abstratas": 0,
+      "enums": 0,
+      "mixins": 0,
+      "extensoes": 0,
+      "internos": [
+        "models/cliente.dart",
+        "models/pedido.dart",
+        "models/situacao_pedido.dart",
+        "services/cliente_service.dart",
+        "services/falhas.dart",
+        "services/pedido_service.dart"
+      ],
+      "externos": [
+        "dart:async",
+        "flutter:foundation"
+      ],
+      "marcas": [
+        "US16"
+      ]
+    },
+    {
+      "caminho": "viewmodels/sessao_viewmodel.dart",
+      "camada": "viewmodels",
+      "classes": 1,
+      "classes_abstratas": 0,
+      "enums": 1,
+      "mixins": 0,
+      "extensoes": 0,
+      "internos": [
+        "models/perfil.dart",
+        "services/auth_service.dart",
+        "services/falhas.dart"
+      ],
+      "externos": [
+        "dart:async",
+        "flutter:foundation"
+      ],
+      "marcas": []
+    },
+    {
+      "caminho": "views/acompanhamento_view.dart",
+      "camada": "ui",
+      "classes": 3,
+      "classes_abstratas": 0,
+      "enums": 0,
+      "mixins": 0,
+      "extensoes": 0,
+      "internos": [
+        "models/pedido.dart",
+        "models/situacao_pedido.dart",
+        "viewmodels/acompanhamento_viewmodel.dart",
+        "views/tema.dart",
+        "views/widgets/botao_sair.dart",
+        "views/widgets/entrada_animada.dart",
+        "views/widgets/estado_vazio.dart",
+        "views/widgets/formatos.dart",
+        "views/widgets/linha_item_pedido.dart",
+        "views/widgets/mensagem_erro.dart",
+        "views/widgets/selo_situacao.dart",
+        "views/widgets/troca_suave.dart"
+      ],
+      "externos": [
+        "flutter:material",
+        "go_router",
+        "provider"
+      ],
+      "marcas": [
+        "RN05"
+      ]
+    },
+    {
+      "caminho": "views/app.dart",
+      "camada": "montagem",
+      "classes": 2,
+      "classes_abstratas": 0,
+      "enums": 0,
+      "mixins": 0,
+      "extensoes": 0,
+      "internos": [
+        "viewmodels/sessao_viewmodel.dart",
+        "views/app_router.dart",
+        "views/tema.dart"
+      ],
+      "externos": [
+        "flutter:material",
+        "flutter_localizations",
+        "go_router",
+        "provider"
+      ],
+      "marcas": []
+    },
+    {
+      "caminho": "views/app_router.dart",
+      "camada": "montagem",
+      "classes": 0,
+      "classes_abstratas": 0,
+      "enums": 0,
+      "mixins": 0,
+      "extensoes": 0,
+      "internos": [
+        "services/auth_service.dart",
+        "services/cliente_service.dart",
+        "services/pedido_service.dart",
+        "services/produto_service.dart",
+        "services/rota_service.dart",
+        "viewmodels/acompanhamento_viewmodel.dart",
+        "viewmodels/cadastro_viewmodel.dart",
+        "viewmodels/carrinho_viewmodel.dart",
+        "viewmodels/clientes_viewmodel.dart",
+        "viewmodels/detalhe_pedido_viewmodel.dart",
+        "viewmodels/estoque_viewmodel.dart",
+        "viewmodels/historico_estoque_viewmodel.dart",
+        "viewmodels/login_viewmodel.dart",
+        "viewmodels/pedidos_viewmodel.dart",
+        "viewmodels/perfil_cliente_viewmodel.dart",
+        "viewmodels/sessao_viewmodel.dart",
+        "views/acompanhamento_view.dart",
+        "views/cadastro_view.dart",
+        "views/carregando_view.dart",
+        "views/carrinho_view.dart",
+        "views/clientes_view.dart",
+        "views/detalhe_pedido_view.dart",
+        "views/estoque_view.dart",
+        "views/historico_estoque_view.dart",
+        "views/login_view.dart",
+        "views/pedidos_view.dart",
+        "views/perfil_cliente_view.dart"
+      ],
+      "externos": [
+        "go_router",
+        "provider"
+      ],
+      "marcas": []
+    },
+    {
+      "caminho": "views/cadastro/campo_cadastro.dart",
+      "camada": "ui",
+      "classes": 1,
+      "classes_abstratas": 0,
+      "enums": 0,
+      "mixins": 0,
+      "extensoes": 0,
+      "internos": [],
+      "externos": [
+        "flutter:material",
+        "flutter:services"
+      ],
+      "marcas": []
+    },
+    {
+      "caminho": "views/cadastro/indicador_etapas.dart",
+      "camada": "ui",
+      "classes": 1,
+      "classes_abstratas": 0,
+      "enums": 0,
+      "mixins": 0,
+      "extensoes": 0,
+      "internos": [
+        "views/tema.dart"
+      ],
+      "externos": [
+        "flutter:material"
+      ],
+      "marcas": []
+    },
+    {
+      "caminho": "views/cadastro_view.dart",
+      "camada": "ui",
+      "classes": 3,
+      "classes_abstratas": 0,
+      "enums": 0,
+      "mixins": 0,
+      "extensoes": 0,
+      "internos": [
+        "models/endereco.dart",
+        "viewmodels/cadastro_viewmodel.dart",
+        "viewmodels/sessao_viewmodel.dart",
+        "views/cadastro/campo_cadastro.dart",
+        "views/cadastro/indicador_etapas.dart",
+        "views/tema.dart",
+        "views/widgets/aviso_destaque.dart",
+        "views/widgets/botao_carregando.dart",
+        "views/widgets/botao_sair.dart",
+        "views/widgets/botoes_dialogo.dart",
+        "views/widgets/campo_senha.dart",
+        "views/widgets/formatos.dart",
+        "views/widgets/mascaras.dart",
+        "views/widgets/mensagem_erro.dart"
+      ],
+      "externos": [
+        "flutter:material",
+        "provider"
+      ],
+      "marcas": []
+    },
+    {
+      "caminho": "views/carregando_view.dart",
+      "camada": "ui",
+      "classes": 1,
+      "classes_abstratas": 0,
+      "enums": 0,
+      "mixins": 0,
+      "extensoes": 0,
+      "internos": [
+        "viewmodels/sessao_viewmodel.dart",
+        "views/widgets/mensagem_erro.dart"
+      ],
+      "externos": [
+        "flutter:material",
+        "provider"
+      ],
+      "marcas": []
+    },
+    {
+      "caminho": "views/carrinho_view.dart",
+      "camada": "ui",
+      "classes": 4,
+      "classes_abstratas": 0,
+      "enums": 0,
+      "mixins": 0,
+      "extensoes": 0,
+      "internos": [
+        "models/produto.dart",
+        "viewmodels/carrinho_viewmodel.dart",
+        "views/tema.dart",
+        "views/widgets/botao_carregando.dart",
+        "views/widgets/botao_sair.dart",
+        "views/widgets/botoes_dialogo.dart",
+        "views/widgets/entrada_animada.dart",
+        "views/widgets/estado_vazio.dart",
+        "views/widgets/formatos.dart",
+        "views/widgets/icone_produto.dart",
+        "views/widgets/mensagem_erro.dart",
+        "views/widgets/texto_animado.dart",
+        "views/widgets/troca_suave.dart"
+      ],
+      "externos": [
+        "dart:async",
+        "flutter:material",
+        "flutter:services",
+        "go_router",
+        "provider"
+      ],
+      "marcas": []
+    },
+    {
+      "caminho": "views/clientes_view.dart",
+      "camada": "ui",
+      "classes": 5,
+      "classes_abstratas": 0,
+      "enums": 0,
+      "mixins": 0,
+      "extensoes": 0,
+      "internos": [
+        "models/cliente.dart",
+        "viewmodels/clientes_viewmodel.dart",
+        "views/tema.dart",
+        "views/widgets/avatar_iniciais.dart",
+        "views/widgets/botao_sair.dart",
+        "views/widgets/entrada_animada.dart",
+        "views/widgets/estado_vazio.dart",
+        "views/widgets/formatos.dart",
+        "views/widgets/mensagem_erro.dart",
+        "views/widgets/navegacao_admin.dart",
+        "views/widgets/troca_suave.dart"
+      ],
+      "externos": [
+        "flutter:material",
+        "go_router",
+        "provider"
+      ],
+      "marcas": [
+        "US16"
+      ]
+    },
+    {
+      "caminho": "views/detalhe_pedido/bloco_rota.dart",
+      "camada": "ui",
+      "classes": 3,
+      "classes_abstratas": 0,
+      "enums": 0,
+      "mixins": 0,
+      "extensoes": 0,
+      "internos": [
+        "models/deslocamento.dart",
+        "models/pedido.dart",
+        "viewmodels/detalhe_pedido_viewmodel.dart",
+        "views/tema.dart",
+        "views/widgets/mensagem_erro.dart",
+        "views/detalhe_pedido/mapa_rota.dart"
+      ],
+      "externos": [
+        "flutter:material"
+      ],
+      "marcas": []
+    },
+    {
+      "caminho": "views/detalhe_pedido/cartao_cliente.dart",
+      "camada": "ui",
+      "classes": 1,
+      "classes_abstratas": 0,
+      "enums": 0,
+      "mixins": 0,
+      "extensoes": 0,
+      "internos": [
+        "models/pedido.dart",
+        "views/widgets/avatar_iniciais.dart",
+        "views/widgets/formatos.dart",
+        "views/widgets/linha_dado.dart",
+        "views/widgets/selo_situacao.dart"
+      ],
+      "externos": [
+        "flutter:material"
+      ],
+      "marcas": []
+    },
+    {
+      "caminho": "views/detalhe_pedido/dialogos_pedido.dart",
+      "camada": "ui",
+      "classes": 4,
+      "classes_abstratas": 0,
+      "enums": 0,
+      "mixins": 0,
+      "extensoes": 0,
+      "internos": [
+        "models/pedido.dart",
+        "viewmodels/detalhe_pedido_viewmodel.dart",
+        "views/widgets/botoes_dialogo.dart",
+        "views/widgets/mensagem_erro.dart"
+      ],
+      "externos": [
+        "flutter:material",
+        "flutter:services",
+        "provider"
+      ],
+      "marcas": []
+    },
+    {
+      "caminho": "views/detalhe_pedido/historico_pedido.dart",
+      "camada": "ui",
+      "classes": 3,
+      "classes_abstratas": 0,
+      "enums": 0,
+      "mixins": 0,
+      "extensoes": 0,
+      "internos": [
+        "models/pedido.dart",
+        "models/situacao_pedido.dart",
+        "views/tema.dart",
+        "views/widgets/formatos.dart"
+      ],
+      "externos": [
+        "flutter:material"
+      ],
+      "marcas": []
+    },
+    {
+      "caminho": "views/detalhe_pedido/itens_pedido.dart",
+      "camada": "ui",
+      "classes": 1,
+      "classes_abstratas": 0,
+      "enums": 0,
+      "mixins": 0,
+      "extensoes": 0,
+      "internos": [
+        "models/pedido.dart",
+        "views/tema.dart",
+        "views/widgets/formatos.dart",
+        "views/widgets/linha_item_pedido.dart"
+      ],
+      "externos": [
+        "flutter:material"
+      ],
+      "marcas": []
+    },
+    {
+      "caminho": "views/detalhe_pedido/mapa_rota.dart",
+      "camada": "ui",
+      "classes": 2,
+      "classes_abstratas": 0,
+      "enums": 0,
+      "mixins": 0,
+      "extensoes": 0,
+      "internos": [
+        "models/coordenada.dart",
+        "views/tema.dart"
+      ],
+      "externos": [
+        "dart:math",
+        "flutter:foundation",
+        "flutter:gestures",
+        "flutter:material",
+        "flutter:services",
+        "google_maps_flutter"
+      ],
+      "marcas": []
+    },
+    {
+      "caminho": "views/detalhe_pedido_view.dart",
+      "camada": "ui",
+      "classes": 1,
+      "classes_abstratas": 0,
+      "enums": 0,
+      "mixins": 0,
+      "extensoes": 0,
+      "internos": [
+        "models/pedido.dart",
+        "models/situacao_pedido.dart",
+        "viewmodels/detalhe_pedido_viewmodel.dart",
+        "views/detalhe_pedido/bloco_rota.dart",
+        "views/detalhe_pedido/cartao_cliente.dart",
+        "views/detalhe_pedido/dialogos_pedido.dart",
+        "views/detalhe_pedido/historico_pedido.dart",
+        "views/detalhe_pedido/itens_pedido.dart",
+        "views/tema.dart",
+        "views/widgets/abrir_dialogo.dart",
+        "views/widgets/aviso_destaque.dart",
+        "views/widgets/botao_sair.dart",
+        "views/widgets/mensagem_erro.dart"
+      ],
+      "externos": [
+        "flutter:material",
+        "flutter:services",
+        "go_router",
+        "provider"
+      ],
+      "marcas": []
+    },
+    {
+      "caminho": "views/estoque_view.dart",
+      "camada": "ui",
+      "classes": 6,
+      "classes_abstratas": 0,
+      "enums": 0,
+      "mixins": 0,
+      "extensoes": 0,
+      "internos": [
+        "models/produto.dart",
+        "viewmodels/estoque_viewmodel.dart",
+        "views/tema.dart",
+        "views/widgets/abrir_dialogo.dart",
+        "views/widgets/botao_sair.dart",
+        "views/widgets/botoes_dialogo.dart",
+        "views/widgets/entrada_animada.dart",
+        "views/widgets/estado_vazio.dart",
+        "views/widgets/formatos.dart",
+        "views/widgets/icone_produto.dart",
+        "views/widgets/mensagem_erro.dart",
+        "views/widgets/navegacao_admin.dart",
+        "views/widgets/troca_suave.dart"
+      ],
+      "externos": [
+        "flutter:material",
+        "go_router",
+        "provider"
+      ],
+      "marcas": [
+        "US08"
+      ]
+    },
+    {
+      "caminho": "views/historico_estoque_view.dart",
+      "camada": "ui",
+      "classes": 3,
+      "classes_abstratas": 0,
+      "enums": 0,
+      "mixins": 0,
+      "extensoes": 0,
+      "internos": [
+        "models/movimentacao_estoque.dart",
+        "models/tipo_movimentacao.dart",
+        "viewmodels/historico_estoque_viewmodel.dart",
+        "views/tema.dart",
+        "views/widgets/entrada_animada.dart",
+        "views/widgets/estado_vazio.dart",
+        "views/widgets/formatos.dart",
+        "views/widgets/mensagem_erro.dart",
+        "views/widgets/troca_suave.dart"
+      ],
+      "externos": [
+        "flutter:material",
+        "provider"
+      ],
+      "marcas": []
+    },
+    {
+      "caminho": "views/login_view.dart",
+      "camada": "ui",
+      "classes": 3,
+      "classes_abstratas": 0,
+      "enums": 0,
+      "mixins": 0,
+      "extensoes": 0,
+      "internos": [
+        "viewmodels/login_viewmodel.dart",
+        "views/tema.dart",
+        "views/widgets/botao_carregando.dart",
+        "views/widgets/campo_senha.dart",
+        "views/widgets/entrada_animada.dart",
+        "views/widgets/mensagem_erro.dart"
+      ],
+      "externos": [
+        "flutter:material",
+        "go_router",
+        "provider"
+      ],
+      "marcas": []
+    },
+    {
+      "caminho": "views/pedidos/painel_filtros.dart",
+      "camada": "ui",
+      "classes": 5,
+      "classes_abstratas": 0,
+      "enums": 0,
+      "mixins": 0,
+      "extensoes": 0,
+      "internos": [
+        "models/situacao_pedido.dart",
+        "viewmodels/pedidos_viewmodel.dart",
+        "views/tema.dart"
+      ],
+      "externos": [
+        "flutter:material"
+      ],
+      "marcas": []
+    },
+    {
+      "caminho": "views/pedidos_view.dart",
+      "camada": "ui",
+      "classes": 1,
+      "classes_abstratas": 0,
+      "enums": 0,
+      "mixins": 0,
+      "extensoes": 0,
+      "internos": [
+        "viewmodels/pedidos_viewmodel.dart",
+        "views/pedidos/painel_filtros.dart",
+        "views/tema.dart",
+        "views/widgets/botao_sair.dart",
+        "views/widgets/cartao_pedido.dart",
+        "views/widgets/entrada_animada.dart",
+        "views/widgets/estado_vazio.dart",
+        "views/widgets/formatos.dart",
+        "views/widgets/mensagem_erro.dart",
+        "views/widgets/navegacao_admin.dart",
+        "views/widgets/troca_suave.dart"
+      ],
+      "externos": [
+        "flutter:material",
+        "provider"
+      ],
+      "marcas": [
+        "US17"
+      ]
+    },
+    {
+      "caminho": "views/perfil_cliente/cabecalho_cliente.dart",
+      "camada": "ui",
+      "classes": 1,
+      "classes_abstratas": 0,
+      "enums": 0,
+      "mixins": 0,
+      "extensoes": 0,
+      "internos": [
+        "models/cliente.dart",
+        "views/tema.dart",
+        "views/widgets/avatar_iniciais.dart"
+      ],
+      "externos": [
+        "flutter:material"
+      ],
+      "marcas": []
+    },
+    {
+      "caminho": "views/perfil_cliente/dados_cliente.dart",
+      "camada": "ui",
+      "classes": 2,
+      "classes_abstratas": 0,
+      "enums": 0,
+      "mixins": 0,
+      "extensoes": 0,
+      "internos": [
+        "models/cliente.dart",
+        "views/tema.dart",
+        "views/widgets/formatos.dart",
+        "views/widgets/linha_dado.dart"
+      ],
+      "externos": [
+        "flutter:material"
+      ],
+      "marcas": []
+    },
+    {
+      "caminho": "views/perfil_cliente/resumo_cliente.dart",
+      "camada": "ui",
+      "classes": 2,
+      "classes_abstratas": 0,
+      "enums": 0,
+      "mixins": 0,
+      "extensoes": 0,
+      "internos": [
+        "viewmodels/perfil_cliente_viewmodel.dart",
+        "views/tema.dart",
+        "views/widgets/formatos.dart"
+      ],
+      "externos": [
+        "flutter:material"
+      ],
+      "marcas": []
+    },
+    {
+      "caminho": "views/perfil_cliente_view.dart",
+      "camada": "ui",
+      "classes": 1,
+      "classes_abstratas": 0,
+      "enums": 0,
+      "mixins": 0,
+      "extensoes": 0,
+      "internos": [
+        "viewmodels/perfil_cliente_viewmodel.dart",
+        "views/perfil_cliente/cabecalho_cliente.dart",
+        "views/perfil_cliente/dados_cliente.dart",
+        "views/perfil_cliente/resumo_cliente.dart",
+        "views/tema.dart",
+        "views/widgets/botao_sair.dart",
+        "views/widgets/cartao_pedido.dart",
+        "views/widgets/estado_vazio.dart",
+        "views/widgets/formatos.dart",
+        "views/widgets/mensagem_erro.dart"
+      ],
+      "externos": [
+        "flutter:material",
+        "go_router",
+        "provider"
+      ],
+      "marcas": [
+        "US16"
+      ]
+    },
+    {
+      "caminho": "views/tema.dart",
+      "camada": "ui",
+      "classes": 4,
+      "classes_abstratas": 0,
+      "enums": 0,
+      "mixins": 0,
+      "extensoes": 0,
+      "internos": [],
+      "externos": [
+        "flutter:material"
+      ],
+      "marcas": []
+    },
+    {
+      "caminho": "views/widgets/abrir_dialogo.dart",
+      "camada": "ui",
+      "classes": 0,
+      "classes_abstratas": 0,
+      "enums": 0,
+      "mixins": 0,
+      "extensoes": 0,
+      "internos": [],
+      "externos": [
+        "flutter:material",
+        "provider"
+      ],
+      "marcas": []
+    },
+    {
+      "caminho": "views/widgets/avatar_iniciais.dart",
+      "camada": "ui",
+      "classes": 1,
+      "classes_abstratas": 0,
+      "enums": 0,
+      "mixins": 0,
+      "extensoes": 0,
+      "internos": [
+        "views/tema.dart"
+      ],
+      "externos": [
+        "flutter:material"
+      ],
+      "marcas": []
+    },
+    {
+      "caminho": "views/widgets/aviso_destaque.dart",
+      "camada": "ui",
+      "classes": 1,
+      "classes_abstratas": 0,
+      "enums": 0,
+      "mixins": 0,
+      "extensoes": 0,
+      "internos": [
+        "views/tema.dart"
+      ],
+      "externos": [
+        "flutter:material"
+      ],
+      "marcas": []
+    },
+    {
+      "caminho": "views/widgets/botao_carregando.dart",
+      "camada": "ui",
+      "classes": 1,
+      "classes_abstratas": 0,
+      "enums": 0,
+      "mixins": 0,
+      "extensoes": 0,
+      "internos": [
+        "views/tema.dart"
+      ],
+      "externos": [
+        "flutter:material"
+      ],
+      "marcas": []
+    },
+    {
+      "caminho": "views/widgets/botao_sair.dart",
+      "camada": "ui",
+      "classes": 1,
+      "classes_abstratas": 0,
+      "enums": 0,
+      "mixins": 0,
+      "extensoes": 0,
+      "internos": [
+        "viewmodels/sessao_viewmodel.dart"
+      ],
+      "externos": [
+        "flutter:material",
+        "provider"
+      ],
+      "marcas": []
+    },
+    {
+      "caminho": "views/widgets/botoes_dialogo.dart",
+      "camada": "ui",
+      "classes": 1,
+      "classes_abstratas": 0,
+      "enums": 0,
+      "mixins": 0,
+      "extensoes": 0,
+      "internos": [
+        "views/tema.dart"
+      ],
+      "externos": [
+        "flutter:material"
+      ],
+      "marcas": []
+    },
+    {
+      "caminho": "views/widgets/campo_senha.dart",
+      "camada": "ui",
+      "classes": 2,
+      "classes_abstratas": 0,
+      "enums": 0,
+      "mixins": 0,
+      "extensoes": 0,
+      "internos": [],
+      "externos": [
+        "flutter:material"
+      ],
+      "marcas": []
+    },
+    {
+      "caminho": "views/widgets/cartao_pedido.dart",
+      "camada": "ui",
+      "classes": 1,
+      "classes_abstratas": 0,
+      "enums": 0,
+      "mixins": 0,
+      "extensoes": 0,
+      "internos": [
+        "models/pedido.dart",
+        "views/widgets/selo_situacao.dart"
+      ],
+      "externos": [
+        "flutter:material",
+        "go_router"
+      ],
+      "marcas": []
+    },
+    {
+      "caminho": "views/widgets/entrada_animada.dart",
+      "camada": "ui",
+      "classes": 1,
+      "classes_abstratas": 0,
+      "enums": 0,
+      "mixins": 0,
+      "extensoes": 0,
+      "internos": [
+        "views/tema.dart"
+      ],
+      "externos": [
+        "flutter:material"
+      ],
+      "marcas": []
+    },
+    {
+      "caminho": "views/widgets/estado_vazio.dart",
+      "camada": "ui",
+      "classes": 1,
+      "classes_abstratas": 0,
+      "enums": 0,
+      "mixins": 0,
+      "extensoes": 0,
+      "internos": [
+        "views/tema.dart",
+        "views/widgets/entrada_animada.dart"
+      ],
+      "externos": [
+        "flutter:material"
+      ],
+      "marcas": []
+    },
+    {
+      "caminho": "views/widgets/formatos.dart",
+      "camada": "ui",
+      "classes": 0,
+      "classes_abstratas": 0,
+      "enums": 0,
+      "mixins": 0,
+      "extensoes": 0,
+      "internos": [],
+      "externos": [],
+      "marcas": []
+    },
+    {
+      "caminho": "views/widgets/icone_produto.dart",
+      "camada": "ui",
+      "classes": 1,
+      "classes_abstratas": 0,
+      "enums": 0,
+      "mixins": 0,
+      "extensoes": 0,
+      "internos": [
+        "views/tema.dart"
+      ],
+      "externos": [
+        "flutter:material"
+      ],
+      "marcas": []
+    },
+    {
+      "caminho": "views/widgets/linha_dado.dart",
+      "camada": "ui",
+      "classes": 1,
+      "classes_abstratas": 0,
+      "enums": 0,
+      "mixins": 0,
+      "extensoes": 0,
+      "internos": [
+        "views/tema.dart"
+      ],
+      "externos": [
+        "flutter:material"
+      ],
+      "marcas": []
+    },
+    {
+      "caminho": "views/widgets/linha_item_pedido.dart",
+      "camada": "ui",
+      "classes": 1,
+      "classes_abstratas": 0,
+      "enums": 0,
+      "mixins": 0,
+      "extensoes": 0,
+      "internos": [
+        "models/item_pedido.dart",
+        "views/tema.dart",
+        "views/widgets/formatos.dart",
+        "views/widgets/icone_produto.dart"
+      ],
+      "externos": [
+        "flutter:material"
+      ],
+      "marcas": []
+    },
+    {
+      "caminho": "views/widgets/mascaras.dart",
+      "camada": "ui",
+      "classes": 1,
+      "classes_abstratas": 0,
+      "enums": 0,
+      "mixins": 0,
+      "extensoes": 0,
+      "internos": [],
+      "externos": [
+        "flutter:services"
+      ],
+      "marcas": []
+    },
+    {
+      "caminho": "views/widgets/mensagem_erro.dart",
+      "camada": "ui",
+      "classes": 1,
+      "classes_abstratas": 0,
+      "enums": 0,
+      "mixins": 0,
+      "extensoes": 0,
+      "internos": [
+        "views/tema.dart"
+      ],
+      "externos": [
+        "flutter:material"
+      ],
+      "marcas": []
+    },
+    {
+      "caminho": "views/widgets/navegacao_admin.dart",
+      "camada": "ui",
+      "classes": 1,
+      "classes_abstratas": 0,
+      "enums": 0,
+      "mixins": 0,
+      "extensoes": 0,
+      "internos": [
+        "views/tema.dart"
+      ],
+      "externos": [
+        "flutter:material",
+        "go_router"
+      ],
+      "marcas": []
+    },
+    {
+      "caminho": "views/widgets/selo_situacao.dart",
+      "camada": "ui",
+      "classes": 1,
+      "classes_abstratas": 0,
+      "enums": 0,
+      "mixins": 0,
+      "extensoes": 0,
+      "internos": [
+        "models/situacao_pedido.dart",
+        "views/tema.dart"
+      ],
+      "externos": [
+        "flutter:material"
+      ],
+      "marcas": []
+    },
+    {
+      "caminho": "views/widgets/texto_animado.dart",
+      "camada": "ui",
+      "classes": 1,
+      "classes_abstratas": 0,
+      "enums": 0,
+      "mixins": 0,
+      "extensoes": 0,
+      "internos": [
+        "views/tema.dart"
+      ],
+      "externos": [
+        "flutter:material"
+      ],
+      "marcas": []
+    },
+    {
+      "caminho": "views/widgets/troca_suave.dart",
+      "camada": "ui",
+      "classes": 1,
+      "classes_abstratas": 0,
+      "enums": 0,
+      "mixins": 0,
+      "extensoes": 0,
+      "internos": [
+        "views/tema.dart"
+      ],
+      "externos": [
+        "flutter:material"
+      ],
+      "marcas": []
+    }
+  ],
+  "matriz_imports": {
+    "montagem": {
+      "services": 10,
+      "viewmodels": 13,
+      "montagem": 2,
+      "ui": 12
+    },
+    "models": {
+      "models": 6
+    },
+    "services": {
+      "models": 12,
+      "services": 5
+    },
+    "viewmodels": {
+      "models": 22,
+      "services": 33,
+      "viewmodels": 4
+    },
+    "ui": {
+      "models": 24,
+      "viewmodels": 17,
+      "ui": 134
+    }
+  },
+  "externos_por_camada": {
+    "montagem": {
+      "cloud_firestore": 1,
+      "firebase_auth": 1,
+      "firebase_core": 1,
+      "flutter:material": 2,
+      "google_sign_in": 1,
+      "http": 1,
+      "provider": 3,
+      "flutter_localizations": 1,
+      "go_router": 2
+    },
+    "models": {
+      "cloud_firestore": 2
+    },
+    "services": {
+      "cloud_firestore": 4,
+      "firebase_auth": 3,
+      "google_sign_in": 1,
+      "dart:async": 1,
+      "dart:convert": 1,
+      "dart:io": 1,
+      "http": 1
+    },
+    "viewmodels": {
+      "dart:async": 9,
+      "flutter:foundation": 11
+    },
+    "ui": {
+      "flutter:material": 42,
+      "go_router": 9,
+      "provider": 14,
+      "flutter:services": 6,
+      "dart:async": 1,
+      "dart:math": 1,
+      "flutter:foundation": 1,
+      "flutter:gestures": 1,
+      "google_maps_flutter": 1
+    }
+  },
+  "imports_nao_resolvidos": [],
+  "localizacao_regras": [
+    {
+      "arquivo": "services/cliente_service.dart",
+      "camada": "services",
+      "marcas": [
+        "US16"
+      ],
+      "externos": [
+        "cloud_firestore"
+      ]
+    },
+    {
+      "arquivo": "services/produto_service.dart",
+      "camada": "services",
+      "marcas": [
+        "US08"
+      ],
+      "externos": [
+        "cloud_firestore",
+        "firebase_auth"
+      ]
+    },
+    {
+      "arquivo": "services/rota_service.dart",
+      "camada": "services",
+      "marcas": [
+        "RF16"
+      ],
+      "externos": [
+        "dart:async",
+        "dart:convert",
+        "dart:io",
+        "http"
+      ]
+    },
+    {
+      "arquivo": "viewmodels/cadastro_viewmodel.dart",
+      "camada": "viewmodels",
+      "marcas": [
+        "RN02",
+        "RN03"
+      ],
+      "externos": [
+        "flutter:foundation"
+      ]
+    },
+    {
+      "arquivo": "viewmodels/carrinho_viewmodel.dart",
+      "camada": "viewmodels",
+      "marcas": [
+        "RN01",
+        "RN02"
+      ],
+      "externos": [
+        "dart:async",
+        "flutter:foundation"
+      ]
+    },
+    {
+      "arquivo": "viewmodels/clientes_viewmodel.dart",
+      "camada": "viewmodels",
+      "marcas": [
+        "US16"
+      ],
+      "externos": [
+        "dart:async",
+        "flutter:foundation"
+      ]
+    },
+    {
+      "arquivo": "viewmodels/detalhe_pedido_viewmodel.dart",
+      "camada": "viewmodels",
+      "marcas": [
+        "RF16",
+        "RN04",
+        "RN05",
+        "RN06"
+      ],
+      "externos": [
+        "dart:async",
+        "flutter:foundation"
+      ]
+    },
+    {
+      "arquivo": "viewmodels/estoque_viewmodel.dart",
+      "camada": "viewmodels",
+      "marcas": [
+        "US08"
+      ],
+      "externos": [
+        "dart:async",
+        "flutter:foundation"
+      ]
+    },
+    {
+      "arquivo": "viewmodels/pedidos_viewmodel.dart",
+      "camada": "viewmodels",
+      "marcas": [
+        "US17"
+      ],
+      "externos": [
+        "dart:async",
+        "flutter:foundation"
+      ]
+    },
+    {
+      "arquivo": "viewmodels/perfil_cliente_viewmodel.dart",
+      "camada": "viewmodels",
+      "marcas": [
+        "US16"
+      ],
+      "externos": [
+        "dart:async",
+        "flutter:foundation"
+      ]
+    },
+    {
+      "arquivo": "views/acompanhamento_view.dart",
+      "camada": "ui",
+      "marcas": [
+        "RN05"
+      ],
+      "externos": [
+        "flutter:material",
+        "go_router",
+        "provider"
+      ]
+    },
+    {
+      "arquivo": "views/clientes_view.dart",
+      "camada": "ui",
+      "marcas": [
+        "US16"
+      ],
+      "externos": [
+        "flutter:material",
+        "go_router",
+        "provider"
+      ]
+    },
+    {
+      "arquivo": "views/estoque_view.dart",
+      "camada": "ui",
+      "marcas": [
+        "US08"
+      ],
+      "externos": [
+        "flutter:material",
+        "go_router",
+        "provider"
+      ]
+    },
+    {
+      "arquivo": "views/pedidos_view.dart",
+      "camada": "ui",
+      "marcas": [
+        "US17"
+      ],
+      "externos": [
+        "flutter:material",
+        "provider"
+      ]
+    },
+    {
+      "arquivo": "views/perfil_cliente_view.dart",
+      "camada": "ui",
+      "marcas": [
+        "US16"
+      ],
+      "externos": [
+        "flutter:material",
+        "go_router",
+        "provider"
+      ]
+    }
+  ],
+  "testes": [
+    {
+      "arquivo": "test/viewmodels/cadastro_viewmodel_test.dart",
+      "grupo": "RN03: CPF válido",
+      "nome": "com CPF inválido, recusa o cadastro",
+      "sloc_corpo": 5,
+      "instancias_corpo": 0,
+      "instancias_setup": 3,
+      "when_corpo": 0,
+      "verify_corpo": 0,
+      "verifyNever_corpo": 2,
+      "when_setup": 1,
+      "verify_setup": 0,
+      "verifyNever_setup": 0,
+      "sloc_preparacao_arquivo": 30,
+      "duplas_declaradas": [
+        "MockAuthService",
+        "MockClienteService",
+        "FakeCliente"
+      ]
+    },
+    {
+      "arquivo": "test/viewmodels/cadastro_viewmodel_test.dart",
+      "grupo": "RN03: CPF válido",
+      "nome": "com CPF válido, cria a conta e salva o cliente",
+      "sloc_corpo": 12,
+      "instancias_corpo": 0,
+      "instancias_setup": 3,
+      "when_corpo": 3,
+      "verify_corpo": 1,
+      "verifyNever_corpo": 0,
+      "when_setup": 1,
+      "verify_setup": 0,
+      "verifyNever_setup": 0,
+      "sloc_preparacao_arquivo": 30,
+      "duplas_declaradas": [
+        "MockAuthService",
+        "MockClienteService",
+        "FakeCliente"
+      ]
+    },
+    {
+      "arquivo": "test/viewmodels/carrinho_viewmodel_test.dart",
+      "grupo": "RN01: pedido limitado ao estoque disponível",
+      "nome": "quantidade acima do estoque é recusada",
+      "sloc_corpo": 4,
+      "instancias_corpo": 0,
+      "instancias_setup": 5,
+      "when_corpo": 0,
+      "verify_corpo": 0,
+      "verifyNever_corpo": 0,
+      "when_setup": 5,
+      "verify_setup": 0,
+      "verifyNever_setup": 0,
+      "sloc_preparacao_arquivo": 53,
+      "duplas_declaradas": [
+        "MockAuthService",
+        "MockClienteService",
+        "MockProdutoService",
+        "MockPedidoService",
+        "FakePedido"
+      ]
+    },
+    {
+      "arquivo": "test/viewmodels/carrinho_viewmodel_test.dart",
+      "grupo": "RN01: pedido limitado ao estoque disponível",
+      "nome": "quantidade dentro do estoque entra no carrinho",
+      "sloc_corpo": 3,
+      "instancias_corpo": 0,
+      "instancias_setup": 5,
+      "when_corpo": 0,
+      "verify_corpo": 0,
+      "verifyNever_corpo": 0,
+      "when_setup": 5,
+      "verify_setup": 0,
+      "verifyNever_setup": 0,
+      "sloc_preparacao_arquivo": 53,
+      "duplas_declaradas": [
+        "MockAuthService",
+        "MockClienteService",
+        "MockProdutoService",
+        "MockPedidoService",
+        "FakePedido"
+      ]
+    },
+    {
+      "arquivo": "test/viewmodels/carrinho_viewmodel_test.dart",
+      "grupo": "RN01: pedido limitado ao estoque disponível",
+      "nome": "estoque que diminuiu antes do envio bloqueia o pedido",
+      "sloc_corpo": 15,
+      "instancias_corpo": 0,
+      "instancias_setup": 5,
+      "when_corpo": 1,
+      "verify_corpo": 0,
+      "verifyNever_corpo": 1,
+      "when_setup": 5,
+      "verify_setup": 0,
+      "verifyNever_setup": 0,
+      "sloc_preparacao_arquivo": 53,
+      "duplas_declaradas": [
+        "MockAuthService",
+        "MockClienteService",
+        "MockProdutoService",
+        "MockPedidoService",
+        "FakePedido"
+      ]
+    },
+    {
+      "arquivo": "test/viewmodels/carrinho_viewmodel_test.dart",
+      "grupo": "RN02: endereço cadastrado válido",
+      "nome": "cliente sem endereço válido não consegue pedir",
+      "sloc_corpo": 18,
+      "instancias_corpo": 0,
+      "instancias_setup": 5,
+      "when_corpo": 1,
+      "verify_corpo": 0,
+      "verifyNever_corpo": 1,
+      "when_setup": 5,
+      "verify_setup": 0,
+      "verifyNever_setup": 0,
+      "sloc_preparacao_arquivo": 53,
+      "duplas_declaradas": [
+        "MockAuthService",
+        "MockClienteService",
+        "MockProdutoService",
+        "MockPedidoService",
+        "FakePedido"
+      ]
+    },
+    {
+      "arquivo": "test/viewmodels/carrinho_viewmodel_test.dart",
+      "grupo": "RN02: endereço cadastrado válido",
+      "nome": "cliente com endereço completo envia o pedido",
+      "sloc_corpo": 10,
+      "instancias_corpo": 0,
+      "instancias_setup": 5,
+      "when_corpo": 0,
+      "verify_corpo": 1,
+      "verifyNever_corpo": 0,
+      "when_setup": 5,
+      "verify_setup": 0,
+      "verifyNever_setup": 0,
+      "sloc_preparacao_arquivo": 53,
+      "duplas_declaradas": [
+        "MockAuthService",
+        "MockClienteService",
+        "MockProdutoService",
+        "MockPedidoService",
+        "FakePedido"
+      ]
+    },
+    {
+      "arquivo": "test/viewmodels/detalhe_pedido_viewmodel_test.dart",
+      "grupo": "RF16: distância e tempo até o cliente",
+      "nome": "pedido aguardando sem distância consulta a Routes API e grava o resultado",
+      "sloc_corpo": 5,
+      "instancias_corpo": 0,
+      "instancias_setup": 4,
+      "when_corpo": 0,
+      "verify_corpo": 2,
+      "verifyNever_corpo": 0,
+      "when_setup": 7,
+      "verify_setup": 0,
+      "verifyNever_setup": 0,
+      "sloc_preparacao_arquivo": 84,
+      "duplas_declaradas": [
+        "MockPedidoService",
+        "MockRotaService",
+        "MockProdutoService",
+        "FakePedido"
+      ]
+    },
+    {
+      "arquivo": "test/viewmodels/detalhe_pedido_viewmodel_test.dart",
+      "grupo": "RF16: distância e tempo até o cliente",
+      "nome": "pedido que já tem a distância não consulta de novo",
+      "sloc_corpo": 2,
+      "instancias_corpo": 0,
+      "instancias_setup": 4,
+      "when_corpo": 0,
+      "verify_corpo": 0,
+      "verifyNever_corpo": 1,
+      "when_setup": 7,
+      "verify_setup": 0,
+      "verifyNever_setup": 0,
+      "sloc_preparacao_arquivo": 84,
+      "duplas_declaradas": [
+        "MockPedidoService",
+        "MockRotaService",
+        "MockProdutoService",
+        "FakePedido"
+      ]
+    },
+    {
+      "arquivo": "test/viewmodels/detalhe_pedido_viewmodel_test.dart",
+      "grupo": "RF16: distância e tempo até o cliente",
+      "nome": "falha da Routes API mostra o aviso e o pedido ainda pode ser aceito",
+      "sloc_corpo": 6,
+      "instancias_corpo": 0,
+      "instancias_setup": 4,
+      "when_corpo": 1,
+      "verify_corpo": 1,
+      "verifyNever_corpo": 0,
+      "when_setup": 7,
+      "verify_setup": 0,
+      "verifyNever_setup": 0,
+      "sloc_preparacao_arquivo": 84,
+      "duplas_declaradas": [
+        "MockPedidoService",
+        "MockRotaService",
+        "MockProdutoService",
+        "FakePedido"
+      ]
+    },
+    {
+      "arquivo": "test/viewmodels/detalhe_pedido_viewmodel_test.dart",
+      "grupo": "RN06: tempo estimado no aceite e na ampliação",
+      "nome": "aceite sem tempo estimado é bloqueado",
+      "sloc_corpo": 4,
+      "instancias_corpo": 0,
+      "instancias_setup": 4,
+      "when_corpo": 0,
+      "verify_corpo": 0,
+      "verifyNever_corpo": 1,
+      "when_setup": 7,
+      "verify_setup": 0,
+      "verifyNever_setup": 0,
+      "sloc_preparacao_arquivo": 84,
+      "duplas_declaradas": [
+        "MockPedidoService",
+        "MockRotaService",
+        "MockProdutoService",
+        "FakePedido"
+      ]
+    },
+    {
+      "arquivo": "test/viewmodels/detalhe_pedido_viewmodel_test.dart",
+      "grupo": "RN06: tempo estimado no aceite e na ampliação",
+      "nome": "ampliação soma os minutos ao pedido aceito",
+      "sloc_corpo": 3,
+      "instancias_corpo": 0,
+      "instancias_setup": 4,
+      "when_corpo": 0,
+      "verify_corpo": 1,
+      "verifyNever_corpo": 0,
+      "when_setup": 7,
+      "verify_setup": 0,
+      "verifyNever_setup": 0,
+      "sloc_preparacao_arquivo": 84,
+      "duplas_declaradas": [
+        "MockPedidoService",
+        "MockRotaService",
+        "MockProdutoService",
+        "FakePedido"
+      ]
+    },
+    {
+      "arquivo": "test/viewmodels/detalhe_pedido_viewmodel_test.dart",
+      "grupo": "RN06: tempo estimado no aceite e na ampliação",
+      "nome": "pedido aguardando não pode ter o tempo ampliado",
+      "sloc_corpo": 7,
+      "instancias_corpo": 0,
+      "instancias_setup": 4,
+      "when_corpo": 0,
+      "verify_corpo": 0,
+      "verifyNever_corpo": 1,
+      "when_setup": 7,
+      "verify_setup": 0,
+      "verifyNever_setup": 0,
+      "sloc_preparacao_arquivo": 84,
+      "duplas_declaradas": [
+        "MockPedidoService",
+        "MockRotaService",
+        "MockProdutoService",
+        "FakePedido"
+      ]
+    },
+    {
+      "arquivo": "test/viewmodels/detalhe_pedido_viewmodel_test.dart",
+      "grupo": "RN05: motivo da recusa",
+      "nome": "recusa sem motivo é bloqueada",
+      "sloc_corpo": 4,
+      "instancias_corpo": 0,
+      "instancias_setup": 4,
+      "when_corpo": 0,
+      "verify_corpo": 0,
+      "verifyNever_corpo": 1,
+      "when_setup": 7,
+      "verify_setup": 0,
+      "verifyNever_setup": 0,
+      "sloc_preparacao_arquivo": 84,
+      "duplas_declaradas": [
+        "MockPedidoService",
+        "MockRotaService",
+        "MockProdutoService",
+        "FakePedido"
+      ]
+    },
+    {
+      "arquivo": "test/viewmodels/detalhe_pedido_viewmodel_test.dart",
+      "grupo": "RN05: motivo da recusa",
+      "nome": "recusa com motivo grava o motivo",
+      "sloc_corpo": 4,
+      "instancias_corpo": 0,
+      "instancias_setup": 4,
+      "when_corpo": 0,
+      "verify_corpo": 1,
+      "verifyNever_corpo": 0,
+      "when_setup": 7,
+      "verify_setup": 0,
+      "verifyNever_setup": 0,
+      "sloc_preparacao_arquivo": 84,
+      "duplas_declaradas": [
+        "MockPedidoService",
+        "MockRotaService",
+        "MockProdutoService",
+        "FakePedido"
+      ]
+    },
+    {
+      "arquivo": "test/viewmodels/detalhe_pedido_viewmodel_test.dart",
+      "grupo": "RN04: baixa com a quantidade entregue",
+      "nome": "entrega maior que a pedida é aceita se houver estoque",
+      "sloc_corpo": 7,
+      "instancias_corpo": 0,
+      "instancias_setup": 4,
+      "when_corpo": 1,
+      "verify_corpo": 1,
+      "verifyNever_corpo": 0,
+      "when_setup": 7,
+      "verify_setup": 0,
+      "verifyNever_setup": 0,
+      "sloc_preparacao_arquivo": 84,
+      "duplas_declaradas": [
+        "MockPedidoService",
+        "MockRotaService",
+        "MockProdutoService",
+        "FakePedido"
+      ]
+    },
+    {
+      "arquivo": "test/viewmodels/detalhe_pedido_viewmodel_test.dart",
+      "grupo": "RN04: baixa com a quantidade entregue",
+      "nome": "entrega acima do estoque é bloqueada e nada é baixado",
+      "sloc_corpo": 6,
+      "instancias_corpo": 0,
+      "instancias_setup": 4,
+      "when_corpo": 1,
+      "verify_corpo": 0,
+      "verifyNever_corpo": 1,
+      "when_setup": 7,
+      "verify_setup": 0,
+      "verifyNever_setup": 0,
+      "sloc_preparacao_arquivo": 84,
+      "duplas_declaradas": [
+        "MockPedidoService",
+        "MockRotaService",
+        "MockProdutoService",
+        "FakePedido"
+      ]
+    },
+    {
+      "arquivo": "test/viewmodels/login_viewmodel_test.dart",
+      "grupo": "RF17: login com e-mail e senha",
+      "nome": "com a senha correta, entra sem erro",
+      "sloc_corpo": 8,
+      "instancias_corpo": 0,
+      "instancias_setup": 1,
+      "when_corpo": 1,
+      "verify_corpo": 0,
+      "verifyNever_corpo": 0,
+      "when_setup": 0,
+      "verify_setup": 0,
+      "verifyNever_setup": 0,
+      "sloc_preparacao_arquivo": 7,
+      "duplas_declaradas": [
+        "MockAuthService"
+      ]
+    },
+    {
+      "arquivo": "test/viewmodels/login_viewmodel_test.dart",
+      "grupo": "RF17: login com e-mail e senha",
+      "nome": "com a senha errada, exibe erro e não entra",
+      "sloc_corpo": 8,
+      "instancias_corpo": 0,
+      "instancias_setup": 1,
+      "when_corpo": 1,
+      "verify_corpo": 0,
+      "verifyNever_corpo": 0,
+      "when_setup": 0,
+      "verify_setup": 0,
+      "verifyNever_setup": 0,
+      "sloc_preparacao_arquivo": 7,
+      "duplas_declaradas": [
+        "MockAuthService"
+      ]
+    },
+    {
+      "arquivo": "test/viewmodels/pedidos_viewmodel_test.dart",
+      "grupo": "US17: filtrar os pedidos",
+      "nome": "situação, período e nome combinados mostram só o que atende a todos",
+      "sloc_corpo": 5,
+      "instancias_corpo": 0,
+      "instancias_setup": 2,
+      "when_corpo": 0,
+      "verify_corpo": 0,
+      "verifyNever_corpo": 0,
+      "when_setup": 2,
+      "verify_setup": 0,
+      "verifyNever_setup": 0,
+      "sloc_preparacao_arquivo": 67,
+      "duplas_declaradas": [
+        "MockPedidoService",
+        "MockProdutoService"
+      ]
+    },
+    {
+      "arquivo": "test/viewmodels/pedidos_viewmodel_test.dart",
+      "grupo": "US17: filtrar os pedidos",
+      "nome": "limpar os filtros volta a mostrar todos os pedidos",
+      "sloc_corpo": 6,
+      "instancias_corpo": 0,
+      "instancias_setup": 2,
+      "when_corpo": 0,
+      "verify_corpo": 0,
+      "verifyNever_corpo": 0,
+      "when_setup": 2,
+      "verify_setup": 0,
+      "verifyNever_setup": 0,
+      "sloc_preparacao_arquivo": 67,
+      "duplas_declaradas": [
+        "MockPedidoService",
+        "MockProdutoService"
+      ]
+    },
+    {
+      "arquivo": "test/viewmodels/perfil_cliente_viewmodel_test.dart",
+      "grupo": "US16: perfil do cliente",
+      "nome": "o resumo conta os pedidos e soma o gasto só dos entregues, pela quantidade entregue",
+      "sloc_corpo": 37,
+      "instancias_corpo": 2,
+      "instancias_setup": 0,
+      "when_corpo": 2,
+      "verify_corpo": 0,
+      "verifyNever_corpo": 0,
+      "when_setup": 0,
+      "verify_setup": 0,
+      "verifyNever_setup": 0,
+      "sloc_preparacao_arquivo": 32,
+      "duplas_declaradas": [
+        "MockClienteService",
+        "MockPedidoService"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,16 @@
+tag,camada,linhas,linhas_cobertas,percentual
+v2/9a8f637,models,143,11,7.69
+v2/9a8f637,montagem,110,1,0.91
+v2/9a8f637,services,299,4,1.34
+v2/9a8f637,ui,1629,20,1.23
+v2/9a8f637,viewmodels,555,306,55.14
+v2/9a8f637,TOTAL,2736,342,12.50
+v2/9a8f637,TOTAL_SEM_UI,1107,322,29.09
+v2/db11a74,data,253,0,0.00
+v2/db11a74,domain,286,164,57.34
+v2/db11a74,infra,260,0,0.00
+v2/db11a74,montagem,145,1,0.69
+v2/db11a74,presentation,407,51,12.53
+v2/db11a74,ui,1629,20,1.23
+v2/db11a74,TOTAL,2980,236,7.92
+v2/db11a74,TOTAL_SEM_UI,1351,216,15.99

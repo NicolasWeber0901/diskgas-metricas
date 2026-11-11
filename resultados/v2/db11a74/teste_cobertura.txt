@@ -1,0 +1,35 @@
+﻿00:00 +0: loading C:/Users/Nicolas/Desktop/Faculdade/TCC/metricas/fontes/db11a74/test/cobertura_todos_test.dart
+00:00 +0: C:/Users/Nicolas/Desktop/Faculdade/TCC/metricas/fontes/db11a74/test/cobertura_todos_test.dart: cobertura
+00:00 +1: C:/Users/Nicolas/Desktop/Faculdade/TCC/metricas/fontes/db11a74/test/domain/casos_de_uso/aceitar_pedido_test.dart: RN06: tempo estimado no aceite e na amplia├º├úo aceite sem tempo estimado ├⌐ bloqueado
+00:00 +2: C:/Users/Nicolas/Desktop/Faculdade/TCC/metricas/fontes/db11a74/test/domain/casos_de_uso/ampliar_tempo_test.dart: RN06: tempo estimado no aceite e na amplia├º├úo amplia├º├úo soma os minutos ao pedido aceito
+00:00 +3: C:/Users/Nicolas/Desktop/Faculdade/TCC/metricas/fontes/db11a74/test/domain/casos_de_uso/ampliar_tempo_test.dart: RN06: tempo estimado no aceite e na amplia├º├úo pedido aguardando n├úo pode ter o tempo ampliado
+00:01 +4: C:/Users/Nicolas/Desktop/Faculdade/TCC/metricas/fontes/db11a74/test/domain/casos_de_uso/cadastrar_cliente_test.dart: (setUpAll)
+00:01 +4: C:/Users/Nicolas/Desktop/Faculdade/TCC/metricas/fontes/db11a74/test/domain/casos_de_uso/cadastrar_cliente_test.dart: RN03: CPF v├ílido com CPF inv├ílido, recusa o cadastro
+00:01 +5: C:/Users/Nicolas/Desktop/Faculdade/TCC/metricas/fontes/db11a74/test/domain/casos_de_uso/cadastrar_cliente_test.dart: RN03: CPF v├ílido com CPF v├ílido, cria a conta e salva o cliente
+00:01 +6: C:/Users/Nicolas/Desktop/Faculdade/TCC/metricas/fontes/db11a74/test/domain/casos_de_uso/cadastrar_cliente_test.dart: (tearDownAll)
+00:01 +6: C:/Users/Nicolas/Desktop/Faculdade/TCC/metricas/fontes/db11a74/test/domain/casos_de_uso/calcular_rota_do_pedido_test.dart: (setUpAll)
+00:01 +6: C:/Users/Nicolas/Desktop/Faculdade/TCC/metricas/fontes/db11a74/test/domain/casos_de_uso/calcular_rota_do_pedido_test.dart: RF16: dist├óncia e tempo at├⌐ o cliente pedido aguardando sem dist├óncia consulta a Routes API e grava o resultado
+00:01 +7: C:/Users/Nicolas/Desktop/Faculdade/TCC/metricas/fontes/db11a74/test/domain/casos_de_uso/calcular_rota_do_pedido_test.dart: RF16: dist├óncia e tempo at├⌐ o cliente pedido que j├í tem a dist├óncia n├úo consulta de novo
+00:01 +8: C:/Users/Nicolas/Desktop/Faculdade/TCC/metricas/fontes/db11a74/test/domain/casos_de_uso/calcular_rota_do_pedido_test.dart: (tearDownAll)
+00:02 +8: C:/Users/Nicolas/Desktop/Faculdade/TCC/metricas/fontes/db11a74/test/domain/casos_de_uso/enviar_pedido_test.dart: (setUpAll)
+00:02 +8: C:/Users/Nicolas/Desktop/Faculdade/TCC/metricas/fontes/db11a74/test/domain/casos_de_uso/enviar_pedido_test.dart: RN01: pedido limitado ao estoque dispon├¡vel estoque que diminuiu antes do envio bloqueia o pedido
+00:02 +9: C:/Users/Nicolas/Desktop/Faculdade/TCC/metricas/fontes/db11a74/test/domain/casos_de_uso/enviar_pedido_test.dart: RN02: endere├ºo cadastrado v├ílido cliente sem endere├ºo v├ílido n├úo consegue pedir
+00:02 +10: C:/Users/Nicolas/Desktop/Faculdade/TCC/metricas/fontes/db11a74/test/domain/casos_de_uso/enviar_pedido_test.dart: RN02: endere├ºo cadastrado v├ílido cliente com endere├ºo completo envia o pedido
+00:02 +11: C:/Users/Nicolas/Desktop/Faculdade/TCC/metricas/fontes/db11a74/test/domain/casos_de_uso/enviar_pedido_test.dart: (tearDownAll)
+00:04 +11: C:/Users/Nicolas/Desktop/Faculdade/TCC/metricas/fontes/db11a74/test/domain/casos_de_uso/filtrar_pedidos_test.dart: US17: filtrar os pedidos situa├º├úo, per├¡odo e nome combinados mostram s├│ o que atende a todos
+00:04 +12: C:/Users/Nicolas/Desktop/Faculdade/TCC/metricas/fontes/db11a74/test/domain/casos_de_uso/filtrar_pedidos_test.dart: US17: filtrar os pedidos limpar os filtros volta a mostrar todos os pedidos
+00:04 +13: C:/Users/Nicolas/Desktop/Faculdade/TCC/metricas/fontes/db11a74/test/domain/casos_de_uso/finalizar_entrega_test.dart: (setUpAll)
+00:04 +13: C:/Users/Nicolas/Desktop/Faculdade/TCC/metricas/fontes/db11a74/test/domain/casos_de_uso/finalizar_entrega_test.dart: RN04: baixa com a quantidade entregue entrega maior que a pedida ├⌐ aceita se houver estoque
+00:04 +14: C:/Users/Nicolas/Desktop/Faculdade/TCC/metricas/fontes/db11a74/test/domain/casos_de_uso/finalizar_entrega_test.dart: RN04: baixa com a quantidade entregue entrega acima do estoque ├⌐ bloqueada e nada ├⌐ baixado
+00:04 +15: C:/Users/Nicolas/Desktop/Faculdade/TCC/metricas/fontes/db11a74/test/domain/casos_de_uso/finalizar_entrega_test.dart: (tearDownAll)
+00:05 +15: C:/Users/Nicolas/Desktop/Faculdade/TCC/metricas/fontes/db11a74/test/domain/casos_de_uso/recusar_pedido_test.dart: RN05: motivo da recusa recusa sem motivo ├⌐ bloqueada
+00:05 +16: C:/Users/Nicolas/Desktop/Faculdade/TCC/metricas/fontes/db11a74/test/domain/casos_de_uso/recusar_pedido_test.dart: RN05: motivo da recusa recusa com motivo grava o motivo
+00:06 +17: C:/Users/Nicolas/Desktop/Faculdade/TCC/metricas/fontes/db11a74/test/domain/casos_de_uso/resumir_pedidos_do_cliente_test.dart: US16: perfil do cliente o resumo conta os pedidos e soma o gasto s├│ dos entregues, pela quantidade entregue
+00:07 +18: C:/Users/Nicolas/Desktop/Faculdade/TCC/metricas/fontes/db11a74/test/domain/casos_de_uso/validar_quantidade_test.dart: RN01: pedido limitado ao estoque dispon├¡vel quantidade acima do estoque ├⌐ recusada
+00:07 +19: C:/Users/Nicolas/Desktop/Faculdade/TCC/metricas/fontes/db11a74/test/domain/casos_de_uso/validar_quantidade_test.dart: RN01: pedido limitado ao estoque dispon├¡vel quantidade dentro do estoque entra no carrinho
+00:07 +20: C:/Users/Nicolas/Desktop/Faculdade/TCC/metricas/fontes/db11a74/test/presentation/detalhe_pedido_viewmodel_test.dart: (setUpAll)
+00:07 +20: C:/Users/Nicolas/Desktop/Faculdade/TCC/metricas/fontes/db11a74/test/presentation/detalhe_pedido_viewmodel_test.dart: RF16: dist├óncia e tempo at├⌐ o cliente falha da Routes API mostra o aviso e o pedido ainda pode ser aceito
+00:07 +21: C:/Users/Nicolas/Desktop/Faculdade/TCC/metricas/fontes/db11a74/test/presentation/detalhe_pedido_viewmodel_test.dart: (tearDownAll)
+00:08 +21: C:/Users/Nicolas/Desktop/Faculdade/TCC/metricas/fontes/db11a74/test/presentation/login_viewmodel_test.dart: RF17: login com e-mail e senha com a senha correta, entra sem erro
+00:08 +22: C:/Users/Nicolas/Desktop/Faculdade/TCC/metricas/fontes/db11a74/test/presentation/login_viewmodel_test.dart: RF17: login com e-mail e senha com a senha errada, exibe erro e n├úo entra
+00:10 +23: All tests passed!

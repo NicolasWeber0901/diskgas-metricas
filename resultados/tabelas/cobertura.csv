@@ -1,0 +1,16 @@
+tag,camada,linhas,linhas_cobertas,percentual
+mvvm-v1,models,117,11,9.40
+mvvm-v1,montagem,104,1,0.96
+mvvm-v1,services,246,4,1.63
+mvvm-v1,ui,1536,19,1.24
+mvvm-v1,viewmodels,521,305,58.54
+mvvm-v1,TOTAL,2524,340,13.47
+mvvm-v1,TOTAL_SEM_UI,988,321,32.49
+clean-v1,data,219,0,0.00
+clean-v1,domain,281,164,58.36
+clean-v1,infra,210,0,0.00
+clean-v1,montagem,138,1,0.72
+clean-v1,presentation,373,51,13.67
+clean-v1,ui,1536,19,1.24
+clean-v1,TOTAL,2757,235,8.52
+clean-v1,TOTAL_SEM_UI,1221,216,17.69

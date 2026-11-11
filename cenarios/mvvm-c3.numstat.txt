@@ -1,0 +1,10 @@
+4	0	{a => b}/firestore.rules
+2	2	{a => b}/lib/main.dart
+62	0	/dev/null => b/lib/models/movimentacao_estoque.dart
+9	0	/dev/null => b/lib/models/tipo_movimentacao.dart
+27	2	{a => b}/lib/services/pedido_service.dart
+81	5	{a => b}/lib/services/produto_service.dart
+67	0	/dev/null => b/lib/viewmodels/historico_estoque_viewmodel.dart
+13	0	{a => b}/lib/views/app_router.dart
+9	1	{a => b}/lib/views/estoque_view.dart
+156	0	/dev/null => b/lib/views/historico_estoque_view.dart

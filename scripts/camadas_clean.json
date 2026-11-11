@@ -1,0 +1,11 @@
+{
+  "regras": [
+    { "prefixo": "main.dart", "camada": "montagem" },
+    { "prefixo": "main/", "camada": "montagem" },
+    { "prefixo": "domain/", "camada": "domain" },
+    { "prefixo": "data/", "camada": "data" },
+    { "prefixo": "infra/", "camada": "infra" },
+    { "prefixo": "presentation/", "camada": "presentation" },
+    { "prefixo": "ui/", "camada": "ui" }
+  ]
+}

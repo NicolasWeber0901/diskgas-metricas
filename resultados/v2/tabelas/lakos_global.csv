@@ -1,0 +1,3 @@
+tag,arquivos,dependencias,grau_medio,aciclico,ccd,acd,nccd,sloc_total,sloc_medio,orfaos
+v2/9a8f637,78,294,3.77,true,796,10.21,1.90,6418,82.28,/models/administrador.dart
+v2/db11a74,129,455,3.53,true,1288,9.98,1.64,7330,56.82,/domain/entidades/administrador.dart

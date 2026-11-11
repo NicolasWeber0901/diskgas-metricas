@@ -1,0 +1,3718 @@
+{
+  "rootDir": "C:/Users/Nicolas/Desktop/Faculdade/TCC/metricas/fontes/db11a74/lib",
+  "nodes": {
+    "/data/fontes/autenticacao_fonte.dart": {
+      "id": "/data/fontes/autenticacao_fonte.dart",
+      "label": "autenticacao_fonte",
+      "cd": 1,
+      "inDegree": 2,
+      "outDegree": 0,
+      "instability": 0.0,
+      "sloc": 10
+    },
+    "/data/fontes/cliente_fonte.dart": {
+      "id": "/data/fontes/cliente_fonte.dart",
+      "label": "cliente_fonte",
+      "cd": 1,
+      "inDegree": 2,
+      "outDegree": 0,
+      "instability": 0.0,
+      "sloc": 6
+    },
+    "/data/fontes/pedido_fonte.dart": {
+      "id": "/data/fontes/pedido_fonte.dart",
+      "label": "pedido_fonte",
+      "cd": 1,
+      "inDegree": 2,
+      "outDegree": 0,
+      "instability": 0.0,
+      "sloc": 17
+    },
+    "/data/fontes/produto_fonte.dart": {
+      "id": "/data/fontes/produto_fonte.dart",
+      "label": "produto_fonte",
+      "cd": 1,
+      "inDegree": 2,
+      "outDegree": 0,
+      "instability": 0.0,
+      "sloc": 9
+    },
+    "/data/fontes/rota_fonte.dart": {
+      "id": "/data/fontes/rota_fonte.dart",
+      "label": "rota_fonte",
+      "cd": 1,
+      "inDegree": 2,
+      "outDegree": 0,
+      "instability": 0.0,
+      "sloc": 3
+    },
+    "/data/modelos/cliente_modelo.dart": {
+      "id": "/data/modelos/cliente_modelo.dart",
+      "label": "cliente_modelo",
+      "cd": 4,
+      "inDegree": 1,
+      "outDegree": 2,
+      "instability": 0.67,
+      "sloc": 33
+    },
+    "/data/modelos/deslocamento_modelo.dart": {
+      "id": "/data/modelos/deslocamento_modelo.dart",
+      "label": "deslocamento_modelo",
+      "cd": 3,
+      "inDegree": 3,
+      "outDegree": 2,
+      "instability": 0.4,
+      "sloc": 72
+    },
+    "/data/modelos/endereco_modelo.dart": {
+      "id": "/data/modelos/endereco_modelo.dart",
+      "label": "endereco_modelo",
+      "cd": 2,
+      "inDegree": 2,
+      "outDegree": 1,
+      "instability": 0.33,
+      "sloc": 19
+    },
+    "/data/modelos/item_pedido_modelo.dart": {
+      "id": "/data/modelos/item_pedido_modelo.dart",
+      "label": "item_pedido_modelo",
+      "cd": 2,
+      "inDegree": 2,
+      "outDegree": 1,
+      "instability": 0.33,
+      "sloc": 22
+    },
+    "/data/modelos/movimentacao_estoque_modelo.dart": {
+      "id": "/data/modelos/movimentacao_estoque_modelo.dart",
+      "label": "movimentacao_estoque_modelo",
+      "cd": 3,
+      "inDegree": 3,
+      "outDegree": 2,
+      "instability": 0.4,
+      "sloc": 36
+    },
+    "/data/modelos/pedido_modelo.dart": {
+      "id": "/data/modelos/pedido_modelo.dart",
+      "label": "pedido_modelo",
+      "cd": 10,
+      "inDegree": 1,
+      "outDegree": 5,
+      "instability": 0.83,
+      "sloc": 50
+    },
+    "/data/modelos/perfil_modelo.dart": {
+      "id": "/data/modelos/perfil_modelo.dart",
+      "label": "perfil_modelo",
+      "cd": 2,
+      "inDegree": 1,
+      "outDegree": 1,
+      "instability": 0.5,
+      "sloc": 6
+    },
+    "/data/modelos/produto_modelo.dart": {
+      "id": "/data/modelos/produto_modelo.dart",
+      "label": "produto_modelo",
+      "cd": 2,
+      "inDegree": 1,
+      "outDegree": 1,
+      "instability": 0.5,
+      "sloc": 18
+    },
+    "/data/repositorios/autenticacao_repositorio_dados.dart": {
+      "id": "/data/repositorios/autenticacao_repositorio_dados.dart",
+      "label": "autenticacao_repositorio_dados",
+      "cd": 5,
+      "inDegree": 1,
+      "outDegree": 4,
+      "instability": 0.8,
+      "sloc": 30
+    },
+    "/data/repositorios/cliente_repositorio_dados.dart": {
+      "id": "/data/repositorios/cliente_repositorio_dados.dart",
+      "label": "cliente_repositorio_dados",
+      "cd": 7,
+      "inDegree": 1,
+      "outDegree": 4,
+      "instability": 0.8,
+      "sloc": 31
+    },
+    "/data/repositorios/pedido_repositorio_dados.dart": {
+      "id": "/data/repositorios/pedido_repositorio_dados.dart",
+      "label": "pedido_repositorio_dados",
+      "cd": 13,
+      "inDegree": 1,
+      "outDegree": 7,
+      "instability": 0.88,
+      "sloc": 66
+    },
+    "/data/repositorios/produto_repositorio_dados.dart": {
+      "id": "/data/repositorios/produto_repositorio_dados.dart",
+      "label": "produto_repositorio_dados",
+      "cd": 8,
+      "inDegree": 1,
+      "outDegree": 6,
+      "instability": 0.86,
+      "sloc": 61
+    },
+    "/data/repositorios/rota_repositorio_dados.dart": {
+      "id": "/data/repositorios/rota_repositorio_dados.dart",
+      "label": "rota_repositorio_dados",
+      "cd": 6,
+      "inDegree": 1,
+      "outDegree": 4,
+      "instability": 0.8,
+      "sloc": 12
+    },
+    "/domain/casos_de_uso/aceitar_pedido.dart": {
+      "id": "/domain/casos_de_uso/aceitar_pedido.dart",
+      "label": "aceitar_pedido",
+      "cd": 9,
+      "inDegree": 2,
+      "outDegree": 4,
+      "instability": 0.67,
+      "sloc": 22
+    },
+    "/domain/casos_de_uso/ampliar_tempo.dart": {
+      "id": "/domain/casos_de_uso/ampliar_tempo.dart",
+      "label": "ampliar_tempo",
+      "cd": 9,
+      "inDegree": 2,
+      "outDegree": 4,
+      "instability": 0.67,
+      "sloc": 22
+    },
+    "/domain/casos_de_uso/buscar_endereco_do_cliente.dart": {
+      "id": "/domain/casos_de_uso/buscar_endereco_do_cliente.dart",
+      "label": "buscar_endereco_do_cliente",
+      "cd": 6,
+      "inDegree": 2,
+      "outDegree": 3,
+      "instability": 0.6,
+      "sloc": 12
+    },
+    "/domain/casos_de_uso/cadastrar_cliente.dart": {
+      "id": "/domain/casos_de_uso/cadastrar_cliente.dart",
+      "label": "cadastrar_cliente",
+      "cd": 7,
+      "inDegree": 2,
+      "outDegree": 5,
+      "instability": 0.71,
+      "sloc": 102
+    },
+    "/domain/casos_de_uso/calcular_rota_do_pedido.dart": {
+      "id": "/domain/casos_de_uso/calcular_rota_do_pedido.dart",
+      "label": "calcular_rota_do_pedido",
+      "cd": 9,
+      "inDegree": 2,
+      "outDegree": 4,
+      "instability": 0.67,
+      "sloc": 19
+    },
+    "/domain/casos_de_uso/entrar_com_email.dart": {
+      "id": "/domain/casos_de_uso/entrar_com_email.dart",
+      "label": "entrar_com_email",
+      "cd": 4,
+      "inDegree": 2,
+      "outDegree": 2,
+      "instability": 0.5,
+      "sloc": 16
+    },
+    "/domain/casos_de_uso/entrar_com_google.dart": {
+      "id": "/domain/casos_de_uso/entrar_com_google.dart",
+      "label": "entrar_com_google",
+      "cd": 3,
+      "inDegree": 2,
+      "outDegree": 1,
+      "instability": 0.33,
+      "sloc": 9
+    },
+    "/domain/casos_de_uso/enviar_pedido.dart": {
+      "id": "/domain/casos_de_uso/enviar_pedido.dart",
+      "label": "enviar_pedido",
+      "cd": 17,
+      "inDegree": 2,
+      "outDegree": 9,
+      "instability": 0.82,
+      "sloc": 70
+    },
+    "/domain/casos_de_uso/filtrar_pedidos.dart": {
+      "id": "/domain/casos_de_uso/filtrar_pedidos.dart",
+      "label": "filtrar_pedidos",
+      "cd": 9,
+      "inDegree": 2,
+      "outDegree": 4,
+      "instability": 0.67,
+      "sloc": 30
+    },
+    "/domain/casos_de_uso/finalizar_entrega.dart": {
+      "id": "/domain/casos_de_uso/finalizar_entrega.dart",
+      "label": "finalizar_entrega",
+      "cd": 13,
+      "inDegree": 2,
+      "outDegree": 5,
+      "instability": 0.71,
+      "sloc": 40
+    },
+    "/domain/casos_de_uso/garantir_produtos_fixos.dart": {
+      "id": "/domain/casos_de_uso/garantir_produtos_fixos.dart",
+      "label": "garantir_produtos_fixos",
+      "cd": 5,
+      "inDegree": 3,
+      "outDegree": 1,
+      "instability": 0.25,
+      "sloc": 6
+    },
+    "/domain/casos_de_uso/observar_clientes.dart": {
+      "id": "/domain/casos_de_uso/observar_clientes.dart",
+      "label": "observar_clientes",
+      "cd": 4,
+      "inDegree": 2,
+      "outDegree": 2,
+      "instability": 0.5,
+      "sloc": 12
+    },
+    "/domain/casos_de_uso/observar_historico_estoque.dart": {
+      "id": "/domain/casos_de_uso/observar_historico_estoque.dart",
+      "label": "observar_historico_estoque",
+      "cd": 5,
+      "inDegree": 2,
+      "outDegree": 2,
+      "instability": 0.5,
+      "sloc": 11
+    },
+    "/domain/casos_de_uso/observar_pedido.dart": {
+      "id": "/domain/casos_de_uso/observar_pedido.dart",
+      "label": "observar_pedido",
+      "cd": 8,
+      "inDegree": 2,
+      "outDegree": 2,
+      "instability": 0.5,
+      "sloc": 7
+    },
+    "/domain/casos_de_uso/observar_pedidos_do_cliente.dart": {
+      "id": "/domain/casos_de_uso/observar_pedidos_do_cliente.dart",
+      "label": "observar_pedidos_do_cliente",
+      "cd": 10,
+      "inDegree": 3,
+      "outDegree": 3,
+      "instability": 0.5,
+      "sloc": 18
+    },
+    "/domain/casos_de_uso/observar_pedidos_recebidos.dart": {
+      "id": "/domain/casos_de_uso/observar_pedidos_recebidos.dart",
+      "label": "observar_pedidos_recebidos",
+      "cd": 8,
+      "inDegree": 2,
+      "outDegree": 3,
+      "instability": 0.6,
+      "sloc": 23
+    },
+    "/domain/casos_de_uso/observar_produtos.dart": {
+      "id": "/domain/casos_de_uso/observar_produtos.dart",
+      "label": "observar_produtos",
+      "cd": 6,
+      "inDegree": 3,
+      "outDegree": 3,
+      "instability": 0.5,
+      "sloc": 10
+    },
+    "/domain/casos_de_uso/observar_quantidade_pedidos.dart": {
+      "id": "/domain/casos_de_uso/observar_quantidade_pedidos.dart",
+      "label": "observar_quantidade_pedidos",
+      "cd": 8,
+      "inDegree": 2,
+      "outDegree": 1,
+      "instability": 0.33,
+      "sloc": 15
+    },
+    "/domain/casos_de_uso/observar_sessao.dart": {
+      "id": "/domain/casos_de_uso/observar_sessao.dart",
+      "label": "observar_sessao",
+      "cd": 4,
+      "inDegree": 2,
+      "outDegree": 3,
+      "instability": 0.6,
+      "sloc": 18
+    },
+    "/domain/casos_de_uso/obter_perfil_cliente.dart": {
+      "id": "/domain/casos_de_uso/obter_perfil_cliente.dart",
+      "label": "obter_perfil_cliente",
+      "cd": 4,
+      "inDegree": 2,
+      "outDegree": 2,
+      "instability": 0.5,
+      "sloc": 7
+    },
+    "/domain/casos_de_uso/recusar_pedido.dart": {
+      "id": "/domain/casos_de_uso/recusar_pedido.dart",
+      "label": "recusar_pedido",
+      "cd": 9,
+      "inDegree": 2,
+      "outDegree": 4,
+      "instability": 0.67,
+      "sloc": 20
+    },
+    "/domain/casos_de_uso/registrar_entrada.dart": {
+      "id": "/domain/casos_de_uso/registrar_entrada.dart",
+      "label": "registrar_entrada",
+      "cd": 6,
+      "inDegree": 2,
+      "outDegree": 3,
+      "instability": 0.6,
+      "sloc": 17
+    },
+    "/domain/casos_de_uso/resumir_pedidos_do_cliente.dart": {
+      "id": "/domain/casos_de_uso/resumir_pedidos_do_cliente.dart",
+      "label": "resumir_pedidos_do_cliente",
+      "cd": 7,
+      "inDegree": 2,
+      "outDegree": 2,
+      "instability": 0.5,
+      "sloc": 30
+    },
+    "/domain/casos_de_uso/sair_da_conta.dart": {
+      "id": "/domain/casos_de_uso/sair_da_conta.dart",
+      "label": "sair_da_conta",
+      "cd": 3,
+      "inDegree": 2,
+      "outDegree": 1,
+      "instability": 0.33,
+      "sloc": 6
+    },
+    "/domain/casos_de_uso/salvar_produto.dart": {
+      "id": "/domain/casos_de_uso/salvar_produto.dart",
+      "label": "salvar_produto",
+      "cd": 6,
+      "inDegree": 2,
+      "outDegree": 3,
+      "instability": 0.6,
+      "sloc": 49
+    },
+    "/domain/casos_de_uso/validar_quantidade.dart": {
+      "id": "/domain/casos_de_uso/validar_quantidade.dart",
+      "label": "validar_quantidade",
+      "cd": 2,
+      "inDegree": 2,
+      "outDegree": 1,
+      "instability": 0.33,
+      "sloc": 10
+    },
+    "/domain/entidades/administrador.dart": {
+      "id": "/domain/entidades/administrador.dart",
+      "label": "administrador",
+      "cd": 1,
+      "inDegree": 0,
+      "outDegree": 0,
+      "instability": null,
+      "sloc": 10
+    },
+    "/domain/entidades/cliente.dart": {
+      "id": "/domain/entidades/cliente.dart",
+      "label": "cliente",
+      "cd": 2,
+      "inDegree": 11,
+      "outDegree": 1,
+      "instability": 0.08,
+      "sloc": 19
+    },
+    "/domain/entidades/coordenada.dart": {
+      "id": "/domain/entidades/coordenada.dart",
+      "label": "coordenada",
+      "cd": 1,
+      "inDegree": 4,
+      "outDegree": 0,
+      "instability": 0.0,
+      "sloc": 5
+    },
+    "/domain/entidades/deslocamento.dart": {
+      "id": "/domain/entidades/deslocamento.dart",
+      "label": "deslocamento",
+      "cd": 2,
+      "inDegree": 7,
+      "outDegree": 1,
+      "instability": 0.13,
+      "sloc": 13
+    },
+    "/domain/entidades/endereco.dart": {
+      "id": "/domain/entidades/endereco.dart",
+      "label": "endereco",
+      "cd": 1,
+      "inDegree": 8,
+      "outDegree": 0,
+      "instability": 0.0,
+      "sloc": 20
+    },
+    "/domain/entidades/item_pedido.dart": {
+      "id": "/domain/entidades/item_pedido.dart",
+      "label": "item_pedido",
+      "cd": 1,
+      "inDegree": 5,
+      "outDegree": 0,
+      "instability": 0.0,
+      "sloc": 17
+    },
+    "/domain/entidades/movimentacao_estoque.dart": {
+      "id": "/domain/entidades/movimentacao_estoque.dart",
+      "label": "movimentacao_estoque",
+      "cd": 2,
+      "inDegree": 8,
+      "outDegree": 1,
+      "instability": 0.11,
+      "sloc": 25
+    },
+    "/domain/entidades/pedido.dart": {
+      "id": "/domain/entidades/pedido.dart",
+      "label": "pedido",
+      "cd": 6,
+      "inDegree": 26,
+      "outDegree": 4,
+      "instability": 0.13,
+      "sloc": 36
+    },
+    "/domain/entidades/perfil.dart": {
+      "id": "/domain/entidades/perfil.dart",
+      "label": "perfil",
+      "cd": 1,
+      "inDegree": 4,
+      "outDegree": 0,
+      "instability": 0.0,
+      "sloc": 1
+    },
+    "/domain/entidades/periodo_pedidos.dart": {
+      "id": "/domain/entidades/periodo_pedidos.dart",
+      "label": "periodo_pedidos",
+      "cd": 1,
+      "inDegree": 3,
+      "outDegree": 0,
+      "instability": 0.0,
+      "sloc": 8
+    },
+    "/domain/entidades/produto.dart": {
+      "id": "/domain/entidades/produto.dart",
+      "label": "produto",
+      "cd": 1,
+      "inDegree": 13,
+      "outDegree": 0,
+      "instability": 0.0,
+      "sloc": 12
+    },
+    "/domain/entidades/situacao_pedido.dart": {
+      "id": "/domain/entidades/situacao_pedido.dart",
+      "label": "situacao_pedido",
+      "cd": 1,
+      "inDegree": 17,
+      "outDegree": 0,
+      "instability": 0.0,
+      "sloc": 8
+    },
+    "/domain/entidades/situacao_sessao.dart": {
+      "id": "/domain/entidades/situacao_sessao.dart",
+      "label": "situacao_sessao",
+      "cd": 1,
+      "inDegree": 2,
+      "outDegree": 0,
+      "instability": 0.0,
+      "sloc": 1
+    },
+    "/domain/entidades/tipo_movimentacao.dart": {
+      "id": "/domain/entidades/tipo_movimentacao.dart",
+      "label": "tipo_movimentacao",
+      "cd": 1,
+      "inDegree": 5,
+      "outDegree": 0,
+      "instability": 0.0,
+      "sloc": 7
+    },
+    "/domain/falhas.dart": {
+      "id": "/domain/falhas.dart",
+      "label": "falhas",
+      "cd": 1,
+      "inDegree": 25,
+      "outDegree": 0,
+      "instability": 0.0,
+      "sloc": 30
+    },
+    "/domain/normalizar_busca.dart": {
+      "id": "/domain/normalizar_busca.dart",
+      "label": "normalizar_busca",
+      "cd": 1,
+      "inDegree": 2,
+      "outDegree": 0,
+      "instability": 0.0,
+      "sloc": 10
+    },
+    "/domain/ordem_produtos.dart": {
+      "id": "/domain/ordem_produtos.dart",
+      "label": "ordem_produtos",
+      "cd": 5,
+      "inDegree": 1,
+      "outDegree": 2,
+      "instability": 0.67,
+      "sloc": 11
+    },
+    "/domain/repositorios/autenticacao_repositorio.dart": {
+      "id": "/domain/repositorios/autenticacao_repositorio.dart",
+      "label": "autenticacao_repositorio",
+      "cd": 2,
+      "inDegree": 11,
+      "outDegree": 1,
+      "instability": 0.08,
+      "sloc": 11
+    },
+    "/domain/repositorios/cliente_repositorio.dart": {
+      "id": "/domain/repositorios/cliente_repositorio.dart",
+      "label": "cliente_repositorio",
+      "cd": 3,
+      "inDegree": 8,
+      "outDegree": 1,
+      "instability": 0.11,
+      "sloc": 7
+    },
+    "/domain/repositorios/pedido_repositorio.dart": {
+      "id": "/domain/repositorios/pedido_repositorio.dart",
+      "label": "pedido_repositorio",
+      "cd": 7,
+      "inDegree": 13,
+      "outDegree": 2,
+      "instability": 0.13,
+      "sloc": 16
+    },
+    "/domain/repositorios/produto_repositorio.dart": {
+      "id": "/domain/repositorios/produto_repositorio.dart",
+      "label": "produto_repositorio",
+      "cd": 4,
+      "inDegree": 11,
+      "outDegree": 2,
+      "instability": 0.15,
+      "sloc": 20
+    },
+    "/domain/repositorios/rota_repositorio.dart": {
+      "id": "/domain/repositorios/rota_repositorio.dart",
+      "label": "rota_repositorio",
+      "cd": 3,
+      "inDegree": 4,
+      "outDegree": 1,
+      "instability": 0.2,
+      "sloc": 4
+    },
+    "/infra/autenticacao_firebase.dart": {
+      "id": "/infra/autenticacao_firebase.dart",
+      "label": "autenticacao_firebase",
+      "cd": 3,
+      "inDegree": 1,
+      "outDegree": 2,
+      "instability": 0.67,
+      "sloc": 96
+    },
+    "/infra/cliente_firestore.dart": {
+      "id": "/infra/cliente_firestore.dart",
+      "label": "cliente_firestore",
+      "cd": 3,
+      "inDegree": 1,
+      "outDegree": 2,
+      "instability": 0.67,
+      "sloc": 53
+    },
+    "/infra/pedido_firestore.dart": {
+      "id": "/infra/pedido_firestore.dart",
+      "label": "pedido_firestore",
+      "cd": 6,
+      "inDegree": 1,
+      "outDegree": 5,
+      "instability": 0.83,
+      "sloc": 172
+    },
+    "/infra/produto_firestore.dart": {
+      "id": "/infra/produto_firestore.dart",
+      "label": "produto_firestore",
+      "cd": 6,
+      "inDegree": 1,
+      "outDegree": 5,
+      "instability": 0.83,
+      "sloc": 154
+    },
+    "/infra/rota_google.dart": {
+      "id": "/infra/rota_google.dart",
+      "label": "rota_google",
+      "cd": 3,
+      "inDegree": 1,
+      "outDegree": 2,
+      "instability": 0.67,
+      "sloc": 71
+    },
+    "/main/app.dart": {
+      "id": "/main/app.dart",
+      "label": "app",
+      "cd": 104,
+      "inDegree": 1,
+      "outDegree": 3,
+      "instability": 0.75,
+      "sloc": 31
+    },
+    "/main/app_router.dart": {
+      "id": "/main/app_router.dart",
+      "label": "app_router",
+      "cd": 103,
+      "inDegree": 1,
+      "outDegree": 51,
+      "instability": 0.98,
+      "sloc": 236
+    },
+    "/main.dart": {
+      "id": "/main.dart",
+      "label": "main",
+      "cd": 128,
+      "inDegree": 0,
+      "outDegree": 19,
+      "instability": 1.0,
+      "sloc": 69
+    },
+    "/presentation/acompanhamento_viewmodel.dart": {
+      "id": "/presentation/acompanhamento_viewmodel.dart",
+      "label": "acompanhamento_viewmodel",
+      "cd": 12,
+      "inDegree": 2,
+      "outDegree": 3,
+      "instability": 0.6,
+      "sloc": 33
+    },
+    "/presentation/cadastro_viewmodel.dart": {
+      "id": "/presentation/cadastro_viewmodel.dart",
+      "label": "cadastro_viewmodel",
+      "cd": 8,
+      "inDegree": 2,
+      "outDegree": 3,
+      "instability": 0.6,
+      "sloc": 93
+    },
+    "/presentation/carrinho_viewmodel.dart": {
+      "id": "/presentation/carrinho_viewmodel.dart",
+      "label": "carrinho_viewmodel",
+      "cd": 22,
+      "inDegree": 2,
+      "outDegree": 7,
+      "instability": 0.78,
+      "sloc": 108
+    },
+    "/presentation/clientes_viewmodel.dart": {
+      "id": "/presentation/clientes_viewmodel.dart",
+      "label": "clientes_viewmodel",
+      "cd": 14,
+      "inDegree": 2,
+      "outDegree": 5,
+      "instability": 0.71,
+      "sloc": 55
+    },
+    "/presentation/detalhe_pedido_viewmodel.dart": {
+      "id": "/presentation/detalhe_pedido_viewmodel.dart",
+      "label": "detalhe_pedido_viewmodel",
+      "cd": 20,
+      "inDegree": 4,
+      "outDegree": 10,
+      "instability": 0.71,
+      "sloc": 139
+    },
+    "/presentation/estoque_viewmodel.dart": {
+      "id": "/presentation/estoque_viewmodel.dart",
+      "label": "estoque_viewmodel",
+      "cd": 11,
+      "inDegree": 2,
+      "outDegree": 6,
+      "instability": 0.75,
+      "sloc": 111
+    },
+    "/presentation/historico_estoque_viewmodel.dart": {
+      "id": "/presentation/historico_estoque_viewmodel.dart",
+      "label": "historico_estoque_viewmodel",
+      "cd": 7,
+      "inDegree": 2,
+      "outDegree": 3,
+      "instability": 0.6,
+      "sloc": 56
+    },
+    "/presentation/login_viewmodel.dart": {
+      "id": "/presentation/login_viewmodel.dart",
+      "label": "login_viewmodel",
+      "cd": 6,
+      "inDegree": 2,
+      "outDegree": 3,
+      "instability": 0.6,
+      "sloc": 44
+    },
+    "/presentation/pedidos_viewmodel.dart": {
+      "id": "/presentation/pedidos_viewmodel.dart",
+      "label": "pedidos_viewmodel",
+      "cd": 18,
+      "inDegree": 3,
+      "outDegree": 7,
+      "instability": 0.7,
+      "sloc": 85
+    },
+    "/presentation/perfil_cliente_viewmodel.dart": {
+      "id": "/presentation/perfil_cliente_viewmodel.dart",
+      "label": "perfil_cliente_viewmodel",
+      "cd": 16,
+      "inDegree": 3,
+      "outDegree": 6,
+      "instability": 0.67,
+      "sloc": 62
+    },
+    "/presentation/sessao_viewmodel.dart": {
+      "id": "/presentation/sessao_viewmodel.dart",
+      "label": "sessao_viewmodel",
+      "cd": 7,
+      "inDegree": 6,
+      "outDegree": 4,
+      "instability": 0.4,
+      "sloc": 58
+    },
+    "/ui/acompanhamento_view.dart": {
+      "id": "/ui/acompanhamento_view.dart",
+      "label": "acompanhamento_view",
+      "cd": 27,
+      "inDegree": 1,
+      "outDegree": 12,
+      "instability": 0.92,
+      "sloc": 202
+    },
+    "/ui/cadastro/campo_cadastro.dart": {
+      "id": "/ui/cadastro/campo_cadastro.dart",
+      "label": "campo_cadastro",
+      "cd": 1,
+      "inDegree": 1,
+      "outDegree": 0,
+      "instability": 0.0,
+      "sloc": 55
+    },
+    "/ui/cadastro/indicador_etapas.dart": {
+      "id": "/ui/cadastro/indicador_etapas.dart",
+      "label": "indicador_etapas",
+      "cd": 2,
+      "inDegree": 1,
+      "outDegree": 1,
+      "instability": 0.5,
+      "sloc": 43
+    },
+    "/ui/cadastro_view.dart": {
+      "id": "/ui/cadastro_view.dart",
+      "label": "cadastro_view",
+      "cd": 24,
+      "inDegree": 1,
+      "outDegree": 14,
+      "instability": 0.93,
+      "sloc": 493
+    },
+    "/ui/carregando_view.dart": {
+      "id": "/ui/carregando_view.dart",
+      "label": "carregando_view",
+      "cd": 10,
+      "inDegree": 1,
+      "outDegree": 2,
+      "instability": 0.67,
+      "sloc": 28
+    },
+    "/ui/carrinho_view.dart": {
+      "id": "/ui/carrinho_view.dart",
+      "label": "carrinho_view",
+      "cd": 38,
+      "inDegree": 1,
+      "outDegree": 13,
+      "instability": 0.93,
+      "sloc": 329
+    },
+    "/ui/clientes_view.dart": {
+      "id": "/ui/clientes_view.dart",
+      "label": "clientes_view",
+      "cd": 30,
+      "inDegree": 1,
+      "outDegree": 11,
+      "instability": 0.92,
+      "sloc": 149
+    },
+    "/ui/detalhe_pedido/bloco_rota.dart": {
+      "id": "/ui/detalhe_pedido/bloco_rota.dart",
+      "label": "bloco_rota",
+      "cd": 24,
+      "inDegree": 1,
+      "outDegree": 6,
+      "instability": 0.86,
+      "sloc": 105
+    },
+    "/ui/detalhe_pedido/cartao_cliente.dart": {
+      "id": "/ui/detalhe_pedido/cartao_cliente.dart",
+      "label": "cartao_cliente",
+      "cd": 12,
+      "inDegree": 1,
+      "outDegree": 5,
+      "instability": 0.83,
+      "sloc": 57
+    },
+    "/ui/detalhe_pedido/dialogos_pedido.dart": {
+      "id": "/ui/detalhe_pedido/dialogos_pedido.dart",
+      "label": "dialogos_pedido",
+      "cd": 24,
+      "inDegree": 1,
+      "outDegree": 4,
+      "instability": 0.8,
+      "sloc": 137
+    },
+    "/ui/detalhe_pedido/historico_pedido.dart": {
+      "id": "/ui/detalhe_pedido/historico_pedido.dart",
+      "label": "historico_pedido",
+      "cd": 9,
+      "inDegree": 1,
+      "outDegree": 4,
+      "instability": 0.8,
+      "sloc": 126
+    },
+    "/ui/detalhe_pedido/itens_pedido.dart": {
+      "id": "/ui/detalhe_pedido/itens_pedido.dart",
+      "label": "itens_pedido",
+      "cd": 11,
+      "inDegree": 1,
+      "outDegree": 4,
+      "instability": 0.8,
+      "sloc": 52
+    },
+    "/ui/detalhe_pedido/mapa_rota.dart": {
+      "id": "/ui/detalhe_pedido/mapa_rota.dart",
+      "label": "mapa_rota",
+      "cd": 3,
+      "inDegree": 1,
+      "outDegree": 2,
+      "instability": 0.67,
+      "sloc": 91
+    },
+    "/ui/detalhe_pedido_view.dart": {
+      "id": "/ui/detalhe_pedido_view.dart",
+      "label": "detalhe_pedido_view",
+      "cd": 45,
+      "inDegree": 1,
+      "outDegree": 13,
+      "instability": 0.93,
+      "sloc": 156
+    },
+    "/ui/estoque_view.dart": {
+      "id": "/ui/estoque_view.dart",
+      "label": "estoque_view",
+      "cd": 29,
+      "inDegree": 1,
+      "outDegree": 13,
+      "instability": 0.93,
+      "sloc": 290
+    },
+    "/ui/historico_estoque_view.dart": {
+      "id": "/ui/historico_estoque_view.dart",
+      "label": "historico_estoque_view",
+      "cd": 14,
+      "inDegree": 1,
+      "outDegree": 9,
+      "instability": 0.9,
+      "sloc": 146
+    },
+    "/ui/login_view.dart": {
+      "id": "/ui/login_view.dart",
+      "label": "login_view",
+      "cd": 12,
+      "inDegree": 1,
+      "outDegree": 6,
+      "instability": 0.86,
+      "sloc": 154
+    },
+    "/ui/pedidos/painel_filtros.dart": {
+      "id": "/ui/pedidos/painel_filtros.dart",
+      "label": "painel_filtros",
+      "cd": 20,
+      "inDegree": 1,
+      "outDegree": 4,
+      "instability": 0.8,
+      "sloc": 211
+    },
+    "/ui/pedidos_view.dart": {
+      "id": "/ui/pedidos_view.dart",
+      "label": "pedidos_view",
+      "cd": 36,
+      "inDegree": 1,
+      "outDegree": 11,
+      "instability": 0.92,
+      "sloc": 116
+    },
+    "/ui/perfil_cliente/cabecalho_cliente.dart": {
+      "id": "/ui/perfil_cliente/cabecalho_cliente.dart",
+      "label": "cabecalho_cliente",
+      "cd": 5,
+      "inDegree": 1,
+      "outDegree": 3,
+      "instability": 0.75,
+      "sloc": 41
+    },
+    "/ui/perfil_cliente/dados_cliente.dart": {
+      "id": "/ui/perfil_cliente/dados_cliente.dart",
+      "label": "dados_cliente",
+      "cd": 6,
+      "inDegree": 1,
+      "outDegree": 4,
+      "instability": 0.8,
+      "sloc": 80
+    },
+    "/ui/perfil_cliente/resumo_cliente.dart": {
+      "id": "/ui/perfil_cliente/resumo_cliente.dart",
+      "label": "resumo_cliente",
+      "cd": 19,
+      "inDegree": 1,
+      "outDegree": 3,
+      "instability": 0.75,
+      "sloc": 101
+    },
+    "/ui/perfil_cliente_view.dart": {
+      "id": "/ui/perfil_cliente_view.dart",
+      "label": "perfil_cliente_view",
+      "cd": 34,
+      "inDegree": 1,
+      "outDegree": 10,
+      "instability": 0.91,
+      "sloc": 74
+    },
+    "/ui/tema.dart": {
+      "id": "/ui/tema.dart",
+      "label": "tema",
+      "cd": 1,
+      "inDegree": 34,
+      "outDegree": 0,
+      "instability": 0.0,
+      "sloc": 240
+    },
+    "/ui/widgets/abrir_dialogo.dart": {
+      "id": "/ui/widgets/abrir_dialogo.dart",
+      "label": "abrir_dialogo",
+      "cd": 1,
+      "inDegree": 2,
+      "outDegree": 0,
+      "instability": 0.0,
+      "sloc": 13
+    },
+    "/ui/widgets/avatar_iniciais.dart": {
+      "id": "/ui/widgets/avatar_iniciais.dart",
+      "label": "avatar_iniciais",
+      "cd": 2,
+      "inDegree": 3,
+      "outDegree": 1,
+      "instability": 0.25,
+      "sloc": 36
+    },
+    "/ui/widgets/aviso_destaque.dart": {
+      "id": "/ui/widgets/aviso_destaque.dart",
+      "label": "aviso_destaque",
+      "cd": 2,
+      "inDegree": 2,
+      "outDegree": 1,
+      "instability": 0.33,
+      "sloc": 56
+    },
+    "/ui/widgets/botao_carregando.dart": {
+      "id": "/ui/widgets/botao_carregando.dart",
+      "label": "botao_carregando",
+      "cd": 2,
+      "inDegree": 3,
+      "outDegree": 1,
+      "instability": 0.25,
+      "sloc": 32
+    },
+    "/ui/widgets/botao_sair.dart": {
+      "id": "/ui/widgets/botao_sair.dart",
+      "label": "botao_sair",
+      "cd": 8,
+      "inDegree": 8,
+      "outDegree": 1,
+      "instability": 0.11,
+      "sloc": 14
+    },
+    "/ui/widgets/botoes_dialogo.dart": {
+      "id": "/ui/widgets/botoes_dialogo.dart",
+      "label": "botoes_dialogo",
+      "cd": 2,
+      "inDegree": 4,
+      "outDegree": 1,
+      "instability": 0.2,
+      "sloc": 46
+    },
+    "/ui/widgets/campo_senha.dart": {
+      "id": "/ui/widgets/campo_senha.dart",
+      "label": "campo_senha",
+      "cd": 1,
+      "inDegree": 2,
+      "outDegree": 0,
+      "instability": 0.0,
+      "sloc": 44
+    },
+    "/ui/widgets/cartao_pedido.dart": {
+      "id": "/ui/widgets/cartao_pedido.dart",
+      "label": "cartao_pedido",
+      "cd": 9,
+      "inDegree": 2,
+      "outDegree": 2,
+      "instability": 0.5,
+      "sloc": 30
+    },
+    "/ui/widgets/entrada_animada.dart": {
+      "id": "/ui/widgets/entrada_animada.dart",
+      "label": "entrada_animada",
+      "cd": 2,
+      "inDegree": 8,
+      "outDegree": 1,
+      "instability": 0.11,
+      "sloc": 29
+    },
+    "/ui/widgets/estado_vazio.dart": {
+      "id": "/ui/widgets/estado_vazio.dart",
+      "label": "estado_vazio",
+      "cd": 3,
+      "inDegree": 7,
+      "outDegree": 2,
+      "instability": 0.22,
+      "sloc": 31
+    },
+    "/ui/widgets/formatos.dart": {
+      "id": "/ui/widgets/formatos.dart",
+      "label": "formatos",
+      "cd": 1,
+      "inDegree": 14,
+      "outDegree": 0,
+      "instability": 0.0,
+      "sloc": 30
+    },
+    "/ui/widgets/icone_produto.dart": {
+      "id": "/ui/widgets/icone_produto.dart",
+      "label": "icone_produto",
+      "cd": 2,
+      "inDegree": 3,
+      "outDegree": 1,
+      "instability": 0.25,
+      "sloc": 28
+    },
+    "/ui/widgets/linha_dado.dart": {
+      "id": "/ui/widgets/linha_dado.dart",
+      "label": "linha_dado",
+      "cd": 2,
+      "inDegree": 2,
+      "outDegree": 1,
+      "instability": 0.33,
+      "sloc": 48
+    },
+    "/ui/widgets/linha_item_pedido.dart": {
+      "id": "/ui/widgets/linha_item_pedido.dart",
+      "label": "linha_item_pedido",
+      "cd": 5,
+      "inDegree": 2,
+      "outDegree": 4,
+      "instability": 0.67,
+      "sloc": 72
+    },
+    "/ui/widgets/mascaras.dart": {
+      "id": "/ui/widgets/mascaras.dart",
+      "label": "mascaras",
+      "cd": 1,
+      "inDegree": 1,
+      "outDegree": 0,
+      "instability": 0.0,
+      "sloc": 42
+    },
+    "/ui/widgets/mensagem_erro.dart": {
+      "id": "/ui/widgets/mensagem_erro.dart",
+      "label": "mensagem_erro",
+      "cd": 2,
+      "inDegree": 13,
+      "outDegree": 1,
+      "instability": 0.07,
+      "sloc": 51
+    },
+    "/ui/widgets/navegacao_admin.dart": {
+      "id": "/ui/widgets/navegacao_admin.dart",
+      "label": "navegacao_admin",
+      "cd": 2,
+      "inDegree": 3,
+      "outDegree": 1,
+      "instability": 0.25,
+      "sloc": 43
+    },
+    "/ui/widgets/selo_situacao.dart": {
+      "id": "/ui/widgets/selo_situacao.dart",
+      "label": "selo_situacao",
+      "cd": 3,
+      "inDegree": 3,
+      "outDegree": 2,
+      "instability": 0.4,
+      "sloc": 48
+    },
+    "/ui/widgets/texto_animado.dart": {
+      "id": "/ui/widgets/texto_animado.dart",
+      "label": "texto_animado",
+      "cd": 2,
+      "inDegree": 1,
+      "outDegree": 1,
+      "instability": 0.5,
+      "sloc": 26
+    },
+    "/ui/widgets/troca_suave.dart": {
+      "id": "/ui/widgets/troca_suave.dart",
+      "label": "troca_suave",
+      "cd": 2,
+      "inDegree": 6,
+      "outDegree": 1,
+      "instability": 0.14,
+      "sloc": 16
+    }
+  },
+  "subgraphs": [
+    {
+      "id": "",
+      "label": "lib",
+      "nodes": [
+        "/main.dart"
+      ],
+      "subgraphs": [
+        {
+          "id": "/data",
+          "label": "data",
+          "nodes": [],
+          "subgraphs": [
+            {
+              "id": "/data/fontes",
+              "label": "fontes",
+              "nodes": [
+                "/data/fontes/autenticacao_fonte.dart",
+                "/data/fontes/cliente_fonte.dart",
+                "/data/fontes/pedido_fonte.dart",
+                "/data/fontes/produto_fonte.dart",
+                "/data/fontes/rota_fonte.dart"
+              ],
+              "subgraphs": []
+            },
+            {
+              "id": "/data/modelos",
+              "label": "modelos",
+              "nodes": [
+                "/data/modelos/cliente_modelo.dart",
+                "/data/modelos/deslocamento_modelo.dart",
+                "/data/modelos/endereco_modelo.dart",
+                "/data/modelos/item_pedido_modelo.dart",
+                "/data/modelos/movimentacao_estoque_modelo.dart",
+                "/data/modelos/pedido_modelo.dart",
+                "/data/modelos/perfil_modelo.dart",
+                "/data/modelos/produto_modelo.dart"
+              ],
+              "subgraphs": []
+            },
+            {
+              "id": "/data/repositorios",
+              "label": "repositorios",
+              "nodes": [
+                "/data/repositorios/autenticacao_repositorio_dados.dart",
+                "/data/repositorios/cliente_repositorio_dados.dart",
+                "/data/repositorios/pedido_repositorio_dados.dart",
+                "/data/repositorios/produto_repositorio_dados.dart",
+                "/data/repositorios/rota_repositorio_dados.dart"
+              ],
+              "subgraphs": []
+            }
+          ]
+        },
+        {
+          "id": "/domain",
+          "label": "domain",
+          "nodes": [
+            "/domain/falhas.dart",
+            "/domain/normalizar_busca.dart",
+            "/domain/ordem_produtos.dart"
+          ],
+          "subgraphs": [
+            {
+              "id": "/domain/casos_de_uso",
+              "label": "casos_de_uso",
+              "nodes": [
+                "/domain/casos_de_uso/aceitar_pedido.dart",
+                "/domain/casos_de_uso/ampliar_tempo.dart",
+                "/domain/casos_de_uso/buscar_endereco_do_cliente.dart",
+                "/domain/casos_de_uso/cadastrar_cliente.dart",
+                "/domain/casos_de_uso/calcular_rota_do_pedido.dart",
+                "/domain/casos_de_uso/entrar_com_email.dart",
+                "/domain/casos_de_uso/entrar_com_google.dart",
+                "/domain/casos_de_uso/enviar_pedido.dart",
+                "/domain/casos_de_uso/filtrar_pedidos.dart",
+                "/domain/casos_de_uso/finalizar_entrega.dart",
+                "/domain/casos_de_uso/garantir_produtos_fixos.dart",
+                "/domain/casos_de_uso/observar_clientes.dart",
+                "/domain/casos_de_uso/observar_historico_estoque.dart",
+                "/domain/casos_de_uso/observar_pedido.dart",
+                "/domain/casos_de_uso/observar_pedidos_do_cliente.dart",
+                "/domain/casos_de_uso/observar_pedidos_recebidos.dart",
+                "/domain/casos_de_uso/observar_produtos.dart",
+                "/domain/casos_de_uso/observar_quantidade_pedidos.dart",
+                "/domain/casos_de_uso/observar_sessao.dart",
+                "/domain/casos_de_uso/obter_perfil_cliente.dart",
+                "/domain/casos_de_uso/recusar_pedido.dart",
+                "/domain/casos_de_uso/registrar_entrada.dart",
+                "/domain/casos_de_uso/resumir_pedidos_do_cliente.dart",
+                "/domain/casos_de_uso/sair_da_conta.dart",
+                "/domain/casos_de_uso/salvar_produto.dart",
+                "/domain/casos_de_uso/validar_quantidade.dart"
+              ],
+              "subgraphs": []
+            },
+            {
+              "id": "/domain/entidades",
+              "label": "entidades",
+              "nodes": [
+                "/domain/entidades/administrador.dart",
+                "/domain/entidades/cliente.dart",
+                "/domain/entidades/coordenada.dart",
+                "/domain/entidades/deslocamento.dart",
+                "/domain/entidades/endereco.dart",
+                "/domain/entidades/item_pedido.dart",
+                "/domain/entidades/movimentacao_estoque.dart",
+                "/domain/entidades/pedido.dart",
+                "/domain/entidades/perfil.dart",
+                "/domain/entidades/periodo_pedidos.dart",
+                "/domain/entidades/produto.dart",
+                "/domain/entidades/situacao_pedido.dart",
+                "/domain/entidades/situacao_sessao.dart",
+                "/domain/entidades/tipo_movimentacao.dart"
+              ],
+              "subgraphs": []
+            },
+            {
+              "id": "/domain/repositorios",
+              "label": "repositorios",
+              "nodes": [
+                "/domain/repositorios/autenticacao_repositorio.dart",
+                "/domain/repositorios/cliente_repositorio.dart",
+                "/domain/repositorios/pedido_repositorio.dart",
+                "/domain/repositorios/produto_repositorio.dart",
+                "/domain/repositorios/rota_repositorio.dart"
+              ],
+              "subgraphs": []
+            }
+          ]
+        },
+        {
+          "id": "/infra",
+          "label": "infra",
+          "nodes": [
+            "/infra/autenticacao_firebase.dart",
+            "/infra/cliente_firestore.dart",
+            "/infra/pedido_firestore.dart",
+            "/infra/produto_firestore.dart",
+            "/infra/rota_google.dart"
+          ],
+          "subgraphs": []
+        },
+        {
+          "id": "/main",
+          "label": "main",
+          "nodes": [
+            "/main/app.dart",
+            "/main/app_router.dart"
+          ],
+          "subgraphs": []
+        },
+        {
+          "id": "/presentation",
+          "label": "presentation",
+          "nodes": [
+            "/presentation/acompanhamento_viewmodel.dart",
+            "/presentation/cadastro_viewmodel.dart",
+            "/presentation/carrinho_viewmodel.dart",
+            "/presentation/clientes_viewmodel.dart",
+            "/presentation/detalhe_pedido_viewmodel.dart",
+            "/presentation/estoque_viewmodel.dart",
+            "/presentation/historico_estoque_viewmodel.dart",
+            "/presentation/login_viewmodel.dart",
+            "/presentation/pedidos_viewmodel.dart",
+            "/presentation/perfil_cliente_viewmodel.dart",
+            "/presentation/sessao_viewmodel.dart"
+          ],
+          "subgraphs": []
+        },
+        {
+          "id": "/ui",
+          "label": "ui",
+          "nodes": [
+            "/ui/acompanhamento_view.dart",
+            "/ui/cadastro_view.dart",
+            "/ui/carregando_view.dart",
+            "/ui/carrinho_view.dart",
+            "/ui/clientes_view.dart",
+            "/ui/detalhe_pedido_view.dart",
+            "/ui/estoque_view.dart",
+            "/ui/historico_estoque_view.dart",
+            "/ui/login_view.dart",
+            "/ui/pedidos_view.dart",
+            "/ui/perfil_cliente_view.dart",
+            "/ui/tema.dart"
+          ],
+          "subgraphs": [
+            {
+              "id": "/ui/cadastro",
+              "label": "cadastro",
+              "nodes": [
+                "/ui/cadastro/campo_cadastro.dart",
+                "/ui/cadastro/indicador_etapas.dart"
+              ],
+              "subgraphs": []
+            },
+            {
+              "id": "/ui/detalhe_pedido",
+              "label": "detalhe_pedido",
+              "nodes": [
+                "/ui/detalhe_pedido/bloco_rota.dart",
+                "/ui/detalhe_pedido/cartao_cliente.dart",
+                "/ui/detalhe_pedido/dialogos_pedido.dart",
+                "/ui/detalhe_pedido/historico_pedido.dart",
+                "/ui/detalhe_pedido/itens_pedido.dart",
+                "/ui/detalhe_pedido/mapa_rota.dart"
+              ],
+              "subgraphs": []
+            },
+            {
+              "id": "/ui/pedidos",
+              "label": "pedidos",
+              "nodes": [
+                "/ui/pedidos/painel_filtros.dart"
+              ],
+              "subgraphs": []
+            },
+            {
+              "id": "/ui/perfil_cliente",
+              "label": "perfil_cliente",
+              "nodes": [
+                "/ui/perfil_cliente/cabecalho_cliente.dart",
+                "/ui/perfil_cliente/dados_cliente.dart",
+                "/ui/perfil_cliente/resumo_cliente.dart"
+              ],
+              "subgraphs": []
+            },
+            {
+              "id": "/ui/widgets",
+              "label": "widgets",
+              "nodes": [
+                "/ui/widgets/abrir_dialogo.dart",
+                "/ui/widgets/avatar_iniciais.dart",
+                "/ui/widgets/aviso_destaque.dart",
+                "/ui/widgets/botao_carregando.dart",
+                "/ui/widgets/botao_sair.dart",
+                "/ui/widgets/botoes_dialogo.dart",
+                "/ui/widgets/campo_senha.dart",
+                "/ui/widgets/cartao_pedido.dart",
+                "/ui/widgets/entrada_animada.dart",
+                "/ui/widgets/estado_vazio.dart",
+                "/ui/widgets/formatos.dart",
+                "/ui/widgets/icone_produto.dart",
+                "/ui/widgets/linha_dado.dart",
+                "/ui/widgets/linha_item_pedido.dart",
+                "/ui/widgets/mascaras.dart",
+                "/ui/widgets/mensagem_erro.dart",
+                "/ui/widgets/navegacao_admin.dart",
+                "/ui/widgets/selo_situacao.dart",
+                "/ui/widgets/texto_animado.dart",
+                "/ui/widgets/troca_suave.dart"
+              ],
+              "subgraphs": []
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "edges": [
+    {
+      "from": "/data/modelos/cliente_modelo.dart",
+      "to": "/domain/entidades/cliente.dart",
+      "directive": "import"
+    },
+    {
+      "from": "/data/modelos/cliente_modelo.dart",
+      "to": "/data/modelos/endereco_modelo.dart",
+      "directive": "import"
+    },
+    {
+      "from": "/data/modelos/deslocamento_modelo.dart",
+      "to": "/domain/entidades/coordenada.dart",
+      "directive": "import"
+    },
+    {
+      "from": "/data/modelos/deslocamento_modelo.dart",
+      "to": "/domain/entidades/deslocamento.dart",
+      "directive": "import"
+    },
+    {
+      "from": "/data/modelos/endereco_modelo.dart",
+      "to": "/domain/entidades/endereco.dart",
+      "directive": "import"
+    },
+    {
+      "from": "/data/modelos/item_pedido_modelo.dart",
+      "to": "/domain/entidades/item_pedido.dart",
+      "directive": "import"
+    },
+    {
+      "from": "/data/modelos/movimentacao_estoque_modelo.dart",
+      "to": "/domain/entidades/movimentacao_estoque.dart",
+      "directive": "import"
+    },
+    {
+      "from": "/data/modelos/movimentacao_estoque_modelo.dart",
+      "to": "/domain/entidades/tipo_movimentacao.dart",
+      "directive": "import"
+    },
+    {
+      "from": "/data/modelos/pedido_modelo.dart",
+      "to": "/domain/entidades/pedido.dart",
+      "directive": "import"
+    },
+    {
+      "from": "/data/modelos/pedido_modelo.dart",
+      "to": "/domain/entidades/situacao_pedido.dart",
+      "directive": "import"
+    },
+    {
+      "from": "/data/modelos/pedido_modelo.dart",
+      "to": "/data/modelos/deslocamento_modelo.dart",
+      "directive": "import"
+    },
+    {
+      "from": "/data/modelos/pedido_modelo.dart",
+      "to": "/data/modelos/endereco_modelo.dart",
+      "directive": "import"
+    },
+    {
+      "from": "/data/modelos/pedido_modelo.dart",
+      "to": "/data/modelos/item_pedido_modelo.dart",
+      "directive": "import"
+    },
+    {
+      "from": "/data/modelos/perfil_modelo.dart",
+      "to": "/domain/entidades/perfil.dart",
+      "directive": "import"
+    },
+    {
+      "from": "/data/modelos/produto_modelo.dart",
+      "to": "/domain/entidades/produto.dart",
+      "directive": "import"
+    },
+    {
+      "from": "/data/repositorios/autenticacao_repositorio_dados.dart",
+      "to": "/domain/entidades/perfil.dart",
+      "directive": "import"
+    },
+    {
+      "from": "/data/repositorios/autenticacao_repositorio_dados.dart",
+      "to": "/domain/repositorios/autenticacao_repositorio.dart",
+      "directive": "import"
+    },
+    {
+      "from": "/data/repositorios/autenticacao_repositorio_dados.dart",
+      "to": "/data/fontes/autenticacao_fonte.dart",
+      "directive": "import"
+    },
+    {
+      "from": "/data/repositorios/autenticacao_repositorio_dados.dart",
+      "to": "/data/modelos/perfil_modelo.dart",
+      "directive": "import"
+    },
+    {
+      "from": "/data/repositorios/cliente_repositorio_dados.dart",
+      "to": "/domain/entidades/cliente.dart",
+      "directive": "import"
+    },
+    {
+      "from": "/data/repositorios/cliente_repositorio_dados.dart",
+      "to": "/domain/repositorios/cliente_repositorio.dart",
+      "directive": "import"
+    },
+    {
+      "from": "/data/repositorios/cliente_repositorio_dados.dart",
+      "to": "/data/fontes/cliente_fonte.dart",
+      "directive": "import"
+    },
+    {
+      "from": "/data/repositorios/cliente_repositorio_dados.dart",
+      "to": "/data/modelos/cliente_modelo.dart",
+      "directive": "import"
+    },
+    {
+      "from": "/data/repositorios/pedido_repositorio_dados.dart",
+      "to": "/domain/entidades/deslocamento.dart",
+      "directive": "import"
+    },
+    {
+      "from": "/data/repositorios/pedido_repositorio_dados.dart",
+      "to": "/domain/entidades/pedido.dart",
+      "directive": "import"
+    },
+    {
+      "from": "/data/repositorios/pedido_repositorio_dados.dart",
+      "to": "/domain/repositorios/pedido_repositorio.dart",
+      "directive": "import"
+    },
+    {
+      "from": "/data/repositorios/pedido_repositorio_dados.dart",
+      "to": "/data/fontes/pedido_fonte.dart",
+      "directive": "import"
+    },
+    {
+      "from": "/data/repositorios/pedido_repositorio_dados.dart",
+      "to": "/data/modelos/deslocamento_modelo.dart",
+      "directive": "import"
+    },
+    {
+      "from": "/data/repositorios/pedido_repositorio_dados.dart",
+      "to": "/data/modelos/item_pedido_modelo.dart",
+      "directive": "import"
+    },
+    {
+      "from": "/data/repositorios/pedido_repositorio_dados.dart",
+      "to": "/data/modelos/pedido_modelo.dart",
+      "directive": "import"
+    },
+    {
+      "from": "/data/repositorios/produto_repositorio_dados.dart",
+      "to": "/domain/entidades/movimentacao_estoque.dart",
+      "directive": "import"
+    },
+    {
+      "from": "/data/repositorios/produto_repositorio_dados.dart",
+      "to": "/domain/entidades/produto.dart",
+      "directive": "import"
+    },
+    {
+      "from": "/data/repositorios/produto_repositorio_dados.dart",
+      "to": "/domain/repositorios/produto_repositorio.dart",
+      "directive": "import"
+    },
+    {
+      "from": "/data/repositorios/produto_repositorio_dados.dart",
+      "to": "/data/fontes/produto_fonte.dart",
+      "directive": "import"
+    },
+    {
+      "from": "/data/repositorios/produto_repositorio_dados.dart",
+      "to": "/data/modelos/movimentacao_estoque_modelo.dart",
+      "directive": "import"
+    },
+    {
+      "from": "/data/repositorios/produto_repositorio_dados.dart",
+      "to": "/data/modelos/produto_modelo.dart",
+      "directive": "import"
+    },
+    {
+      "from": "/data/repositorios/rota_repositorio_dados.dart",
+      "to": "/domain/entidades/deslocamento.dart",
+      "directive": "import"
+    },
+    {
+      "from": "/data/repositorios/rota_repositorio_dados.dart",
+      "to": "/domain/repositorios/rota_repositorio.dart",
+      "directive": "import"
+    },
+    {
+      "from": "/data/repositorios/rota_repositorio_dados.dart",
+      "to": "/data/fontes/rota_fonte.dart",
+      "directive": "import"
+    },
+    {
+      "from": "/data/repositorios/rota_repositorio_dados.dart",
+      "to": "/data/modelos/deslocamento_modelo.dart",
+      "directive": "import"
+    },
+    {
+      "from": "/domain/casos_de_uso/aceitar_pedido.dart",
+      "to": "/domain/entidades/pedido.dart",
+      "directive": "import"
+    },
+    {
+      "from": "/domain/casos_de_uso/aceitar_pedido.dart",
+      "to": "/domain/entidades/situacao_pedido.dart",
+      "directive": "import"
+    },
+    {
+      "from": "/domain/casos_de_uso/aceitar_pedido.dart",
+      "to": "/domain/falhas.dart",
+      "directive": "import"
+    },
+    {
+      "from": "/domain/casos_de_uso/aceitar_pedido.dart",
+      "to": "/domain/repositorios/pedido_repositorio.dart",
+      "directive": "import"
+    },
+    {
+      "from": "/domain/casos_de_uso/ampliar_tempo.dart",
+      "to": "/domain/entidades/pedido.dart",
+      "directive": "import"
+    },
+    {
+      "from": "/domain/casos_de_uso/ampliar_tempo.dart",
+      "to": "/domain/entidades/situacao_pedido.dart",
+      "directive": "import"
+    },
+    {
+      "from": "/domain/casos_de_uso/ampliar_tempo.dart",
+      "to": "/domain/falhas.dart",
+      "directive": "import"
+    },
+    {
+      "from": "/domain/casos_de_uso/ampliar_tempo.dart",
+      "to": "/domain/repositorios/pedido_repositorio.dart",
+      "directive": "import"
+    },
+    {
+      "from": "/domain/casos_de_uso/buscar_endereco_do_cliente.dart",
+      "to": "/domain/entidades/endereco.dart",
+      "directive": "import"
+    },
+    {
+      "from": "/domain/casos_de_uso/buscar_endereco_do_cliente.dart",
+      "to": "/domain/repositorios/autenticacao_repositorio.dart",
+      "directive": "import"
+    },
+    {
+      "from": "/domain/casos_de_uso/buscar_endereco_do_cliente.dart",
+      "to": "/domain/repositorios/cliente_repositorio.dart",
+      "directive": "import"
+    },
+    {
+      "from": "/domain/casos_de_uso/cadastrar_cliente.dart",
+      "to": "/domain/entidades/cliente.dart",
+      "directive": "import"
+    },
+    {
+      "from": "/domain/casos_de_uso/cadastrar_cliente.dart",
+      "to": "/domain/entidades/endereco.dart",
+      "directive": "import"
+    },
+    {
+      "from": "/domain/casos_de_uso/cadastrar_cliente.dart",
+      "to": "/domain/falhas.dart",
+      "directive": "import"
+    },
+    {
+      "from": "/domain/casos_de_uso/cadastrar_cliente.dart",
+      "to": "/domain/repositorios/autenticacao_repositorio.dart",
+      "directive": "import"
+    },
+    {
+      "from": "/domain/casos_de_uso/cadastrar_cliente.dart",
+      "to": "/domain/repositorios/cliente_repositorio.dart",
+      "directive": "import"
+    },
+    {
+      "from": "/domain/casos_de_uso/calcular_rota_do_pedido.dart",
+      "to": "/domain/entidades/pedido.dart",
+      "directive": "import"
+    },
+    {
+      "from": "/domain/casos_de_uso/calcular_rota_do_pedido.dart",
+      "to": "/domain/entidades/situacao_pedido.dart",
+      "directive": "import"
+    },
+    {
+      "from": "/domain/casos_de_uso/calcular_rota_do_pedido.dart",
+      "to": "/domain/repositorios/pedido_repositorio.dart",
+      "directive": "import"
+    },
+    {
+      "from": "/domain/casos_de_uso/calcular_rota_do_pedido.dart",
+      "to": "/domain/repositorios/rota_repositorio.dart",
+      "directive": "import"
+    },
+    {
+      "from": "/domain/casos_de_uso/entrar_com_email.dart",
+      "to": "/domain/falhas.dart",
+      "directive": "import"
+    },
+    {
+      "from": "/domain/casos_de_uso/entrar_com_email.dart",
+      "to": "/domain/repositorios/autenticacao_repositorio.dart",
+      "directive": "import"
+    },
+    {
+      "from": "/domain/casos_de_uso/entrar_com_google.dart",
+      "to": "/domain/repositorios/autenticacao_repositorio.dart",
+      "directive": "import"
+    },
+    {
+      "from": "/domain/casos_de_uso/enviar_pedido.dart",
+      "to": "/domain/entidades/item_pedido.dart",
+      "directive": "import"
+    },
+    {
+      "from": "/domain/casos_de_uso/enviar_pedido.dart",
+      "to": "/domain/entidades/pedido.dart",
+      "directive": "import"
+    },
+    {
+      "from": "/domain/casos_de_uso/enviar_pedido.dart",
+      "to": "/domain/entidades/produto.dart",
+      "directive": "import"
+    },
+    {
+      "from": "/domain/casos_de_uso/enviar_pedido.dart",
+      "to": "/domain/entidades/situacao_pedido.dart",
+      "directive": "import"
+    },
+    {
+      "from": "/domain/casos_de_uso/enviar_pedido.dart",
+      "to": "/domain/falhas.dart",
+      "directive": "import"
+    },
+    {
+      "from": "/domain/casos_de_uso/enviar_pedido.dart",
+      "to": "/domain/repositorios/autenticacao_repositorio.dart",
+      "directive": "import"
+    },
+    {
+      "from": "/domain/casos_de_uso/enviar_pedido.dart",
+      "to": "/domain/repositorios/cliente_repositorio.dart",
+      "directive": "import"
+    },
+    {
+      "from": "/domain/casos_de_uso/enviar_pedido.dart",
+      "to": "/domain/repositorios/pedido_repositorio.dart",
+      "directive": "import"
+    },
+    {
+      "from": "/domain/casos_de_uso/enviar_pedido.dart",
+      "to": "/domain/repositorios/produto_repositorio.dart",
+      "directive": "import"
+    },
+    {
+      "from": "/domain/casos_de_uso/filtrar_pedidos.dart",
+      "to": "/domain/entidades/pedido.dart",
+      "directive": "import"
+    },
+    {
+      "from": "/domain/casos_de_uso/filtrar_pedidos.dart",
+      "to": "/domain/entidades/periodo_pedidos.dart",
+      "directive": "import"
+    },
+    {
+      "from": "/domain/casos_de_uso/filtrar_pedidos.dart",
+      "to": "/domain/entidades/situacao_pedido.dart",
+      "directive": "import"
+    },
+    {
+      "from": "/domain/casos_de_uso/filtrar_pedidos.dart",
+      "to": "/domain/normalizar_busca.dart",
+      "directive": "import"
+    },
+    {
+      "from": "/domain/casos_de_uso/finalizar_entrega.dart",
+      "to": "/domain/entidades/pedido.dart",
+      "directive": "import"
+    },
+    {
+      "from": "/domain/casos_de_uso/finalizar_entrega.dart",
+      "to": "/domain/entidades/situacao_pedido.dart",
+      "directive": "import"
+    },
+    {
+      "from": "/domain/casos_de_uso/finalizar_entrega.dart",
+      "to": "/domain/falhas.dart",
+      "directive": "import"
+    },
+    {
+      "from": "/domain/casos_de_uso/finalizar_entrega.dart",
+      "to": "/domain/repositorios/pedido_repositorio.dart",
+      "directive": "import"
+    },
+    {
+      "from": "/domain/casos_de_uso/finalizar_entrega.dart",
+      "to": "/domain/repositorios/produto_repositorio.dart",
+      "directive": "import"
+    },
+    {
+      "from": "/domain/casos_de_uso/garantir_produtos_fixos.dart",
+      "to": "/domain/repositorios/produto_repositorio.dart",
+      "directive": "import"
+    },
+    {
+      "from": "/domain/casos_de_uso/observar_clientes.dart",
+      "to": "/domain/entidades/cliente.dart",
+      "directive": "import"
+    },
+    {
+      "from": "/domain/casos_de_uso/observar_clientes.dart",
+      "to": "/domain/repositorios/cliente_repositorio.dart",
+      "directive": "import"
+    },
+    {
+      "from": "/domain/casos_de_uso/observar_historico_estoque.dart",
+      "to": "/domain/entidades/movimentacao_estoque.dart",
+      "directive": "import"
+    },
+    {
+      "from": "/domain/casos_de_uso/observar_historico_estoque.dart",
+      "to": "/domain/repositorios/produto_repositorio.dart",
+      "directive": "import"
+    },
+    {
+      "from": "/domain/casos_de_uso/observar_pedido.dart",
+      "to": "/domain/entidades/pedido.dart",
+      "directive": "import"
+    },
+    {
+      "from": "/domain/casos_de_uso/observar_pedido.dart",
+      "to": "/domain/repositorios/pedido_repositorio.dart",
+      "directive": "import"
+    },
+    {
+      "from": "/domain/casos_de_uso/observar_pedidos_do_cliente.dart",
+      "to": "/domain/entidades/pedido.dart",
+      "directive": "import"
+    },
+    {
+      "from": "/domain/casos_de_uso/observar_pedidos_do_cliente.dart",
+      "to": "/domain/repositorios/autenticacao_repositorio.dart",
+      "directive": "import"
+    },
+    {
+      "from": "/domain/casos_de_uso/observar_pedidos_do_cliente.dart",
+      "to": "/domain/repositorios/pedido_repositorio.dart",
+      "directive": "import"
+    },
+    {
+      "from": "/domain/casos_de_uso/observar_pedidos_recebidos.dart",
+      "to": "/domain/entidades/pedido.dart",
+      "directive": "import"
+    },
+    {
+      "from": "/domain/casos_de_uso/observar_pedidos_recebidos.dart",
+      "to": "/domain/entidades/situacao_pedido.dart",
+      "directive": "import"
+    },
+    {
+      "from": "/domain/casos_de_uso/observar_pedidos_recebidos.dart",
+      "to": "/domain/repositorios/pedido_repositorio.dart",
+      "directive": "import"
+    },
+    {
+      "from": "/domain/casos_de_uso/observar_produtos.dart",
+      "to": "/domain/entidades/produto.dart",
+      "directive": "import"
+    },
+    {
+      "from": "/domain/casos_de_uso/observar_produtos.dart",
+      "to": "/domain/ordem_produtos.dart",
+      "directive": "import"
+    },
+    {
+      "from": "/domain/casos_de_uso/observar_produtos.dart",
+      "to": "/domain/repositorios/produto_repositorio.dart",
+      "directive": "import"
+    },
+    {
+      "from": "/domain/casos_de_uso/observar_quantidade_pedidos.dart",
+      "to": "/domain/repositorios/pedido_repositorio.dart",
+      "directive": "import"
+    },
+    {
+      "from": "/domain/casos_de_uso/observar_sessao.dart",
+      "to": "/domain/entidades/perfil.dart",
+      "directive": "import"
+    },
+    {
+      "from": "/domain/casos_de_uso/observar_sessao.dart",
+      "to": "/domain/entidades/situacao_sessao.dart",
+      "directive": "import"
+    },
+    {
+      "from": "/domain/casos_de_uso/observar_sessao.dart",
+      "to": "/domain/repositorios/autenticacao_repositorio.dart",
+      "directive": "import"
+    },
+    {
+      "from": "/domain/casos_de_uso/obter_perfil_cliente.dart",
+      "to": "/domain/entidades/cliente.dart",
+      "directive": "import"
+    },
+    {
+      "from": "/domain/casos_de_uso/obter_perfil_cliente.dart",
+      "to": "/domain/repositorios/cliente_repositorio.dart",
+      "directive": "import"
+    },
+    {
+      "from": "/domain/casos_de_uso/recusar_pedido.dart",
+      "to": "/domain/entidades/pedido.dart",
+      "directive": "import"
+    },
+    {
+      "from": "/domain/casos_de_uso/recusar_pedido.dart",
+      "to": "/domain/entidades/situacao_pedido.dart",
+      "directive": "import"
+    },
+    {
+      "from": "/domain/casos_de_uso/recusar_pedido.dart",
+      "to": "/domain/falhas.dart",
+      "directive": "import"
+    },
+    {
+      "from": "/domain/casos_de_uso/recusar_pedido.dart",
+      "to": "/domain/repositorios/pedido_repositorio.dart",
+      "directive": "import"
+    },
+    {
+      "from": "/domain/casos_de_uso/registrar_entrada.dart",
+      "to": "/domain/entidades/produto.dart",
+      "directive": "import"
+    },
+    {
+      "from": "/domain/casos_de_uso/registrar_entrada.dart",
+      "to": "/domain/falhas.dart",
+      "directive": "import"
+    },
+    {
+      "from": "/domain/casos_de_uso/registrar_entrada.dart",
+      "to": "/domain/repositorios/produto_repositorio.dart",
+      "directive": "import"
+    },
+    {
+      "from": "/domain/casos_de_uso/resumir_pedidos_do_cliente.dart",
+      "to": "/domain/entidades/pedido.dart",
+      "directive": "import"
+    },
+    {
+      "from": "/domain/casos_de_uso/resumir_pedidos_do_cliente.dart",
+      "to": "/domain/entidades/situacao_pedido.dart",
+      "directive": "import"
+    },
+    {
+      "from": "/domain/casos_de_uso/sair_da_conta.dart",
+      "to": "/domain/repositorios/autenticacao_repositorio.dart",
+      "directive": "import"
+    },
+    {
+      "from": "/domain/casos_de_uso/salvar_produto.dart",
+      "to": "/domain/entidades/produto.dart",
+      "directive": "import"
+    },
+    {
+      "from": "/domain/casos_de_uso/salvar_produto.dart",
+      "to": "/domain/falhas.dart",
+      "directive": "import"
+    },
+    {
+      "from": "/domain/casos_de_uso/salvar_produto.dart",
+      "to": "/domain/repositorios/produto_repositorio.dart",
+      "directive": "import"
+    },
+    {
+      "from": "/domain/casos_de_uso/validar_quantidade.dart",
+      "to": "/domain/entidades/produto.dart",
+      "directive": "import"
+    },
+    {
+      "from": "/domain/entidades/cliente.dart",
+      "to": "/domain/entidades/endereco.dart",
+      "directive": "import"
+    },
+    {
+      "from": "/domain/entidades/deslocamento.dart",
+      "to": "/domain/entidades/coordenada.dart",
+      "directive": "import"
+    },
+    {
+      "from": "/domain/entidades/movimentacao_estoque.dart",
+      "to": "/domain/entidades/tipo_movimentacao.dart",
+      "directive": "import"
+    },
+    {
+      "from": "/domain/entidades/pedido.dart",
+      "to": "/domain/entidades/deslocamento.dart",
+      "directive": "import"
+    },
+    {
+      "from": "/domain/entidades/pedido.dart",
+      "to": "/domain/entidades/endereco.dart",
+      "directive": "import"
+    },
+    {
+      "from": "/domain/entidades/pedido.dart",
+      "to": "/domain/entidades/item_pedido.dart",
+      "directive": "import"
+    },
+    {
+      "from": "/domain/entidades/pedido.dart",
+      "to": "/domain/entidades/situacao_pedido.dart",
+      "directive": "import"
+    },
+    {
+      "from": "/domain/ordem_produtos.dart",
+      "to": "/domain/entidades/produto.dart",
+      "directive": "import"
+    },
+    {
+      "from": "/domain/ordem_produtos.dart",
+      "to": "/domain/repositorios/produto_repositorio.dart",
+      "directive": "import"
+    },
+    {
+      "from": "/domain/repositorios/autenticacao_repositorio.dart",
+      "to": "/domain/entidades/perfil.dart",
+      "directive": "import"
+    },
+    {
+      "from": "/domain/repositorios/cliente_repositorio.dart",
+      "to": "/domain/entidades/cliente.dart",
+      "directive": "import"
+    },
+    {
+      "from": "/domain/repositorios/pedido_repositorio.dart",
+      "to": "/domain/entidades/deslocamento.dart",
+      "directive": "import"
+    },
+    {
+      "from": "/domain/repositorios/pedido_repositorio.dart",
+      "to": "/domain/entidades/pedido.dart",
+      "directive": "import"
+    },
+    {
+      "from": "/domain/repositorios/produto_repositorio.dart",
+      "to": "/domain/entidades/movimentacao_estoque.dart",
+      "directive": "import"
+    },
+    {
+      "from": "/domain/repositorios/produto_repositorio.dart",
+      "to": "/domain/entidades/produto.dart",
+      "directive": "import"
+    },
+    {
+      "from": "/domain/repositorios/rota_repositorio.dart",
+      "to": "/domain/entidades/deslocamento.dart",
+      "directive": "import"
+    },
+    {
+      "from": "/infra/autenticacao_firebase.dart",
+      "to": "/data/fontes/autenticacao_fonte.dart",
+      "directive": "import"
+    },
+    {
+      "from": "/infra/autenticacao_firebase.dart",
+      "to": "/domain/falhas.dart",
+      "directive": "import"
+    },
+    {
+      "from": "/infra/cliente_firestore.dart",
+      "to": "/data/fontes/cliente_fonte.dart",
+      "directive": "import"
+    },
+    {
+      "from": "/infra/cliente_firestore.dart",
+      "to": "/domain/falhas.dart",
+      "directive": "import"
+    },
+    {
+      "from": "/infra/pedido_firestore.dart",
+      "to": "/data/fontes/pedido_fonte.dart",
+      "directive": "import"
+    },
+    {
+      "from": "/infra/pedido_firestore.dart",
+      "to": "/data/modelos/movimentacao_estoque_modelo.dart",
+      "directive": "import"
+    },
+    {
+      "from": "/infra/pedido_firestore.dart",
+      "to": "/domain/entidades/movimentacao_estoque.dart",
+      "directive": "import"
+    },
+    {
+      "from": "/infra/pedido_firestore.dart",
+      "to": "/domain/entidades/tipo_movimentacao.dart",
+      "directive": "import"
+    },
+    {
+      "from": "/infra/pedido_firestore.dart",
+      "to": "/domain/falhas.dart",
+      "directive": "import"
+    },
+    {
+      "from": "/infra/produto_firestore.dart",
+      "to": "/data/fontes/produto_fonte.dart",
+      "directive": "import"
+    },
+    {
+      "from": "/infra/produto_firestore.dart",
+      "to": "/data/modelos/movimentacao_estoque_modelo.dart",
+      "directive": "import"
+    },
+    {
+      "from": "/infra/produto_firestore.dart",
+      "to": "/domain/entidades/movimentacao_estoque.dart",
+      "directive": "import"
+    },
+    {
+      "from": "/infra/produto_firestore.dart",
+      "to": "/domain/entidades/tipo_movimentacao.dart",
+      "directive": "import"
+    },
+    {
+      "from": "/infra/produto_firestore.dart",
+      "to": "/domain/falhas.dart",
+      "directive": "import"
+    },
+    {
+      "from": "/infra/rota_google.dart",
+      "to": "/data/fontes/rota_fonte.dart",
+      "directive": "import"
+    },
+    {
+      "from": "/infra/rota_google.dart",
+      "to": "/domain/falhas.dart",
+      "directive": "import"
+    },
+    {
+      "from": "/main/app.dart",
+      "to": "/presentation/sessao_viewmodel.dart",
+      "directive": "import"
+    },
+    {
+      "from": "/main/app.dart",
+      "to": "/main/app_router.dart",
+      "directive": "import"
+    },
+    {
+      "from": "/main/app.dart",
+      "to": "/ui/tema.dart",
+      "directive": "import"
+    },
+    {
+      "from": "/main/app_router.dart",
+      "to": "/domain/casos_de_uso/aceitar_pedido.dart",
+      "directive": "import"
+    },
+    {
+      "from": "/main/app_router.dart",
+      "to": "/domain/casos_de_uso/ampliar_tempo.dart",
+      "directive": "import"
+    },
+    {
+      "from": "/main/app_router.dart",
+      "to": "/domain/casos_de_uso/buscar_endereco_do_cliente.dart",
+      "directive": "import"
+    },
+    {
+      "from": "/main/app_router.dart",
+      "to": "/domain/casos_de_uso/cadastrar_cliente.dart",
+      "directive": "import"
+    },
+    {
+      "from": "/main/app_router.dart",
+      "to": "/domain/casos_de_uso/calcular_rota_do_pedido.dart",
+      "directive": "import"
+    },
+    {
+      "from": "/main/app_router.dart",
+      "to": "/domain/casos_de_uso/finalizar_entrega.dart",
+      "directive": "import"
+    },
+    {
+      "from": "/main/app_router.dart",
+      "to": "/domain/casos_de_uso/observar_pedido.dart",
+      "directive": "import"
+    },
+    {
+      "from": "/main/app_router.dart",
+      "to": "/domain/casos_de_uso/observar_pedidos_recebidos.dart",
+      "directive": "import"
+    },
+    {
+      "from": "/main/app_router.dart",
+      "to": "/domain/casos_de_uso/recusar_pedido.dart",
+      "directive": "import"
+    },
+    {
+      "from": "/main/app_router.dart",
+      "to": "/domain/repositorios/rota_repositorio.dart",
+      "directive": "import"
+    },
+    {
+      "from": "/main/app_router.dart",
+      "to": "/domain/casos_de_uso/entrar_com_email.dart",
+      "directive": "import"
+    },
+    {
+      "from": "/main/app_router.dart",
+      "to": "/domain/casos_de_uso/entrar_com_google.dart",
+      "directive": "import"
+    },
+    {
+      "from": "/main/app_router.dart",
+      "to": "/domain/casos_de_uso/enviar_pedido.dart",
+      "directive": "import"
+    },
+    {
+      "from": "/main/app_router.dart",
+      "to": "/domain/casos_de_uso/filtrar_pedidos.dart",
+      "directive": "import"
+    },
+    {
+      "from": "/main/app_router.dart",
+      "to": "/domain/casos_de_uso/garantir_produtos_fixos.dart",
+      "directive": "import"
+    },
+    {
+      "from": "/main/app_router.dart",
+      "to": "/domain/casos_de_uso/observar_clientes.dart",
+      "directive": "import"
+    },
+    {
+      "from": "/main/app_router.dart",
+      "to": "/domain/casos_de_uso/observar_historico_estoque.dart",
+      "directive": "import"
+    },
+    {
+      "from": "/main/app_router.dart",
+      "to": "/domain/casos_de_uso/observar_quantidade_pedidos.dart",
+      "directive": "import"
+    },
+    {
+      "from": "/main/app_router.dart",
+      "to": "/domain/casos_de_uso/obter_perfil_cliente.dart",
+      "directive": "import"
+    },
+    {
+      "from": "/main/app_router.dart",
+      "to": "/domain/casos_de_uso/resumir_pedidos_do_cliente.dart",
+      "directive": "import"
+    },
+    {
+      "from": "/main/app_router.dart",
+      "to": "/domain/casos_de_uso/observar_pedidos_do_cliente.dart",
+      "directive": "import"
+    },
+    {
+      "from": "/main/app_router.dart",
+      "to": "/domain/casos_de_uso/observar_produtos.dart",
+      "directive": "import"
+    },
+    {
+      "from": "/main/app_router.dart",
+      "to": "/domain/casos_de_uso/registrar_entrada.dart",
+      "directive": "import"
+    },
+    {
+      "from": "/main/app_router.dart",
+      "to": "/domain/casos_de_uso/salvar_produto.dart",
+      "directive": "import"
+    },
+    {
+      "from": "/main/app_router.dart",
+      "to": "/domain/casos_de_uso/validar_quantidade.dart",
+      "directive": "import"
+    },
+    {
+      "from": "/main/app_router.dart",
+      "to": "/domain/repositorios/autenticacao_repositorio.dart",
+      "directive": "import"
+    },
+    {
+      "from": "/main/app_router.dart",
+      "to": "/domain/repositorios/cliente_repositorio.dart",
+      "directive": "import"
+    },
+    {
+      "from": "/main/app_router.dart",
+      "to": "/domain/repositorios/pedido_repositorio.dart",
+      "directive": "import"
+    },
+    {
+      "from": "/main/app_router.dart",
+      "to": "/domain/repositorios/produto_repositorio.dart",
+      "directive": "import"
+    },
+    {
+      "from": "/main/app_router.dart",
+      "to": "/presentation/acompanhamento_viewmodel.dart",
+      "directive": "import"
+    },
+    {
+      "from": "/main/app_router.dart",
+      "to": "/presentation/cadastro_viewmodel.dart",
+      "directive": "import"
+    },
+    {
+      "from": "/main/app_router.dart",
+      "to": "/presentation/carrinho_viewmodel.dart",
+      "directive": "import"
+    },
+    {
+      "from": "/main/app_router.dart",
+      "to": "/presentation/clientes_viewmodel.dart",
+      "directive": "import"
+    },
+    {
+      "from": "/main/app_router.dart",
+      "to": "/presentation/detalhe_pedido_viewmodel.dart",
+      "directive": "import"
+    },
+    {
+      "from": "/main/app_router.dart",
+      "to": "/presentation/estoque_viewmodel.dart",
+      "directive": "import"
+    },
+    {
+      "from": "/main/app_router.dart",
+      "to": "/presentation/historico_estoque_viewmodel.dart",
+      "directive": "import"
+    },
+    {
+      "from": "/main/app_router.dart",
+      "to": "/presentation/login_viewmodel.dart",
+      "directive": "import"
+    },
+    {
+      "from": "/main/app_router.dart",
+      "to": "/presentation/pedidos_viewmodel.dart",
+      "directive": "import"
+    },
+    {
+      "from": "/main/app_router.dart",
+      "to": "/presentation/perfil_cliente_viewmodel.dart",
+      "directive": "import"
+    },
+    {
+      "from": "/main/app_router.dart",
+      "to": "/presentation/sessao_viewmodel.dart",
+      "directive": "import"
+    },
+    {
+      "from": "/main/app_router.dart",
+      "to": "/ui/acompanhamento_view.dart",
+      "directive": "import"
+    },
+    {
+      "from": "/main/app_router.dart",
+      "to": "/ui/cadastro_view.dart",
+      "directive": "import"
+    },
+    {
+      "from": "/main/app_router.dart",
+      "to": "/ui/carregando_view.dart",
+      "directive": "import"
+    },
+    {
+      "from": "/main/app_router.dart",
+      "to": "/ui/carrinho_view.dart",
+      "directive": "import"
+    },
+    {
+      "from": "/main/app_router.dart",
+      "to": "/ui/clientes_view.dart",
+      "directive": "import"
+    },
+    {
+      "from": "/main/app_router.dart",
+      "to": "/ui/detalhe_pedido_view.dart",
+      "directive": "import"
+    },
+    {
+      "from": "/main/app_router.dart",
+      "to": "/ui/estoque_view.dart",
+      "directive": "import"
+    },
+    {
+      "from": "/main/app_router.dart",
+      "to": "/ui/historico_estoque_view.dart",
+      "directive": "import"
+    },
+    {
+      "from": "/main/app_router.dart",
+      "to": "/ui/login_view.dart",
+      "directive": "import"
+    },
+    {
+      "from": "/main/app_router.dart",
+      "to": "/ui/pedidos_view.dart",
+      "directive": "import"
+    },
+    {
+      "from": "/main/app_router.dart",
+      "to": "/ui/perfil_cliente_view.dart",
+      "directive": "import"
+    },
+    {
+      "from": "/main.dart",
+      "to": "/data/repositorios/autenticacao_repositorio_dados.dart",
+      "directive": "import"
+    },
+    {
+      "from": "/main.dart",
+      "to": "/data/repositorios/cliente_repositorio_dados.dart",
+      "directive": "import"
+    },
+    {
+      "from": "/main.dart",
+      "to": "/data/repositorios/pedido_repositorio_dados.dart",
+      "directive": "import"
+    },
+    {
+      "from": "/main.dart",
+      "to": "/data/repositorios/produto_repositorio_dados.dart",
+      "directive": "import"
+    },
+    {
+      "from": "/main.dart",
+      "to": "/data/repositorios/rota_repositorio_dados.dart",
+      "directive": "import"
+    },
+    {
+      "from": "/main.dart",
+      "to": "/domain/casos_de_uso/observar_sessao.dart",
+      "directive": "import"
+    },
+    {
+      "from": "/main.dart",
+      "to": "/domain/casos_de_uso/sair_da_conta.dart",
+      "directive": "import"
+    },
+    {
+      "from": "/main.dart",
+      "to": "/domain/repositorios/autenticacao_repositorio.dart",
+      "directive": "import"
+    },
+    {
+      "from": "/main.dart",
+      "to": "/domain/repositorios/cliente_repositorio.dart",
+      "directive": "import"
+    },
+    {
+      "from": "/main.dart",
+      "to": "/domain/repositorios/pedido_repositorio.dart",
+      "directive": "import"
+    },
+    {
+      "from": "/main.dart",
+      "to": "/domain/repositorios/produto_repositorio.dart",
+      "directive": "import"
+    },
+    {
+      "from": "/main.dart",
+      "to": "/domain/repositorios/rota_repositorio.dart",
+      "directive": "import"
+    },
+    {
+      "from": "/main.dart",
+      "to": "/infra/autenticacao_firebase.dart",
+      "directive": "import"
+    },
+    {
+      "from": "/main.dart",
+      "to": "/infra/cliente_firestore.dart",
+      "directive": "import"
+    },
+    {
+      "from": "/main.dart",
+      "to": "/infra/pedido_firestore.dart",
+      "directive": "import"
+    },
+    {
+      "from": "/main.dart",
+      "to": "/infra/produto_firestore.dart",
+      "directive": "import"
+    },
+    {
+      "from": "/main.dart",
+      "to": "/infra/rota_google.dart",
+      "directive": "import"
+    },
+    {
+      "from": "/main.dart",
+      "to": "/presentation/sessao_viewmodel.dart",
+      "directive": "import"
+    },
+    {
+      "from": "/main.dart",
+      "to": "/main/app.dart",
+      "directive": "import"
+    },
+    {
+      "from": "/presentation/acompanhamento_viewmodel.dart",
+      "to": "/domain/casos_de_uso/observar_pedidos_do_cliente.dart",
+      "directive": "import"
+    },
+    {
+      "from": "/presentation/acompanhamento_viewmodel.dart",
+      "to": "/domain/entidades/pedido.dart",
+      "directive": "import"
+    },
+    {
+      "from": "/presentation/acompanhamento_viewmodel.dart",
+      "to": "/domain/falhas.dart",
+      "directive": "import"
+    },
+    {
+      "from": "/presentation/cadastro_viewmodel.dart",
+      "to": "/domain/casos_de_uso/cadastrar_cliente.dart",
+      "directive": "import"
+    },
+    {
+      "from": "/presentation/cadastro_viewmodel.dart",
+      "to": "/domain/entidades/endereco.dart",
+      "directive": "import"
+    },
+    {
+      "from": "/presentation/cadastro_viewmodel.dart",
+      "to": "/domain/falhas.dart",
+      "directive": "import"
+    },
+    {
+      "from": "/presentation/carrinho_viewmodel.dart",
+      "to": "/domain/casos_de_uso/buscar_endereco_do_cliente.dart",
+      "directive": "import"
+    },
+    {
+      "from": "/presentation/carrinho_viewmodel.dart",
+      "to": "/domain/casos_de_uso/enviar_pedido.dart",
+      "directive": "import"
+    },
+    {
+      "from": "/presentation/carrinho_viewmodel.dart",
+      "to": "/domain/casos_de_uso/observar_produtos.dart",
+      "directive": "import"
+    },
+    {
+      "from": "/presentation/carrinho_viewmodel.dart",
+      "to": "/domain/casos_de_uso/validar_quantidade.dart",
+      "directive": "import"
+    },
+    {
+      "from": "/presentation/carrinho_viewmodel.dart",
+      "to": "/domain/entidades/endereco.dart",
+      "directive": "import"
+    },
+    {
+      "from": "/presentation/carrinho_viewmodel.dart",
+      "to": "/domain/entidades/produto.dart",
+      "directive": "import"
+    },
+    {
+      "from": "/presentation/carrinho_viewmodel.dart",
+      "to": "/domain/falhas.dart",
+      "directive": "import"
+    },
+    {
+      "from": "/presentation/clientes_viewmodel.dart",
+      "to": "/domain/casos_de_uso/observar_clientes.dart",
+      "directive": "import"
+    },
+    {
+      "from": "/presentation/clientes_viewmodel.dart",
+      "to": "/domain/casos_de_uso/observar_quantidade_pedidos.dart",
+      "directive": "import"
+    },
+    {
+      "from": "/presentation/clientes_viewmodel.dart",
+      "to": "/domain/entidades/cliente.dart",
+      "directive": "import"
+    },
+    {
+      "from": "/presentation/clientes_viewmodel.dart",
+      "to": "/domain/falhas.dart",
+      "directive": "import"
+    },
+    {
+      "from": "/presentation/clientes_viewmodel.dart",
+      "to": "/domain/normalizar_busca.dart",
+      "directive": "import"
+    },
+    {
+      "from": "/presentation/detalhe_pedido_viewmodel.dart",
+      "to": "/domain/casos_de_uso/aceitar_pedido.dart",
+      "directive": "import"
+    },
+    {
+      "from": "/presentation/detalhe_pedido_viewmodel.dart",
+      "to": "/domain/casos_de_uso/ampliar_tempo.dart",
+      "directive": "import"
+    },
+    {
+      "from": "/presentation/detalhe_pedido_viewmodel.dart",
+      "to": "/domain/casos_de_uso/calcular_rota_do_pedido.dart",
+      "directive": "import"
+    },
+    {
+      "from": "/presentation/detalhe_pedido_viewmodel.dart",
+      "to": "/domain/casos_de_uso/finalizar_entrega.dart",
+      "directive": "import"
+    },
+    {
+      "from": "/presentation/detalhe_pedido_viewmodel.dart",
+      "to": "/domain/casos_de_uso/observar_pedido.dart",
+      "directive": "import"
+    },
+    {
+      "from": "/presentation/detalhe_pedido_viewmodel.dart",
+      "to": "/domain/casos_de_uso/recusar_pedido.dart",
+      "directive": "import"
+    },
+    {
+      "from": "/presentation/detalhe_pedido_viewmodel.dart",
+      "to": "/domain/entidades/coordenada.dart",
+      "directive": "import"
+    },
+    {
+      "from": "/presentation/detalhe_pedido_viewmodel.dart",
+      "to": "/domain/entidades/item_pedido.dart",
+      "directive": "import"
+    },
+    {
+      "from": "/presentation/detalhe_pedido_viewmodel.dart",
+      "to": "/domain/entidades/pedido.dart",
+      "directive": "import"
+    },
+    {
+      "from": "/presentation/detalhe_pedido_viewmodel.dart",
+      "to": "/domain/falhas.dart",
+      "directive": "import"
+    },
+    {
+      "from": "/presentation/estoque_viewmodel.dart",
+      "to": "/domain/casos_de_uso/garantir_produtos_fixos.dart",
+      "directive": "import"
+    },
+    {
+      "from": "/presentation/estoque_viewmodel.dart",
+      "to": "/domain/casos_de_uso/observar_produtos.dart",
+      "directive": "import"
+    },
+    {
+      "from": "/presentation/estoque_viewmodel.dart",
+      "to": "/domain/casos_de_uso/registrar_entrada.dart",
+      "directive": "import"
+    },
+    {
+      "from": "/presentation/estoque_viewmodel.dart",
+      "to": "/domain/casos_de_uso/salvar_produto.dart",
+      "directive": "import"
+    },
+    {
+      "from": "/presentation/estoque_viewmodel.dart",
+      "to": "/domain/entidades/produto.dart",
+      "directive": "import"
+    },
+    {
+      "from": "/presentation/estoque_viewmodel.dart",
+      "to": "/domain/falhas.dart",
+      "directive": "import"
+    },
+    {
+      "from": "/presentation/historico_estoque_viewmodel.dart",
+      "to": "/domain/casos_de_uso/observar_historico_estoque.dart",
+      "directive": "import"
+    },
+    {
+      "from": "/presentation/historico_estoque_viewmodel.dart",
+      "to": "/domain/entidades/movimentacao_estoque.dart",
+      "directive": "import"
+    },
+    {
+      "from": "/presentation/historico_estoque_viewmodel.dart",
+      "to": "/domain/falhas.dart",
+      "directive": "import"
+    },
+    {
+      "from": "/presentation/login_viewmodel.dart",
+      "to": "/domain/casos_de_uso/entrar_com_email.dart",
+      "directive": "import"
+    },
+    {
+      "from": "/presentation/login_viewmodel.dart",
+      "to": "/domain/casos_de_uso/entrar_com_google.dart",
+      "directive": "import"
+    },
+    {
+      "from": "/presentation/login_viewmodel.dart",
+      "to": "/domain/falhas.dart",
+      "directive": "import"
+    },
+    {
+      "from": "/presentation/pedidos_viewmodel.dart",
+      "to": "/domain/casos_de_uso/filtrar_pedidos.dart",
+      "directive": "import"
+    },
+    {
+      "from": "/presentation/pedidos_viewmodel.dart",
+      "to": "/domain/casos_de_uso/garantir_produtos_fixos.dart",
+      "directive": "import"
+    },
+    {
+      "from": "/presentation/pedidos_viewmodel.dart",
+      "to": "/domain/casos_de_uso/observar_pedidos_recebidos.dart",
+      "directive": "import"
+    },
+    {
+      "from": "/presentation/pedidos_viewmodel.dart",
+      "to": "/domain/entidades/pedido.dart",
+      "directive": "import"
+    },
+    {
+      "from": "/presentation/pedidos_viewmodel.dart",
+      "to": "/domain/entidades/periodo_pedidos.dart",
+      "directive": "import"
+    },
+    {
+      "from": "/presentation/pedidos_viewmodel.dart",
+      "to": "/domain/entidades/situacao_pedido.dart",
+      "directive": "import"
+    },
+    {
+      "from": "/presentation/pedidos_viewmodel.dart",
+      "to": "/domain/falhas.dart",
+      "directive": "import"
+    },
+    {
+      "from": "/presentation/perfil_cliente_viewmodel.dart",
+      "to": "/domain/casos_de_uso/observar_pedidos_do_cliente.dart",
+      "directive": "import"
+    },
+    {
+      "from": "/presentation/perfil_cliente_viewmodel.dart",
+      "to": "/domain/casos_de_uso/obter_perfil_cliente.dart",
+      "directive": "import"
+    },
+    {
+      "from": "/presentation/perfil_cliente_viewmodel.dart",
+      "to": "/domain/casos_de_uso/resumir_pedidos_do_cliente.dart",
+      "directive": "import"
+    },
+    {
+      "from": "/presentation/perfil_cliente_viewmodel.dart",
+      "to": "/domain/entidades/cliente.dart",
+      "directive": "import"
+    },
+    {
+      "from": "/presentation/perfil_cliente_viewmodel.dart",
+      "to": "/domain/entidades/pedido.dart",
+      "directive": "import"
+    },
+    {
+      "from": "/presentation/perfil_cliente_viewmodel.dart",
+      "to": "/domain/falhas.dart",
+      "directive": "import"
+    },
+    {
+      "from": "/presentation/sessao_viewmodel.dart",
+      "to": "/domain/casos_de_uso/observar_sessao.dart",
+      "directive": "import"
+    },
+    {
+      "from": "/presentation/sessao_viewmodel.dart",
+      "to": "/domain/casos_de_uso/sair_da_conta.dart",
+      "directive": "import"
+    },
+    {
+      "from": "/presentation/sessao_viewmodel.dart",
+      "to": "/domain/entidades/situacao_sessao.dart",
+      "directive": "import"
+    },
+    {
+      "from": "/presentation/sessao_viewmodel.dart",
+      "to": "/domain/falhas.dart",
+      "directive": "import"
+    },
+    {
+      "from": "/ui/acompanhamento_view.dart",
+      "to": "/domain/entidades/pedido.dart",
+      "directive": "import"
+    },
+    {
+      "from": "/ui/acompanhamento_view.dart",
+      "to": "/domain/entidades/situacao_pedido.dart",
+      "directive": "import"
+    },
+    {
+      "from": "/ui/acompanhamento_view.dart",
+      "to": "/presentation/acompanhamento_viewmodel.dart",
+      "directive": "import"
+    },
+    {
+      "from": "/ui/acompanhamento_view.dart",
+      "to": "/ui/tema.dart",
+      "directive": "import"
+    },
+    {
+      "from": "/ui/acompanhamento_view.dart",
+      "to": "/ui/widgets/botao_sair.dart",
+      "directive": "import"
+    },
+    {
+      "from": "/ui/acompanhamento_view.dart",
+      "to": "/ui/widgets/entrada_animada.dart",
+      "directive": "import"
+    },
+    {
+      "from": "/ui/acompanhamento_view.dart",
+      "to": "/ui/widgets/estado_vazio.dart",
+      "directive": "import"
+    },
+    {
+      "from": "/ui/acompanhamento_view.dart",
+      "to": "/ui/widgets/formatos.dart",
+      "directive": "import"
+    },
+    {
+      "from": "/ui/acompanhamento_view.dart",
+      "to": "/ui/widgets/linha_item_pedido.dart",
+      "directive": "import"
+    },
+    {
+      "from": "/ui/acompanhamento_view.dart",
+      "to": "/ui/widgets/mensagem_erro.dart",
+      "directive": "import"
+    },
+    {
+      "from": "/ui/acompanhamento_view.dart",
+      "to": "/ui/widgets/selo_situacao.dart",
+      "directive": "import"
+    },
+    {
+      "from": "/ui/acompanhamento_view.dart",
+      "to": "/ui/widgets/troca_suave.dart",
+      "directive": "import"
+    },
+    {
+      "from": "/ui/cadastro/indicador_etapas.dart",
+      "to": "/ui/tema.dart",
+      "directive": "import"
+    },
+    {
+      "from": "/ui/cadastro_view.dart",
+      "to": "/domain/entidades/endereco.dart",
+      "directive": "import"
+    },
+    {
+      "from": "/ui/cadastro_view.dart",
+      "to": "/presentation/cadastro_viewmodel.dart",
+      "directive": "import"
+    },
+    {
+      "from": "/ui/cadastro_view.dart",
+      "to": "/presentation/sessao_viewmodel.dart",
+      "directive": "import"
+    },
+    {
+      "from": "/ui/cadastro_view.dart",
+      "to": "/ui/cadastro/campo_cadastro.dart",
+      "directive": "import"
+    },
+    {
+      "from": "/ui/cadastro_view.dart",
+      "to": "/ui/cadastro/indicador_etapas.dart",
+      "directive": "import"
+    },
+    {
+      "from": "/ui/cadastro_view.dart",
+      "to": "/ui/tema.dart",
+      "directive": "import"
+    },
+    {
+      "from": "/ui/cadastro_view.dart",
+      "to": "/ui/widgets/aviso_destaque.dart",
+      "directive": "import"
+    },
+    {
+      "from": "/ui/cadastro_view.dart",
+      "to": "/ui/widgets/botao_carregando.dart",
+      "directive": "import"
+    },
+    {
+      "from": "/ui/cadastro_view.dart",
+      "to": "/ui/widgets/botao_sair.dart",
+      "directive": "import"
+    },
+    {
+      "from": "/ui/cadastro_view.dart",
+      "to": "/ui/widgets/botoes_dialogo.dart",
+      "directive": "import"
+    },
+    {
+      "from": "/ui/cadastro_view.dart",
+      "to": "/ui/widgets/campo_senha.dart",
+      "directive": "import"
+    },
+    {
+      "from": "/ui/cadastro_view.dart",
+      "to": "/ui/widgets/formatos.dart",
+      "directive": "import"
+    },
+    {
+      "from": "/ui/cadastro_view.dart",
+      "to": "/ui/widgets/mascaras.dart",
+      "directive": "import"
+    },
+    {
+      "from": "/ui/cadastro_view.dart",
+      "to": "/ui/widgets/mensagem_erro.dart",
+      "directive": "import"
+    },
+    {
+      "from": "/ui/carregando_view.dart",
+      "to": "/presentation/sessao_viewmodel.dart",
+      "directive": "import"
+    },
+    {
+      "from": "/ui/carregando_view.dart",
+      "to": "/ui/widgets/mensagem_erro.dart",
+      "directive": "import"
+    },
+    {
+      "from": "/ui/carrinho_view.dart",
+      "to": "/domain/entidades/produto.dart",
+      "directive": "import"
+    },
+    {
+      "from": "/ui/carrinho_view.dart",
+      "to": "/presentation/carrinho_viewmodel.dart",
+      "directive": "import"
+    },
+    {
+      "from": "/ui/carrinho_view.dart",
+      "to": "/ui/tema.dart",
+      "directive": "import"
+    },
+    {
+      "from": "/ui/carrinho_view.dart",
+      "to": "/ui/widgets/botao_carregando.dart",
+      "directive": "import"
+    },
+    {
+      "from": "/ui/carrinho_view.dart",
+      "to": "/ui/widgets/botao_sair.dart",
+      "directive": "import"
+    },
+    {
+      "from": "/ui/carrinho_view.dart",
+      "to": "/ui/widgets/botoes_dialogo.dart",
+      "directive": "import"
+    },
+    {
+      "from": "/ui/carrinho_view.dart",
+      "to": "/ui/widgets/entrada_animada.dart",
+      "directive": "import"
+    },
+    {
+      "from": "/ui/carrinho_view.dart",
+      "to": "/ui/widgets/estado_vazio.dart",
+      "directive": "import"
+    },
+    {
+      "from": "/ui/carrinho_view.dart",
+      "to": "/ui/widgets/formatos.dart",
+      "directive": "import"
+    },
+    {
+      "from": "/ui/carrinho_view.dart",
+      "to": "/ui/widgets/icone_produto.dart",
+      "directive": "import"
+    },
+    {
+      "from": "/ui/carrinho_view.dart",
+      "to": "/ui/widgets/mensagem_erro.dart",
+      "directive": "import"
+    },
+    {
+      "from": "/ui/carrinho_view.dart",
+      "to": "/ui/widgets/texto_animado.dart",
+      "directive": "import"
+    },
+    {
+      "from": "/ui/carrinho_view.dart",
+      "to": "/ui/widgets/troca_suave.dart",
+      "directive": "import"
+    },
+    {
+      "from": "/ui/clientes_view.dart",
+      "to": "/domain/entidades/cliente.dart",
+      "directive": "import"
+    },
+    {
+      "from": "/ui/clientes_view.dart",
+      "to": "/presentation/clientes_viewmodel.dart",
+      "directive": "import"
+    },
+    {
+      "from": "/ui/clientes_view.dart",
+      "to": "/ui/tema.dart",
+      "directive": "import"
+    },
+    {
+      "from": "/ui/clientes_view.dart",
+      "to": "/ui/widgets/avatar_iniciais.dart",
+      "directive": "import"
+    },
+    {
+      "from": "/ui/clientes_view.dart",
+      "to": "/ui/widgets/botao_sair.dart",
+      "directive": "import"
+    },
+    {
+      "from": "/ui/clientes_view.dart",
+      "to": "/ui/widgets/entrada_animada.dart",
+      "directive": "import"
+    },
+    {
+      "from": "/ui/clientes_view.dart",
+      "to": "/ui/widgets/estado_vazio.dart",
+      "directive": "import"
+    },
+    {
+      "from": "/ui/clientes_view.dart",
+      "to": "/ui/widgets/formatos.dart",
+      "directive": "import"
+    },
+    {
+      "from": "/ui/clientes_view.dart",
+      "to": "/ui/widgets/mensagem_erro.dart",
+      "directive": "import"
+    },
+    {
+      "from": "/ui/clientes_view.dart",
+      "to": "/ui/widgets/navegacao_admin.dart",
+      "directive": "import"
+    },
+    {
+      "from": "/ui/clientes_view.dart",
+      "to": "/ui/widgets/troca_suave.dart",
+      "directive": "import"
+    },
+    {
+      "from": "/ui/detalhe_pedido/bloco_rota.dart",
+      "to": "/domain/entidades/deslocamento.dart",
+      "directive": "import"
+    },
+    {
+      "from": "/ui/detalhe_pedido/bloco_rota.dart",
+      "to": "/domain/entidades/pedido.dart",
+      "directive": "import"
+    },
+    {
+      "from": "/ui/detalhe_pedido/bloco_rota.dart",
+      "to": "/presentation/detalhe_pedido_viewmodel.dart",
+      "directive": "import"
+    },
+    {
+      "from": "/ui/detalhe_pedido/bloco_rota.dart",
+      "to": "/ui/tema.dart",
+      "directive": "import"
+    },
+    {
+      "from": "/ui/detalhe_pedido/bloco_rota.dart",
+      "to": "/ui/widgets/mensagem_erro.dart",
+      "directive": "import"
+    },
+    {
+      "from": "/ui/detalhe_pedido/bloco_rota.dart",
+      "to": "/ui/detalhe_pedido/mapa_rota.dart",
+      "directive": "import"
+    },
+    {
+      "from": "/ui/detalhe_pedido/cartao_cliente.dart",
+      "to": "/domain/entidades/pedido.dart",
+      "directive": "import"
+    },
+    {
+      "from": "/ui/detalhe_pedido/cartao_cliente.dart",
+      "to": "/ui/widgets/avatar_iniciais.dart",
+      "directive": "import"
+    },
+    {
+      "from": "/ui/detalhe_pedido/cartao_cliente.dart",
+      "to": "/ui/widgets/formatos.dart",
+      "directive": "import"
+    },
+    {
+      "from": "/ui/detalhe_pedido/cartao_cliente.dart",
+      "to": "/ui/widgets/linha_dado.dart",
+      "directive": "import"
+    },
+    {
+      "from": "/ui/detalhe_pedido/cartao_cliente.dart",
+      "to": "/ui/widgets/selo_situacao.dart",
+      "directive": "import"
+    },
+    {
+      "from": "/ui/detalhe_pedido/dialogos_pedido.dart",
+      "to": "/domain/entidades/pedido.dart",
+      "directive": "import"
+    },
+    {
+      "from": "/ui/detalhe_pedido/dialogos_pedido.dart",
+      "to": "/presentation/detalhe_pedido_viewmodel.dart",
+      "directive": "import"
+    },
+    {
+      "from": "/ui/detalhe_pedido/dialogos_pedido.dart",
+      "to": "/ui/widgets/botoes_dialogo.dart",
+      "directive": "import"
+    },
+    {
+      "from": "/ui/detalhe_pedido/dialogos_pedido.dart",
+      "to": "/ui/widgets/mensagem_erro.dart",
+      "directive": "import"
+    },
+    {
+      "from": "/ui/detalhe_pedido/historico_pedido.dart",
+      "to": "/domain/entidades/pedido.dart",
+      "directive": "import"
+    },
+    {
+      "from": "/ui/detalhe_pedido/historico_pedido.dart",
+      "to": "/domain/entidades/situacao_pedido.dart",
+      "directive": "import"
+    },
+    {
+      "from": "/ui/detalhe_pedido/historico_pedido.dart",
+      "to": "/ui/tema.dart",
+      "directive": "import"
+    },
+    {
+      "from": "/ui/detalhe_pedido/historico_pedido.dart",
+      "to": "/ui/widgets/formatos.dart",
+      "directive": "import"
+    },
+    {
+      "from": "/ui/detalhe_pedido/itens_pedido.dart",
+      "to": "/domain/entidades/pedido.dart",
+      "directive": "import"
+    },
+    {
+      "from": "/ui/detalhe_pedido/itens_pedido.dart",
+      "to": "/ui/tema.dart",
+      "directive": "import"
+    },
+    {
+      "from": "/ui/detalhe_pedido/itens_pedido.dart",
+      "to": "/ui/widgets/formatos.dart",
+      "directive": "import"
+    },
+    {
+      "from": "/ui/detalhe_pedido/itens_pedido.dart",
+      "to": "/ui/widgets/linha_item_pedido.dart",
+      "directive": "import"
+    },
+    {
+      "from": "/ui/detalhe_pedido/mapa_rota.dart",
+      "to": "/domain/entidades/coordenada.dart",
+      "directive": "import"
+    },
+    {
+      "from": "/ui/detalhe_pedido/mapa_rota.dart",
+      "to": "/ui/tema.dart",
+      "directive": "import"
+    },
+    {
+      "from": "/ui/detalhe_pedido_view.dart",
+      "to": "/domain/entidades/pedido.dart",
+      "directive": "import"
+    },
+    {
+      "from": "/ui/detalhe_pedido_view.dart",
+      "to": "/domain/entidades/situacao_pedido.dart",
+      "directive": "import"
+    },
+    {
+      "from": "/ui/detalhe_pedido_view.dart",
+      "to": "/presentation/detalhe_pedido_viewmodel.dart",
+      "directive": "import"
+    },
+    {
+      "from": "/ui/detalhe_pedido_view.dart",
+      "to": "/ui/detalhe_pedido/bloco_rota.dart",
+      "directive": "import"
+    },
+    {
+      "from": "/ui/detalhe_pedido_view.dart",
+      "to": "/ui/detalhe_pedido/cartao_cliente.dart",
+      "directive": "import"
+    },
+    {
+      "from": "/ui/detalhe_pedido_view.dart",
+      "to": "/ui/detalhe_pedido/dialogos_pedido.dart",
+      "directive": "import"
+    },
+    {
+      "from": "/ui/detalhe_pedido_view.dart",
+      "to": "/ui/detalhe_pedido/historico_pedido.dart",
+      "directive": "import"
+    },
+    {
+      "from": "/ui/detalhe_pedido_view.dart",
+      "to": "/ui/detalhe_pedido/itens_pedido.dart",
+      "directive": "import"
+    },
+    {
+      "from": "/ui/detalhe_pedido_view.dart",
+      "to": "/ui/tema.dart",
+      "directive": "import"
+    },
+    {
+      "from": "/ui/detalhe_pedido_view.dart",
+      "to": "/ui/widgets/abrir_dialogo.dart",
+      "directive": "import"
+    },
+    {
+      "from": "/ui/detalhe_pedido_view.dart",
+      "to": "/ui/widgets/aviso_destaque.dart",
+      "directive": "import"
+    },
+    {
+      "from": "/ui/detalhe_pedido_view.dart",
+      "to": "/ui/widgets/botao_sair.dart",
+      "directive": "import"
+    },
+    {
+      "from": "/ui/detalhe_pedido_view.dart",
+      "to": "/ui/widgets/mensagem_erro.dart",
+      "directive": "import"
+    },
+    {
+      "from": "/ui/estoque_view.dart",
+      "to": "/domain/entidades/produto.dart",
+      "directive": "import"
+    },
+    {
+      "from": "/ui/estoque_view.dart",
+      "to": "/presentation/estoque_viewmodel.dart",
+      "directive": "import"
+    },
+    {
+      "from": "/ui/estoque_view.dart",
+      "to": "/ui/tema.dart",
+      "directive": "import"
+    },
+    {
+      "from": "/ui/estoque_view.dart",
+      "to": "/ui/widgets/abrir_dialogo.dart",
+      "directive": "import"
+    },
+    {
+      "from": "/ui/estoque_view.dart",
+      "to": "/ui/widgets/botao_sair.dart",
+      "directive": "import"
+    },
+    {
+      "from": "/ui/estoque_view.dart",
+      "to": "/ui/widgets/botoes_dialogo.dart",
+      "directive": "import"
+    },
+    {
+      "from": "/ui/estoque_view.dart",
+      "to": "/ui/widgets/entrada_animada.dart",
+      "directive": "import"
+    },
+    {
+      "from": "/ui/estoque_view.dart",
+      "to": "/ui/widgets/estado_vazio.dart",
+      "directive": "import"
+    },
+    {
+      "from": "/ui/estoque_view.dart",
+      "to": "/ui/widgets/formatos.dart",
+      "directive": "import"
+    },
+    {
+      "from": "/ui/estoque_view.dart",
+      "to": "/ui/widgets/icone_produto.dart",
+      "directive": "import"
+    },
+    {
+      "from": "/ui/estoque_view.dart",
+      "to": "/ui/widgets/mensagem_erro.dart",
+      "directive": "import"
+    },
+    {
+      "from": "/ui/estoque_view.dart",
+      "to": "/ui/widgets/navegacao_admin.dart",
+      "directive": "import"
+    },
+    {
+      "from": "/ui/estoque_view.dart",
+      "to": "/ui/widgets/troca_suave.dart",
+      "directive": "import"
+    },
+    {
+      "from": "/ui/historico_estoque_view.dart",
+      "to": "/domain/entidades/movimentacao_estoque.dart",
+      "directive": "import"
+    },
+    {
+      "from": "/ui/historico_estoque_view.dart",
+      "to": "/domain/entidades/tipo_movimentacao.dart",
+      "directive": "import"
+    },
+    {
+      "from": "/ui/historico_estoque_view.dart",
+      "to": "/presentation/historico_estoque_viewmodel.dart",
+      "directive": "import"
+    },
+    {
+      "from": "/ui/historico_estoque_view.dart",
+      "to": "/ui/tema.dart",
+      "directive": "import"
+    },
+    {
+      "from": "/ui/historico_estoque_view.dart",
+      "to": "/ui/widgets/entrada_animada.dart",
+      "directive": "import"
+    },
+    {
+      "from": "/ui/historico_estoque_view.dart",
+      "to": "/ui/widgets/estado_vazio.dart",
+      "directive": "import"
+    },
+    {
+      "from": "/ui/historico_estoque_view.dart",
+      "to": "/ui/widgets/formatos.dart",
+      "directive": "import"
+    },
+    {
+      "from": "/ui/historico_estoque_view.dart",
+      "to": "/ui/widgets/mensagem_erro.dart",
+      "directive": "import"
+    },
+    {
+      "from": "/ui/historico_estoque_view.dart",
+      "to": "/ui/widgets/troca_suave.dart",
+      "directive": "import"
+    },
+    {
+      "from": "/ui/login_view.dart",
+      "to": "/presentation/login_viewmodel.dart",
+      "directive": "import"
+    },
+    {
+      "from": "/ui/login_view.dart",
+      "to": "/ui/tema.dart",
+      "directive": "import"
+    },
+    {
+      "from": "/ui/login_view.dart",
+      "to": "/ui/widgets/botao_carregando.dart",
+      "directive": "import"
+    },
+    {
+      "from": "/ui/login_view.dart",
+      "to": "/ui/widgets/campo_senha.dart",
+      "directive": "import"
+    },
+    {
+      "from": "/ui/login_view.dart",
+      "to": "/ui/widgets/entrada_animada.dart",
+      "directive": "import"
+    },
+    {
+      "from": "/ui/login_view.dart",
+      "to": "/ui/widgets/mensagem_erro.dart",
+      "directive": "import"
+    },
+    {
+      "from": "/ui/pedidos/painel_filtros.dart",
+      "to": "/domain/entidades/periodo_pedidos.dart",
+      "directive": "import"
+    },
+    {
+      "from": "/ui/pedidos/painel_filtros.dart",
+      "to": "/domain/entidades/situacao_pedido.dart",
+      "directive": "import"
+    },
+    {
+      "from": "/ui/pedidos/painel_filtros.dart",
+      "to": "/presentation/pedidos_viewmodel.dart",
+      "directive": "import"
+    },
+    {
+      "from": "/ui/pedidos/painel_filtros.dart",
+      "to": "/ui/tema.dart",
+      "directive": "import"
+    },
+    {
+      "from": "/ui/pedidos_view.dart",
+      "to": "/presentation/pedidos_viewmodel.dart",
+      "directive": "import"
+    },
+    {
+      "from": "/ui/pedidos_view.dart",
+      "to": "/ui/pedidos/painel_filtros.dart",
+      "directive": "import"
+    },
+    {
+      "from": "/ui/pedidos_view.dart",
+      "to": "/ui/tema.dart",
+      "directive": "import"
+    },
+    {
+      "from": "/ui/pedidos_view.dart",
+      "to": "/ui/widgets/botao_sair.dart",
+      "directive": "import"
+    },
+    {
+      "from": "/ui/pedidos_view.dart",
+      "to": "/ui/widgets/cartao_pedido.dart",
+      "directive": "import"
+    },
+    {
+      "from": "/ui/pedidos_view.dart",
+      "to": "/ui/widgets/entrada_animada.dart",
+      "directive": "import"
+    },
+    {
+      "from": "/ui/pedidos_view.dart",
+      "to": "/ui/widgets/estado_vazio.dart",
+      "directive": "import"
+    },
+    {
+      "from": "/ui/pedidos_view.dart",
+      "to": "/ui/widgets/formatos.dart",
+      "directive": "import"
+    },
+    {
+      "from": "/ui/pedidos_view.dart",
+      "to": "/ui/widgets/mensagem_erro.dart",
+      "directive": "import"
+    },
+    {
+      "from": "/ui/pedidos_view.dart",
+      "to": "/ui/widgets/navegacao_admin.dart",
+      "directive": "import"
+    },
+    {
+      "from": "/ui/pedidos_view.dart",
+      "to": "/ui/widgets/troca_suave.dart",
+      "directive": "import"
+    },
+    {
+      "from": "/ui/perfil_cliente/cabecalho_cliente.dart",
+      "to": "/domain/entidades/cliente.dart",
+      "directive": "import"
+    },
+    {
+      "from": "/ui/perfil_cliente/cabecalho_cliente.dart",
+      "to": "/ui/tema.dart",
+      "directive": "import"
+    },
+    {
+      "from": "/ui/perfil_cliente/cabecalho_cliente.dart",
+      "to": "/ui/widgets/avatar_iniciais.dart",
+      "directive": "import"
+    },
+    {
+      "from": "/ui/perfil_cliente/dados_cliente.dart",
+      "to": "/domain/entidades/cliente.dart",
+      "directive": "import"
+    },
+    {
+      "from": "/ui/perfil_cliente/dados_cliente.dart",
+      "to": "/ui/tema.dart",
+      "directive": "import"
+    },
+    {
+      "from": "/ui/perfil_cliente/dados_cliente.dart",
+      "to": "/ui/widgets/formatos.dart",
+      "directive": "import"
+    },
+    {
+      "from": "/ui/perfil_cliente/dados_cliente.dart",
+      "to": "/ui/widgets/linha_dado.dart",
+      "directive": "import"
+    },
+    {
+      "from": "/ui/perfil_cliente/resumo_cliente.dart",
+      "to": "/presentation/perfil_cliente_viewmodel.dart",
+      "directive": "import"
+    },
+    {
+      "from": "/ui/perfil_cliente/resumo_cliente.dart",
+      "to": "/ui/tema.dart",
+      "directive": "import"
+    },
+    {
+      "from": "/ui/perfil_cliente/resumo_cliente.dart",
+      "to": "/ui/widgets/formatos.dart",
+      "directive": "import"
+    },
+    {
+      "from": "/ui/perfil_cliente_view.dart",
+      "to": "/presentation/perfil_cliente_viewmodel.dart",
+      "directive": "import"
+    },
+    {
+      "from": "/ui/perfil_cliente_view.dart",
+      "to": "/ui/perfil_cliente/cabecalho_cliente.dart",
+      "directive": "import"
+    },
+    {
+      "from": "/ui/perfil_cliente_view.dart",
+      "to": "/ui/perfil_cliente/dados_cliente.dart",
+      "directive": "import"
+    },
+    {
+      "from": "/ui/perfil_cliente_view.dart",
+      "to": "/ui/perfil_cliente/resumo_cliente.dart",
+      "directive": "import"
+    },
+    {
+      "from": "/ui/perfil_cliente_view.dart",
+      "to": "/ui/tema.dart",
+      "directive": "import"
+    },
+    {
+      "from": "/ui/perfil_cliente_view.dart",
+      "to": "/ui/widgets/botao_sair.dart",
+      "directive": "import"
+    },
+    {
+      "from": "/ui/perfil_cliente_view.dart",
+      "to": "/ui/widgets/cartao_pedido.dart",
+      "directive": "import"
+    },
+    {
+      "from": "/ui/perfil_cliente_view.dart",
+      "to": "/ui/widgets/estado_vazio.dart",
+      "directive": "import"
+    },
+    {
+      "from": "/ui/perfil_cliente_view.dart",
+      "to": "/ui/widgets/formatos.dart",
+      "directive": "import"
+    },
+    {
+      "from": "/ui/perfil_cliente_view.dart",
+      "to": "/ui/widgets/mensagem_erro.dart",
+      "directive": "import"
+    },
+    {
+      "from": "/ui/widgets/avatar_iniciais.dart",
+      "to": "/ui/tema.dart",
+      "directive": "import"
+    },
+    {
+      "from": "/ui/widgets/aviso_destaque.dart",
+      "to": "/ui/tema.dart",
+      "directive": "import"
+    },
+    {
+      "from": "/ui/widgets/botao_carregando.dart",
+      "to": "/ui/tema.dart",
+      "directive": "import"
+    },
+    {
+      "from": "/ui/widgets/botao_sair.dart",
+      "to": "/presentation/sessao_viewmodel.dart",
+      "directive": "import"
+    },
+    {
+      "from": "/ui/widgets/botoes_dialogo.dart",
+      "to": "/ui/tema.dart",
+      "directive": "import"
+    },
+    {
+      "from": "/ui/widgets/cartao_pedido.dart",
+      "to": "/domain/entidades/pedido.dart",
+      "directive": "import"
+    },
+    {
+      "from": "/ui/widgets/cartao_pedido.dart",
+      "to": "/ui/widgets/selo_situacao.dart",
+      "directive": "import"
+    },
+    {
+      "from": "/ui/widgets/entrada_animada.dart",
+      "to": "/ui/tema.dart",
+      "directive": "import"
+    },
+    {
+      "from": "/ui/widgets/estado_vazio.dart",
+      "to": "/ui/tema.dart",
+      "directive": "import"
+    },
+    {
+      "from": "/ui/widgets/estado_vazio.dart",
+      "to": "/ui/widgets/entrada_animada.dart",
+      "directive": "import"
+    },
+    {
+      "from": "/ui/widgets/icone_produto.dart",
+      "to": "/ui/tema.dart",
+      "directive": "import"
+    },
+    {
+      "from": "/ui/widgets/linha_dado.dart",
+      "to": "/ui/tema.dart",
+      "directive": "import"
+    },
+    {
+      "from": "/ui/widgets/linha_item_pedido.dart",
+      "to": "/domain/entidades/item_pedido.dart",
+      "directive": "import"
+    },
+    {
+      "from": "/ui/widgets/linha_item_pedido.dart",
+      "to": "/ui/tema.dart",
+      "directive": "import"
+    },
+    {
+      "from": "/ui/widgets/linha_item_pedido.dart",
+      "to": "/ui/widgets/formatos.dart",
+      "directive": "import"
+    },
+    {
+      "from": "/ui/widgets/linha_item_pedido.dart",
+      "to": "/ui/widgets/icone_produto.dart",
+      "directive": "import"
+    },
+    {
+      "from": "/ui/widgets/mensagem_erro.dart",
+      "to": "/ui/tema.dart",
+      "directive": "import"
+    },
+    {
+      "from": "/ui/widgets/navegacao_admin.dart",
+      "to": "/ui/tema.dart",
+      "directive": "import"
+    },
+    {
+      "from": "/ui/widgets/selo_situacao.dart",
+      "to": "/domain/entidades/situacao_pedido.dart",
+      "directive": "import"
+    },
+    {
+      "from": "/ui/widgets/selo_situacao.dart",
+      "to": "/ui/tema.dart",
+      "directive": "import"
+    },
+    {
+      "from": "/ui/widgets/texto_animado.dart",
+      "to": "/ui/tema.dart",
+      "directive": "import"
+    },
+    {
+      "from": "/ui/widgets/troca_suave.dart",
+      "to": "/ui/tema.dart",
+      "directive": "import"
+    }
+  ],
+  "metrics": {
+    "isAcyclic": true,
+    "firstCycle": [],
+    "numNodes": 129,
+    "numEdges": 455,
+    "avgDegree": 3.53,
+    "orphans": [
+      "/domain/entidades/administrador.dart"
+    ],
+    "ccd": 1288,
+    "acd": 9.98,
+    "nccd": 1.64,
+    "totalSloc": 7330,
+    "avgSloc": 56.82
+  }
+}

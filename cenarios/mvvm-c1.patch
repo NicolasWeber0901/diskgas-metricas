@@ -1,0 +1,143 @@
+diff --git a/a/lib/main.dart b/b/lib/main.dart
+index 85c42f6..49f5136 100644
+--- a/a/lib/main.dart
++++ b/b/lib/main.dart
+@@ -27,10 +27,7 @@ Future<void> main() async {
+   final clienteService = ClienteService(firestore);
+   final produtoService = ProdutoService(firestore);
+   final pedidoService = PedidoService(firestore);
+-  final rotaService = RotaService(
+-    http.Client(),
+-    const String.fromEnvironment('ROUTES_API_KEY'),
+-  );
++  final rotaService = RotaService(http.Client());
+ 
+   runApp(
+     MultiProvider(
+diff --git a/a/lib/services/rota_service.dart b/b/lib/services/rota_service.dart
+index ec4b6cd..626544d 100644
+--- a/a/lib/services/rota_service.dart
++++ b/b/lib/services/rota_service.dart
+@@ -8,65 +8,85 @@ import '../models/coordenada.dart';
+ import '../models/deslocamento.dart';
+ import 'falhas.dart';
+ 
+-/// US11: distância, tempo e rota até o cliente pela Routes API (RF16, RNF08).
++/// US11: distância, tempo e rota até o cliente por Nominatim e OSRM (RF16, RNF08).
+ class RotaService {
+   final http.Client _cliente;
+-  final String _chaveApi;
+ 
+-  RotaService(this._cliente, this._chaveApi);
++  RotaService(this._cliente);
+ 
+-  static const enderecoDeposito =
+-      'Roma Auto Center, R. Elizeo Schmitt - Centro, Dona Emma - SC, 89155-000';
++  static const enderecoDeposito = 'Dona Emma, SC, Brasil';
++  static const _intervaloEntreBuscas = Duration(milliseconds: 1100);
++  static const _tempoLimite = Duration(seconds: 10);
++  static const _cabecalhos = {'User-Agent': 'DiskGasTCC/1.0'};
++  static DateTime _proximaBusca = DateTime.fromMillisecondsSinceEpoch(0);
++
++  Future<void> _aguardarVez() async {
++    final agora = DateTime.now();
++    final vez = _proximaBusca.isAfter(agora) ? _proximaBusca : agora;
++    _proximaBusca = vez.add(_intervaloEntreBuscas);
++    await Future<void>.delayed(vez.difference(agora));
++  }
++
++  Future<Coordenada> _localizar(String endereco) async {
++    await _aguardarVez();
++    final resposta = await _cliente
++        .get(
++          Uri.https('nominatim.openstreetmap.org', '/search', {
++            'format': 'jsonv2',
++            'limit': '1',
++            'countrycodes': 'br',
++            'q': endereco,
++          }),
++          headers: _cabecalhos,
++        )
++        .timeout(_tempoLimite);
++    if (resposta.statusCode != 200) throw const FalhaRota();
++    final lista = jsonDecode(resposta.body);
++    if (lista is! List || lista.isEmpty || lista.first is! Map) {
++      throw const FalhaRota();
++    }
++    final lugar = lista.first as Map;
++    final latitude = double.tryParse('${lugar['lat']}');
++    final longitude = double.tryParse('${lugar['lon']}');
++    if (latitude == null || longitude == null) throw const FalhaRota();
++    return Coordenada(latitude, longitude);
++  }
+ 
+   Future<Deslocamento> calcularDeslocamento(String destino) async {
+-    if (_chaveApi.isEmpty) throw const FalhaRota();
+     try {
++      final origem = await _localizar(enderecoDeposito);
++      final chegada = await _localizar('$destino, SC, Brasil');
+       final resposta = await _cliente
+-          .post(
++          .get(
+             Uri.parse(
+-              'https://routes.googleapis.com/directions/v2:computeRoutes',
++              'https://router.project-osrm.org/route/v1/driving/'
++              '${origem.longitude},${origem.latitude};'
++              '${chegada.longitude},${chegada.latitude}'
++              '?overview=full&geometries=polyline',
+             ),
+-            headers: {
+-              'Content-Type': 'application/json',
+-              'X-Goog-Api-Key': _chaveApi,
+-              'X-Goog-FieldMask':
+-                  'routes.distanceMeters,routes.duration,'
+-                  'routes.polyline.encodedPolyline',
+-            },
+-            body: jsonEncode({
+-              'origin': {'address': enderecoDeposito},
+-              'destination': {'address': '$destino, SC, Brasil'},
+-              'travelMode': 'DRIVE',
+-              'languageCode': 'pt-BR',
+-              'regionCode': 'BR',
+-            }),
++            headers: _cabecalhos,
+           )
+-          .timeout(const Duration(seconds: 10));
++          .timeout(_tempoLimite);
+       if (resposta.statusCode != 200) throw const FalhaRota();
+ 
+       final corpo = jsonDecode(resposta.body);
+-      final rotas = corpo is Map ? corpo['routes'] : null;
++      if (corpo is! Map || corpo['code'] != 'Ok') throw const FalhaRota();
++      final rotas = corpo['routes'];
+       if (rotas is! List || rotas.isEmpty || rotas.first is! Map) {
+         throw const FalhaRota();
+       }
+       final rota = rotas.first as Map;
+-      final distancia = rota['distanceMeters'] ?? 0;
+-      final duracao = rota['duration'] ?? '0s';
+-      if (distancia is! num || duracao is! String || !duracao.endsWith('s')) {
++      final distancia = rota['distance'];
++      final duracao = rota['duration'];
++      final geometria = rota['geometry'];
++      if (distancia is! num || duracao is! num || geometria is! String) {
+         throw const FalhaRota();
+       }
+-      final segundos = double.tryParse(
+-        duracao.substring(0, duracao.length - 1),
+-      );
+-      if (segundos == null) throw const FalhaRota();
+-      final linha = rota['polyline'];
+-      final codificada = linha is Map ? linha['encodedPolyline'] : null;
+-      final polilinha = codificada is String ? codificada : null;
+ 
+       return Deslocamento(
+-        distanciaMetros: distancia.toInt(),
+-        duracaoSegundos: segundos.round(),
+-        polilinha: polilinha,
++        distanciaMetros: distancia.round(),
++        duracaoSegundos: duracao.round(),
++        polilinha: geometria,
+       );
+     } on TimeoutException {
+       throw const FalhaRota();

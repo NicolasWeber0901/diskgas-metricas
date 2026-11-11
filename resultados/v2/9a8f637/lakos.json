@@ -1,0 +1,2346 @@
+{
+  "rootDir": "C:/Users/Nicolas/Desktop/Faculdade/TCC/metricas/fontes/9a8f637/lib",
+  "nodes": {
+    "/main.dart": {
+      "id": "/main.dart",
+      "label": "main",
+      "cd": 77,
+      "inDegree": 0,
+      "outDegree": 7,
+      "instability": 1.0,
+      "sloc": 46
+    },
+    "/models/administrador.dart": {
+      "id": "/models/administrador.dart",
+      "label": "administrador",
+      "cd": 1,
+      "inDegree": 0,
+      "outDegree": 0,
+      "instability": null,
+      "sloc": 20
+    },
+    "/models/cliente.dart": {
+      "id": "/models/cliente.dart",
+      "label": "cliente",
+      "cd": 2,
+      "inDegree": 7,
+      "outDegree": 1,
+      "instability": 0.13,
+      "sloc": 45
+    },
+    "/models/coordenada.dart": {
+      "id": "/models/coordenada.dart",
+      "label": "coordenada",
+      "cd": 1,
+      "inDegree": 3,
+      "outDegree": 0,
+      "instability": 0.0,
+      "sloc": 5
+    },
+    "/models/deslocamento.dart": {
+      "id": "/models/deslocamento.dart",
+      "label": "deslocamento",
+      "cd": 1,
+      "inDegree": 4,
+      "outDegree": 0,
+      "instability": 0.0,
+      "sloc": 12
+    },
+    "/models/endereco.dart": {
+      "id": "/models/endereco.dart",
+      "label": "endereco",
+      "cd": 1,
+      "inDegree": 5,
+      "outDegree": 0,
+      "instability": 0.0,
+      "sloc": 24
+    },
+    "/models/item_pedido.dart": {
+      "id": "/models/item_pedido.dart",
+      "label": "item_pedido",
+      "cd": 1,
+      "inDegree": 4,
+      "outDegree": 0,
+      "instability": 0.0,
+      "sloc": 35
+    },
+    "/models/movimentacao_estoque.dart": {
+      "id": "/models/movimentacao_estoque.dart",
+      "label": "movimentacao_estoque",
+      "cd": 2,
+      "inDegree": 4,
+      "outDegree": 1,
+      "instability": 0.2,
+      "sloc": 57
+    },
+    "/models/pedido.dart": {
+      "id": "/models/pedido.dart",
+      "label": "pedido",
+      "cd": 5,
+      "inDegree": 15,
+      "outDegree": 4,
+      "instability": 0.21,
+      "sloc": 93
+    },
+    "/models/perfil.dart": {
+      "id": "/models/perfil.dart",
+      "label": "perfil",
+      "cd": 1,
+      "inDegree": 2,
+      "outDegree": 0,
+      "instability": 0.0,
+      "sloc": 1
+    },
+    "/models/produto.dart": {
+      "id": "/models/produto.dart",
+      "label": "produto",
+      "cd": 1,
+      "inDegree": 6,
+      "outDegree": 0,
+      "instability": 0.0,
+      "sloc": 27
+    },
+    "/models/situacao_pedido.dart": {
+      "id": "/models/situacao_pedido.dart",
+      "label": "situacao_pedido",
+      "cd": 1,
+      "inDegree": 10,
+      "outDegree": 0,
+      "instability": 0.0,
+      "sloc": 8
+    },
+    "/models/tipo_movimentacao.dart": {
+      "id": "/models/tipo_movimentacao.dart",
+      "label": "tipo_movimentacao",
+      "cd": 1,
+      "inDegree": 4,
+      "outDegree": 0,
+      "instability": 0.0,
+      "sloc": 7
+    },
+    "/services/auth_service.dart": {
+      "id": "/services/auth_service.dart",
+      "label": "auth_service",
+      "cd": 3,
+      "inDegree": 7,
+      "outDegree": 2,
+      "instability": 0.22,
+      "sloc": 89
+    },
+    "/services/cliente_service.dart": {
+      "id": "/services/cliente_service.dart",
+      "label": "cliente_service",
+      "cd": 4,
+      "inDegree": 6,
+      "outDegree": 2,
+      "instability": 0.25,
+      "sloc": 53
+    },
+    "/services/falhas.dart": {
+      "id": "/services/falhas.dart",
+      "label": "falhas",
+      "cd": 1,
+      "inDegree": 16,
+      "outDegree": 0,
+      "instability": 0.0,
+      "sloc": 23
+    },
+    "/services/pedido_service.dart": {
+      "id": "/services/pedido_service.dart",
+      "label": "pedido_service",
+      "cd": 9,
+      "inDegree": 8,
+      "outDegree": 6,
+      "instability": 0.43,
+      "sloc": 161
+    },
+    "/services/produto_service.dart": {
+      "id": "/services/produto_service.dart",
+      "label": "produto_service",
+      "cd": 5,
+      "inDegree": 8,
+      "outDegree": 4,
+      "instability": 0.33,
+      "sloc": 156
+    },
+    "/services/rota_service.dart": {
+      "id": "/services/rota_service.dart",
+      "label": "rota_service",
+      "cd": 4,
+      "inDegree": 3,
+      "outDegree": 3,
+      "instability": 0.5,
+      "sloc": 99
+    },
+    "/viewmodels/acompanhamento_viewmodel.dart": {
+      "id": "/viewmodels/acompanhamento_viewmodel.dart",
+      "label": "acompanhamento_viewmodel",
+      "cd": 12,
+      "inDegree": 2,
+      "outDegree": 4,
+      "instability": 0.67,
+      "sloc": 38
+    },
+    "/viewmodels/cadastro_viewmodel.dart": {
+      "id": "/viewmodels/cadastro_viewmodel.dart",
+      "label": "cadastro_viewmodel",
+      "cd": 7,
+      "inDegree": 2,
+      "outDegree": 5,
+      "instability": 0.71,
+      "sloc": 146
+    },
+    "/viewmodels/carrinho_viewmodel.dart": {
+      "id": "/viewmodels/carrinho_viewmodel.dart",
+      "label": "carrinho_viewmodel",
+      "cd": 17,
+      "inDegree": 2,
+      "outDegree": 11,
+      "instability": 0.85,
+      "sloc": 158
+    },
+    "/viewmodels/clientes_viewmodel.dart": {
+      "id": "/viewmodels/clientes_viewmodel.dart",
+      "label": "clientes_viewmodel",
+      "cd": 13,
+      "inDegree": 2,
+      "outDegree": 6,
+      "instability": 0.75,
+      "sloc": 62
+    },
+    "/viewmodels/detalhe_pedido_viewmodel.dart": {
+      "id": "/viewmodels/detalhe_pedido_viewmodel.dart",
+      "label": "detalhe_pedido_viewmodel",
+      "cd": 14,
+      "inDegree": 4,
+      "outDegree": 7,
+      "instability": 0.64,
+      "sloc": 171
+    },
+    "/viewmodels/estoque_viewmodel.dart": {
+      "id": "/viewmodels/estoque_viewmodel.dart",
+      "label": "estoque_viewmodel",
+      "cd": 7,
+      "inDegree": 2,
+      "outDegree": 4,
+      "instability": 0.67,
+      "sloc": 113
+    },
+    "/viewmodels/historico_estoque_viewmodel.dart": {
+      "id": "/viewmodels/historico_estoque_viewmodel.dart",
+      "label": "historico_estoque_viewmodel",
+      "cd": 6,
+      "inDegree": 2,
+      "outDegree": 3,
+      "instability": 0.6,
+      "sloc": 56
+    },
+    "/viewmodels/login_viewmodel.dart": {
+      "id": "/viewmodels/login_viewmodel.dart",
+      "label": "login_viewmodel",
+      "cd": 4,
+      "inDegree": 2,
+      "outDegree": 2,
+      "instability": 0.5,
+      "sloc": 46
+    },
+    "/viewmodels/normalizar_busca.dart": {
+      "id": "/viewmodels/normalizar_busca.dart",
+      "label": "normalizar_busca",
+      "cd": 1,
+      "inDegree": 2,
+      "outDegree": 0,
+      "instability": 0.0,
+      "sloc": 10
+    },
+    "/viewmodels/ordem_produtos.dart": {
+      "id": "/viewmodels/ordem_produtos.dart",
+      "label": "ordem_produtos",
+      "cd": 6,
+      "inDegree": 2,
+      "outDegree": 2,
+      "instability": 0.5,
+      "sloc": 11
+    },
+    "/viewmodels/pedidos_viewmodel.dart": {
+      "id": "/viewmodels/pedidos_viewmodel.dart",
+      "label": "pedidos_viewmodel",
+      "cd": 13,
+      "inDegree": 3,
+      "outDegree": 6,
+      "instability": 0.67,
+      "sloc": 115
+    },
+    "/viewmodels/perfil_cliente_viewmodel.dart": {
+      "id": "/viewmodels/perfil_cliente_viewmodel.dart",
+      "label": "perfil_cliente_viewmodel",
+      "cd": 12,
+      "inDegree": 3,
+      "outDegree": 6,
+      "instability": 0.67,
+      "sloc": 62
+    },
+    "/viewmodels/sessao_viewmodel.dart": {
+      "id": "/viewmodels/sessao_viewmodel.dart",
+      "label": "sessao_viewmodel",
+      "cd": 4,
+      "inDegree": 6,
+      "outDegree": 3,
+      "instability": 0.33,
+      "sloc": 59
+    },
+    "/views/acompanhamento_view.dart": {
+      "id": "/views/acompanhamento_view.dart",
+      "label": "acompanhamento_view",
+      "cd": 24,
+      "inDegree": 1,
+      "outDegree": 12,
+      "instability": 0.92,
+      "sloc": 202
+    },
+    "/views/app.dart": {
+      "id": "/views/app.dart",
+      "label": "app",
+      "cd": 76,
+      "inDegree": 1,
+      "outDegree": 3,
+      "instability": 0.75,
+      "sloc": 31
+    },
+    "/views/app_router.dart": {
+      "id": "/views/app_router.dart",
+      "label": "app_router",
+      "cd": 75,
+      "inDegree": 1,
+      "outDegree": 27,
+      "instability": 0.96,
+      "sloc": 169
+    },
+    "/views/cadastro/campo_cadastro.dart": {
+      "id": "/views/cadastro/campo_cadastro.dart",
+      "label": "campo_cadastro",
+      "cd": 1,
+      "inDegree": 1,
+      "outDegree": 0,
+      "instability": 0.0,
+      "sloc": 55
+    },
+    "/views/cadastro/indicador_etapas.dart": {
+      "id": "/views/cadastro/indicador_etapas.dart",
+      "label": "indicador_etapas",
+      "cd": 2,
+      "inDegree": 1,
+      "outDegree": 1,
+      "instability": 0.5,
+      "sloc": 43
+    },
+    "/views/cadastro_view.dart": {
+      "id": "/views/cadastro_view.dart",
+      "label": "cadastro_view",
+      "cd": 20,
+      "inDegree": 1,
+      "outDegree": 14,
+      "instability": 0.93,
+      "sloc": 493
+    },
+    "/views/carregando_view.dart": {
+      "id": "/views/carregando_view.dart",
+      "label": "carregando_view",
+      "cd": 7,
+      "inDegree": 1,
+      "outDegree": 2,
+      "instability": 0.67,
+      "sloc": 28
+    },
+    "/views/carrinho_view.dart": {
+      "id": "/views/carrinho_view.dart",
+      "label": "carrinho_view",
+      "cd": 30,
+      "inDegree": 1,
+      "outDegree": 13,
+      "instability": 0.93,
+      "sloc": 329
+    },
+    "/views/clientes_view.dart": {
+      "id": "/views/clientes_view.dart",
+      "label": "clientes_view",
+      "cd": 26,
+      "inDegree": 1,
+      "outDegree": 11,
+      "instability": 0.92,
+      "sloc": 149
+    },
+    "/views/detalhe_pedido/bloco_rota.dart": {
+      "id": "/views/detalhe_pedido/bloco_rota.dart",
+      "label": "bloco_rota",
+      "cd": 18,
+      "inDegree": 1,
+      "outDegree": 6,
+      "instability": 0.86,
+      "sloc": 105
+    },
+    "/views/detalhe_pedido/cartao_cliente.dart": {
+      "id": "/views/detalhe_pedido/cartao_cliente.dart",
+      "label": "cartao_cliente",
+      "cd": 11,
+      "inDegree": 1,
+      "outDegree": 5,
+      "instability": 0.83,
+      "sloc": 57
+    },
+    "/views/detalhe_pedido/dialogos_pedido.dart": {
+      "id": "/views/detalhe_pedido/dialogos_pedido.dart",
+      "label": "dialogos_pedido",
+      "cd": 18,
+      "inDegree": 1,
+      "outDegree": 4,
+      "instability": 0.8,
+      "sloc": 137
+    },
+    "/views/detalhe_pedido/historico_pedido.dart": {
+      "id": "/views/detalhe_pedido/historico_pedido.dart",
+      "label": "historico_pedido",
+      "cd": 8,
+      "inDegree": 1,
+      "outDegree": 4,
+      "instability": 0.8,
+      "sloc": 126
+    },
+    "/views/detalhe_pedido/itens_pedido.dart": {
+      "id": "/views/detalhe_pedido/itens_pedido.dart",
+      "label": "itens_pedido",
+      "cd": 10,
+      "inDegree": 1,
+      "outDegree": 4,
+      "instability": 0.8,
+      "sloc": 52
+    },
+    "/views/detalhe_pedido/mapa_rota.dart": {
+      "id": "/views/detalhe_pedido/mapa_rota.dart",
+      "label": "mapa_rota",
+      "cd": 3,
+      "inDegree": 1,
+      "outDegree": 2,
+      "instability": 0.67,
+      "sloc": 91
+    },
+    "/views/detalhe_pedido_view.dart": {
+      "id": "/views/detalhe_pedido_view.dart",
+      "label": "detalhe_pedido_view",
+      "cd": 36,
+      "inDegree": 1,
+      "outDegree": 13,
+      "instability": 0.93,
+      "sloc": 156
+    },
+    "/views/estoque_view.dart": {
+      "id": "/views/estoque_view.dart",
+      "label": "estoque_view",
+      "cd": 22,
+      "inDegree": 1,
+      "outDegree": 13,
+      "instability": 0.93,
+      "sloc": 290
+    },
+    "/views/historico_estoque_view.dart": {
+      "id": "/views/historico_estoque_view.dart",
+      "label": "historico_estoque_view",
+      "cd": 13,
+      "inDegree": 1,
+      "outDegree": 9,
+      "instability": 0.9,
+      "sloc": 146
+    },
+    "/views/login_view.dart": {
+      "id": "/views/login_view.dart",
+      "label": "login_view",
+      "cd": 10,
+      "inDegree": 1,
+      "outDegree": 6,
+      "instability": 0.86,
+      "sloc": 154
+    },
+    "/views/pedidos/painel_filtros.dart": {
+      "id": "/views/pedidos/painel_filtros.dart",
+      "label": "painel_filtros",
+      "cd": 15,
+      "inDegree": 1,
+      "outDegree": 3,
+      "instability": 0.75,
+      "sloc": 210
+    },
+    "/views/pedidos_view.dart": {
+      "id": "/views/pedidos_view.dart",
+      "label": "pedidos_view",
+      "cd": 28,
+      "inDegree": 1,
+      "outDegree": 11,
+      "instability": 0.92,
+      "sloc": 116
+    },
+    "/views/perfil_cliente/cabecalho_cliente.dart": {
+      "id": "/views/perfil_cliente/cabecalho_cliente.dart",
+      "label": "cabecalho_cliente",
+      "cd": 5,
+      "inDegree": 1,
+      "outDegree": 3,
+      "instability": 0.75,
+      "sloc": 41
+    },
+    "/views/perfil_cliente/dados_cliente.dart": {
+      "id": "/views/perfil_cliente/dados_cliente.dart",
+      "label": "dados_cliente",
+      "cd": 6,
+      "inDegree": 1,
+      "outDegree": 4,
+      "instability": 0.8,
+      "sloc": 80
+    },
+    "/views/perfil_cliente/resumo_cliente.dart": {
+      "id": "/views/perfil_cliente/resumo_cliente.dart",
+      "label": "resumo_cliente",
+      "cd": 15,
+      "inDegree": 1,
+      "outDegree": 3,
+      "instability": 0.75,
+      "sloc": 101
+    },
+    "/views/perfil_cliente_view.dart": {
+      "id": "/views/perfil_cliente_view.dart",
+      "label": "perfil_cliente_view",
+      "cd": 29,
+      "inDegree": 1,
+      "outDegree": 10,
+      "instability": 0.91,
+      "sloc": 74
+    },
+    "/views/tema.dart": {
+      "id": "/views/tema.dart",
+      "label": "tema",
+      "cd": 1,
+      "inDegree": 34,
+      "outDegree": 0,
+      "instability": 0.0,
+      "sloc": 240
+    },
+    "/views/widgets/abrir_dialogo.dart": {
+      "id": "/views/widgets/abrir_dialogo.dart",
+      "label": "abrir_dialogo",
+      "cd": 1,
+      "inDegree": 2,
+      "outDegree": 0,
+      "instability": 0.0,
+      "sloc": 13
+    },
+    "/views/widgets/avatar_iniciais.dart": {
+      "id": "/views/widgets/avatar_iniciais.dart",
+      "label": "avatar_iniciais",
+      "cd": 2,
+      "inDegree": 3,
+      "outDegree": 1,
+      "instability": 0.25,
+      "sloc": 36
+    },
+    "/views/widgets/aviso_destaque.dart": {
+      "id": "/views/widgets/aviso_destaque.dart",
+      "label": "aviso_destaque",
+      "cd": 2,
+      "inDegree": 2,
+      "outDegree": 1,
+      "instability": 0.33,
+      "sloc": 56
+    },
+    "/views/widgets/botao_carregando.dart": {
+      "id": "/views/widgets/botao_carregando.dart",
+      "label": "botao_carregando",
+      "cd": 2,
+      "inDegree": 3,
+      "outDegree": 1,
+      "instability": 0.25,
+      "sloc": 32
+    },
+    "/views/widgets/botao_sair.dart": {
+      "id": "/views/widgets/botao_sair.dart",
+      "label": "botao_sair",
+      "cd": 5,
+      "inDegree": 8,
+      "outDegree": 1,
+      "instability": 0.11,
+      "sloc": 14
+    },
+    "/views/widgets/botoes_dialogo.dart": {
+      "id": "/views/widgets/botoes_dialogo.dart",
+      "label": "botoes_dialogo",
+      "cd": 2,
+      "inDegree": 4,
+      "outDegree": 1,
+      "instability": 0.2,
+      "sloc": 46
+    },
+    "/views/widgets/campo_senha.dart": {
+      "id": "/views/widgets/campo_senha.dart",
+      "label": "campo_senha",
+      "cd": 1,
+      "inDegree": 2,
+      "outDegree": 0,
+      "instability": 0.0,
+      "sloc": 44
+    },
+    "/views/widgets/cartao_pedido.dart": {
+      "id": "/views/widgets/cartao_pedido.dart",
+      "label": "cartao_pedido",
+      "cd": 8,
+      "inDegree": 2,
+      "outDegree": 2,
+      "instability": 0.5,
+      "sloc": 30
+    },
+    "/views/widgets/entrada_animada.dart": {
+      "id": "/views/widgets/entrada_animada.dart",
+      "label": "entrada_animada",
+      "cd": 2,
+      "inDegree": 8,
+      "outDegree": 1,
+      "instability": 0.11,
+      "sloc": 29
+    },
+    "/views/widgets/estado_vazio.dart": {
+      "id": "/views/widgets/estado_vazio.dart",
+      "label": "estado_vazio",
+      "cd": 3,
+      "inDegree": 7,
+      "outDegree": 2,
+      "instability": 0.22,
+      "sloc": 31
+    },
+    "/views/widgets/formatos.dart": {
+      "id": "/views/widgets/formatos.dart",
+      "label": "formatos",
+      "cd": 1,
+      "inDegree": 14,
+      "outDegree": 0,
+      "instability": 0.0,
+      "sloc": 30
+    },
+    "/views/widgets/icone_produto.dart": {
+      "id": "/views/widgets/icone_produto.dart",
+      "label": "icone_produto",
+      "cd": 2,
+      "inDegree": 3,
+      "outDegree": 1,
+      "instability": 0.25,
+      "sloc": 28
+    },
+    "/views/widgets/linha_dado.dart": {
+      "id": "/views/widgets/linha_dado.dart",
+      "label": "linha_dado",
+      "cd": 2,
+      "inDegree": 2,
+      "outDegree": 1,
+      "instability": 0.33,
+      "sloc": 48
+    },
+    "/views/widgets/linha_item_pedido.dart": {
+      "id": "/views/widgets/linha_item_pedido.dart",
+      "label": "linha_item_pedido",
+      "cd": 5,
+      "inDegree": 2,
+      "outDegree": 4,
+      "instability": 0.67,
+      "sloc": 72
+    },
+    "/views/widgets/mascaras.dart": {
+      "id": "/views/widgets/mascaras.dart",
+      "label": "mascaras",
+      "cd": 1,
+      "inDegree": 1,
+      "outDegree": 0,
+      "instability": 0.0,
+      "sloc": 42
+    },
+    "/views/widgets/mensagem_erro.dart": {
+      "id": "/views/widgets/mensagem_erro.dart",
+      "label": "mensagem_erro",
+      "cd": 2,
+      "inDegree": 13,
+      "outDegree": 1,
+      "instability": 0.07,
+      "sloc": 51
+    },
+    "/views/widgets/navegacao_admin.dart": {
+      "id": "/views/widgets/navegacao_admin.dart",
+      "label": "navegacao_admin",
+      "cd": 2,
+      "inDegree": 3,
+      "outDegree": 1,
+      "instability": 0.25,
+      "sloc": 43
+    },
+    "/views/widgets/selo_situacao.dart": {
+      "id": "/views/widgets/selo_situacao.dart",
+      "label": "selo_situacao",
+      "cd": 3,
+      "inDegree": 3,
+      "outDegree": 2,
+      "instability": 0.4,
+      "sloc": 48
+    },
+    "/views/widgets/texto_animado.dart": {
+      "id": "/views/widgets/texto_animado.dart",
+      "label": "texto_animado",
+      "cd": 2,
+      "inDegree": 1,
+      "outDegree": 1,
+      "instability": 0.5,
+      "sloc": 26
+    },
+    "/views/widgets/troca_suave.dart": {
+      "id": "/views/widgets/troca_suave.dart",
+      "label": "troca_suave",
+      "cd": 2,
+      "inDegree": 6,
+      "outDegree": 1,
+      "instability": 0.14,
+      "sloc": 16
+    }
+  },
+  "subgraphs": [
+    {
+      "id": "",
+      "label": "lib",
+      "nodes": [
+        "/main.dart"
+      ],
+      "subgraphs": [
+        {
+          "id": "/models",
+          "label": "models",
+          "nodes": [
+            "/models/administrador.dart",
+            "/models/cliente.dart",
+            "/models/coordenada.dart",
+            "/models/deslocamento.dart",
+            "/models/endereco.dart",
+            "/models/item_pedido.dart",
+            "/models/movimentacao_estoque.dart",
+            "/models/pedido.dart",
+            "/models/perfil.dart",
+            "/models/produto.dart",
+            "/models/situacao_pedido.dart",
+            "/models/tipo_movimentacao.dart"
+          ],
+          "subgraphs": []
+        },
+        {
+          "id": "/services",
+          "label": "services",
+          "nodes": [
+            "/services/auth_service.dart",
+            "/services/cliente_service.dart",
+            "/services/falhas.dart",
+            "/services/pedido_service.dart",
+            "/services/produto_service.dart",
+            "/services/rota_service.dart"
+          ],
+          "subgraphs": []
+        },
+        {
+          "id": "/viewmodels",
+          "label": "viewmodels",
+          "nodes": [
+            "/viewmodels/acompanhamento_viewmodel.dart",
+            "/viewmodels/cadastro_viewmodel.dart",
+            "/viewmodels/carrinho_viewmodel.dart",
+            "/viewmodels/clientes_viewmodel.dart",
+            "/viewmodels/detalhe_pedido_viewmodel.dart",
+            "/viewmodels/estoque_viewmodel.dart",
+            "/viewmodels/historico_estoque_viewmodel.dart",
+            "/viewmodels/login_viewmodel.dart",
+            "/viewmodels/normalizar_busca.dart",
+            "/viewmodels/ordem_produtos.dart",
+            "/viewmodels/pedidos_viewmodel.dart",
+            "/viewmodels/perfil_cliente_viewmodel.dart",
+            "/viewmodels/sessao_viewmodel.dart"
+          ],
+          "subgraphs": []
+        },
+        {
+          "id": "/views",
+          "label": "views",
+          "nodes": [
+            "/views/acompanhamento_view.dart",
+            "/views/app.dart",
+            "/views/app_router.dart",
+            "/views/cadastro_view.dart",
+            "/views/carregando_view.dart",
+            "/views/carrinho_view.dart",
+            "/views/clientes_view.dart",
+            "/views/detalhe_pedido_view.dart",
+            "/views/estoque_view.dart",
+            "/views/historico_estoque_view.dart",
+            "/views/login_view.dart",
+            "/views/pedidos_view.dart",
+            "/views/perfil_cliente_view.dart",
+            "/views/tema.dart"
+          ],
+          "subgraphs": [
+            {
+              "id": "/views/cadastro",
+              "label": "cadastro",
+              "nodes": [
+                "/views/cadastro/campo_cadastro.dart",
+                "/views/cadastro/indicador_etapas.dart"
+              ],
+              "subgraphs": []
+            },
+            {
+              "id": "/views/detalhe_pedido",
+              "label": "detalhe_pedido",
+              "nodes": [
+                "/views/detalhe_pedido/bloco_rota.dart",
+                "/views/detalhe_pedido/cartao_cliente.dart",
+                "/views/detalhe_pedido/dialogos_pedido.dart",
+                "/views/detalhe_pedido/historico_pedido.dart",
+                "/views/detalhe_pedido/itens_pedido.dart",
+                "/views/detalhe_pedido/mapa_rota.dart"
+              ],
+              "subgraphs": []
+            },
+            {
+              "id": "/views/pedidos",
+              "label": "pedidos",
+              "nodes": [
+                "/views/pedidos/painel_filtros.dart"
+              ],
+              "subgraphs": []
+            },
+            {
+              "id": "/views/perfil_cliente",
+              "label": "perfil_cliente",
+              "nodes": [
+                "/views/perfil_cliente/cabecalho_cliente.dart",
+                "/views/perfil_cliente/dados_cliente.dart",
+                "/views/perfil_cliente/resumo_cliente.dart"
+              ],
+              "subgraphs": []
+            },
+            {
+              "id": "/views/widgets",
+              "label": "widgets",
+              "nodes": [
+                "/views/widgets/abrir_dialogo.dart",
+                "/views/widgets/avatar_iniciais.dart",
+                "/views/widgets/aviso_destaque.dart",
+                "/views/widgets/botao_carregando.dart",
+                "/views/widgets/botao_sair.dart",
+                "/views/widgets/botoes_dialogo.dart",
+                "/views/widgets/campo_senha.dart",
+                "/views/widgets/cartao_pedido.dart",
+                "/views/widgets/entrada_animada.dart",
+                "/views/widgets/estado_vazio.dart",
+                "/views/widgets/formatos.dart",
+                "/views/widgets/icone_produto.dart",
+                "/views/widgets/linha_dado.dart",
+                "/views/widgets/linha_item_pedido.dart",
+                "/views/widgets/mascaras.dart",
+                "/views/widgets/mensagem_erro.dart",
+                "/views/widgets/navegacao_admin.dart",
+                "/views/widgets/selo_situacao.dart",
+                "/views/widgets/texto_animado.dart",
+                "/views/widgets/troca_suave.dart"
+              ],
+              "subgraphs": []
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "edges": [
+    {
+      "from": "/main.dart",
+      "to": "/services/auth_service.dart",
+      "directive": "import"
+    },
+    {
+      "from": "/main.dart",
+      "to": "/services/cliente_service.dart",
+      "directive": "import"
+    },
+    {
+      "from": "/main.dart",
+      "to": "/services/pedido_service.dart",
+      "directive": "import"
+    },
+    {
+      "from": "/main.dart",
+      "to": "/services/produto_service.dart",
+      "directive": "import"
+    },
+    {
+      "from": "/main.dart",
+      "to": "/services/rota_service.dart",
+      "directive": "import"
+    },
+    {
+      "from": "/main.dart",
+      "to": "/viewmodels/sessao_viewmodel.dart",
+      "directive": "import"
+    },
+    {
+      "from": "/main.dart",
+      "to": "/views/app.dart",
+      "directive": "import"
+    },
+    {
+      "from": "/models/cliente.dart",
+      "to": "/models/endereco.dart",
+      "directive": "import"
+    },
+    {
+      "from": "/models/movimentacao_estoque.dart",
+      "to": "/models/tipo_movimentacao.dart",
+      "directive": "import"
+    },
+    {
+      "from": "/models/pedido.dart",
+      "to": "/models/deslocamento.dart",
+      "directive": "import"
+    },
+    {
+      "from": "/models/pedido.dart",
+      "to": "/models/endereco.dart",
+      "directive": "import"
+    },
+    {
+      "from": "/models/pedido.dart",
+      "to": "/models/item_pedido.dart",
+      "directive": "import"
+    },
+    {
+      "from": "/models/pedido.dart",
+      "to": "/models/situacao_pedido.dart",
+      "directive": "import"
+    },
+    {
+      "from": "/services/auth_service.dart",
+      "to": "/models/perfil.dart",
+      "directive": "import"
+    },
+    {
+      "from": "/services/auth_service.dart",
+      "to": "/services/falhas.dart",
+      "directive": "import"
+    },
+    {
+      "from": "/services/cliente_service.dart",
+      "to": "/models/cliente.dart",
+      "directive": "import"
+    },
+    {
+      "from": "/services/cliente_service.dart",
+      "to": "/services/falhas.dart",
+      "directive": "import"
+    },
+    {
+      "from": "/services/pedido_service.dart",
+      "to": "/models/deslocamento.dart",
+      "directive": "import"
+    },
+    {
+      "from": "/services/pedido_service.dart",
+      "to": "/models/item_pedido.dart",
+      "directive": "import"
+    },
+    {
+      "from": "/services/pedido_service.dart",
+      "to": "/models/movimentacao_estoque.dart",
+      "directive": "import"
+    },
+    {
+      "from": "/services/pedido_service.dart",
+      "to": "/models/pedido.dart",
+      "directive": "import"
+    },
+    {
+      "from": "/services/pedido_service.dart",
+      "to": "/models/tipo_movimentacao.dart",
+      "directive": "import"
+    },
+    {
+      "from": "/services/pedido_service.dart",
+      "to": "/services/falhas.dart",
+      "directive": "import"
+    },
+    {
+      "from": "/services/produto_service.dart",
+      "to": "/models/movimentacao_estoque.dart",
+      "directive": "import"
+    },
+    {
+      "from": "/services/produto_service.dart",
+      "to": "/models/produto.dart",
+      "directive": "import"
+    },
+    {
+      "from": "/services/produto_service.dart",
+      "to": "/models/tipo_movimentacao.dart",
+      "directive": "import"
+    },
+    {
+      "from": "/services/produto_service.dart",
+      "to": "/services/falhas.dart",
+      "directive": "import"
+    },
+    {
+      "from": "/services/rota_service.dart",
+      "to": "/models/coordenada.dart",
+      "directive": "import"
+    },
+    {
+      "from": "/services/rota_service.dart",
+      "to": "/models/deslocamento.dart",
+      "directive": "import"
+    },
+    {
+      "from": "/services/rota_service.dart",
+      "to": "/services/falhas.dart",
+      "directive": "import"
+    },
+    {
+      "from": "/viewmodels/acompanhamento_viewmodel.dart",
+      "to": "/models/pedido.dart",
+      "directive": "import"
+    },
+    {
+      "from": "/viewmodels/acompanhamento_viewmodel.dart",
+      "to": "/services/auth_service.dart",
+      "directive": "import"
+    },
+    {
+      "from": "/viewmodels/acompanhamento_viewmodel.dart",
+      "to": "/services/falhas.dart",
+      "directive": "import"
+    },
+    {
+      "from": "/viewmodels/acompanhamento_viewmodel.dart",
+      "to": "/services/pedido_service.dart",
+      "directive": "import"
+    },
+    {
+      "from": "/viewmodels/cadastro_viewmodel.dart",
+      "to": "/models/cliente.dart",
+      "directive": "import"
+    },
+    {
+      "from": "/viewmodels/cadastro_viewmodel.dart",
+      "to": "/models/endereco.dart",
+      "directive": "import"
+    },
+    {
+      "from": "/viewmodels/cadastro_viewmodel.dart",
+      "to": "/services/auth_service.dart",
+      "directive": "import"
+    },
+    {
+      "from": "/viewmodels/cadastro_viewmodel.dart",
+      "to": "/services/cliente_service.dart",
+      "directive": "import"
+    },
+    {
+      "from": "/viewmodels/cadastro_viewmodel.dart",
+      "to": "/services/falhas.dart",
+      "directive": "import"
+    },
+    {
+      "from": "/viewmodels/carrinho_viewmodel.dart",
+      "to": "/models/endereco.dart",
+      "directive": "import"
+    },
+    {
+      "from": "/viewmodels/carrinho_viewmodel.dart",
+      "to": "/models/item_pedido.dart",
+      "directive": "import"
+    },
+    {
+      "from": "/viewmodels/carrinho_viewmodel.dart",
+      "to": "/models/pedido.dart",
+      "directive": "import"
+    },
+    {
+      "from": "/viewmodels/carrinho_viewmodel.dart",
+      "to": "/models/produto.dart",
+      "directive": "import"
+    },
+    {
+      "from": "/viewmodels/carrinho_viewmodel.dart",
+      "to": "/models/situacao_pedido.dart",
+      "directive": "import"
+    },
+    {
+      "from": "/viewmodels/carrinho_viewmodel.dart",
+      "to": "/services/auth_service.dart",
+      "directive": "import"
+    },
+    {
+      "from": "/viewmodels/carrinho_viewmodel.dart",
+      "to": "/services/cliente_service.dart",
+      "directive": "import"
+    },
+    {
+      "from": "/viewmodels/carrinho_viewmodel.dart",
+      "to": "/services/falhas.dart",
+      "directive": "import"
+    },
+    {
+      "from": "/viewmodels/carrinho_viewmodel.dart",
+      "to": "/services/pedido_service.dart",
+      "directive": "import"
+    },
+    {
+      "from": "/viewmodels/carrinho_viewmodel.dart",
+      "to": "/services/produto_service.dart",
+      "directive": "import"
+    },
+    {
+      "from": "/viewmodels/carrinho_viewmodel.dart",
+      "to": "/viewmodels/ordem_produtos.dart",
+      "directive": "import"
+    },
+    {
+      "from": "/viewmodels/clientes_viewmodel.dart",
+      "to": "/models/cliente.dart",
+      "directive": "import"
+    },
+    {
+      "from": "/viewmodels/clientes_viewmodel.dart",
+      "to": "/models/pedido.dart",
+      "directive": "import"
+    },
+    {
+      "from": "/viewmodels/clientes_viewmodel.dart",
+      "to": "/services/cliente_service.dart",
+      "directive": "import"
+    },
+    {
+      "from": "/viewmodels/clientes_viewmodel.dart",
+      "to": "/services/falhas.dart",
+      "directive": "import"
+    },
+    {
+      "from": "/viewmodels/clientes_viewmodel.dart",
+      "to": "/services/pedido_service.dart",
+      "directive": "import"
+    },
+    {
+      "from": "/viewmodels/clientes_viewmodel.dart",
+      "to": "/viewmodels/normalizar_busca.dart",
+      "directive": "import"
+    },
+    {
+      "from": "/viewmodels/detalhe_pedido_viewmodel.dart",
+      "to": "/models/coordenada.dart",
+      "directive": "import"
+    },
+    {
+      "from": "/viewmodels/detalhe_pedido_viewmodel.dart",
+      "to": "/models/pedido.dart",
+      "directive": "import"
+    },
+    {
+      "from": "/viewmodels/detalhe_pedido_viewmodel.dart",
+      "to": "/models/situacao_pedido.dart",
+      "directive": "import"
+    },
+    {
+      "from": "/viewmodels/detalhe_pedido_viewmodel.dart",
+      "to": "/services/falhas.dart",
+      "directive": "import"
+    },
+    {
+      "from": "/viewmodels/detalhe_pedido_viewmodel.dart",
+      "to": "/services/pedido_service.dart",
+      "directive": "import"
+    },
+    {
+      "from": "/viewmodels/detalhe_pedido_viewmodel.dart",
+      "to": "/services/produto_service.dart",
+      "directive": "import"
+    },
+    {
+      "from": "/viewmodels/detalhe_pedido_viewmodel.dart",
+      "to": "/services/rota_service.dart",
+      "directive": "import"
+    },
+    {
+      "from": "/viewmodels/estoque_viewmodel.dart",
+      "to": "/models/produto.dart",
+      "directive": "import"
+    },
+    {
+      "from": "/viewmodels/estoque_viewmodel.dart",
+      "to": "/services/falhas.dart",
+      "directive": "import"
+    },
+    {
+      "from": "/viewmodels/estoque_viewmodel.dart",
+      "to": "/services/produto_service.dart",
+      "directive": "import"
+    },
+    {
+      "from": "/viewmodels/estoque_viewmodel.dart",
+      "to": "/viewmodels/ordem_produtos.dart",
+      "directive": "import"
+    },
+    {
+      "from": "/viewmodels/historico_estoque_viewmodel.dart",
+      "to": "/models/movimentacao_estoque.dart",
+      "directive": "import"
+    },
+    {
+      "from": "/viewmodels/historico_estoque_viewmodel.dart",
+      "to": "/services/falhas.dart",
+      "directive": "import"
+    },
+    {
+      "from": "/viewmodels/historico_estoque_viewmodel.dart",
+      "to": "/services/produto_service.dart",
+      "directive": "import"
+    },
+    {
+      "from": "/viewmodels/login_viewmodel.dart",
+      "to": "/services/auth_service.dart",
+      "directive": "import"
+    },
+    {
+      "from": "/viewmodels/login_viewmodel.dart",
+      "to": "/services/falhas.dart",
+      "directive": "import"
+    },
+    {
+      "from": "/viewmodels/ordem_produtos.dart",
+      "to": "/models/produto.dart",
+      "directive": "import"
+    },
+    {
+      "from": "/viewmodels/ordem_produtos.dart",
+      "to": "/services/produto_service.dart",
+      "directive": "import"
+    },
+    {
+      "from": "/viewmodels/pedidos_viewmodel.dart",
+      "to": "/models/pedido.dart",
+      "directive": "import"
+    },
+    {
+      "from": "/viewmodels/pedidos_viewmodel.dart",
+      "to": "/models/situacao_pedido.dart",
+      "directive": "import"
+    },
+    {
+      "from": "/viewmodels/pedidos_viewmodel.dart",
+      "to": "/services/falhas.dart",
+      "directive": "import"
+    },
+    {
+      "from": "/viewmodels/pedidos_viewmodel.dart",
+      "to": "/services/pedido_service.dart",
+      "directive": "import"
+    },
+    {
+      "from": "/viewmodels/pedidos_viewmodel.dart",
+      "to": "/services/produto_service.dart",
+      "directive": "import"
+    },
+    {
+      "from": "/viewmodels/pedidos_viewmodel.dart",
+      "to": "/viewmodels/normalizar_busca.dart",
+      "directive": "import"
+    },
+    {
+      "from": "/viewmodels/perfil_cliente_viewmodel.dart",
+      "to": "/models/cliente.dart",
+      "directive": "import"
+    },
+    {
+      "from": "/viewmodels/perfil_cliente_viewmodel.dart",
+      "to": "/models/pedido.dart",
+      "directive": "import"
+    },
+    {
+      "from": "/viewmodels/perfil_cliente_viewmodel.dart",
+      "to": "/models/situacao_pedido.dart",
+      "directive": "import"
+    },
+    {
+      "from": "/viewmodels/perfil_cliente_viewmodel.dart",
+      "to": "/services/cliente_service.dart",
+      "directive": "import"
+    },
+    {
+      "from": "/viewmodels/perfil_cliente_viewmodel.dart",
+      "to": "/services/falhas.dart",
+      "directive": "import"
+    },
+    {
+      "from": "/viewmodels/perfil_cliente_viewmodel.dart",
+      "to": "/services/pedido_service.dart",
+      "directive": "import"
+    },
+    {
+      "from": "/viewmodels/sessao_viewmodel.dart",
+      "to": "/models/perfil.dart",
+      "directive": "import"
+    },
+    {
+      "from": "/viewmodels/sessao_viewmodel.dart",
+      "to": "/services/auth_service.dart",
+      "directive": "import"
+    },
+    {
+      "from": "/viewmodels/sessao_viewmodel.dart",
+      "to": "/services/falhas.dart",
+      "directive": "import"
+    },
+    {
+      "from": "/views/acompanhamento_view.dart",
+      "to": "/models/pedido.dart",
+      "directive": "import"
+    },
+    {
+      "from": "/views/acompanhamento_view.dart",
+      "to": "/models/situacao_pedido.dart",
+      "directive": "import"
+    },
+    {
+      "from": "/views/acompanhamento_view.dart",
+      "to": "/viewmodels/acompanhamento_viewmodel.dart",
+      "directive": "import"
+    },
+    {
+      "from": "/views/acompanhamento_view.dart",
+      "to": "/views/tema.dart",
+      "directive": "import"
+    },
+    {
+      "from": "/views/acompanhamento_view.dart",
+      "to": "/views/widgets/botao_sair.dart",
+      "directive": "import"
+    },
+    {
+      "from": "/views/acompanhamento_view.dart",
+      "to": "/views/widgets/entrada_animada.dart",
+      "directive": "import"
+    },
+    {
+      "from": "/views/acompanhamento_view.dart",
+      "to": "/views/widgets/estado_vazio.dart",
+      "directive": "import"
+    },
+    {
+      "from": "/views/acompanhamento_view.dart",
+      "to": "/views/widgets/formatos.dart",
+      "directive": "import"
+    },
+    {
+      "from": "/views/acompanhamento_view.dart",
+      "to": "/views/widgets/linha_item_pedido.dart",
+      "directive": "import"
+    },
+    {
+      "from": "/views/acompanhamento_view.dart",
+      "to": "/views/widgets/mensagem_erro.dart",
+      "directive": "import"
+    },
+    {
+      "from": "/views/acompanhamento_view.dart",
+      "to": "/views/widgets/selo_situacao.dart",
+      "directive": "import"
+    },
+    {
+      "from": "/views/acompanhamento_view.dart",
+      "to": "/views/widgets/troca_suave.dart",
+      "directive": "import"
+    },
+    {
+      "from": "/views/app.dart",
+      "to": "/viewmodels/sessao_viewmodel.dart",
+      "directive": "import"
+    },
+    {
+      "from": "/views/app.dart",
+      "to": "/views/app_router.dart",
+      "directive": "import"
+    },
+    {
+      "from": "/views/app.dart",
+      "to": "/views/tema.dart",
+      "directive": "import"
+    },
+    {
+      "from": "/views/app_router.dart",
+      "to": "/services/auth_service.dart",
+      "directive": "import"
+    },
+    {
+      "from": "/views/app_router.dart",
+      "to": "/services/cliente_service.dart",
+      "directive": "import"
+    },
+    {
+      "from": "/views/app_router.dart",
+      "to": "/services/pedido_service.dart",
+      "directive": "import"
+    },
+    {
+      "from": "/views/app_router.dart",
+      "to": "/services/produto_service.dart",
+      "directive": "import"
+    },
+    {
+      "from": "/views/app_router.dart",
+      "to": "/services/rota_service.dart",
+      "directive": "import"
+    },
+    {
+      "from": "/views/app_router.dart",
+      "to": "/viewmodels/acompanhamento_viewmodel.dart",
+      "directive": "import"
+    },
+    {
+      "from": "/views/app_router.dart",
+      "to": "/viewmodels/cadastro_viewmodel.dart",
+      "directive": "import"
+    },
+    {
+      "from": "/views/app_router.dart",
+      "to": "/viewmodels/carrinho_viewmodel.dart",
+      "directive": "import"
+    },
+    {
+      "from": "/views/app_router.dart",
+      "to": "/viewmodels/clientes_viewmodel.dart",
+      "directive": "import"
+    },
+    {
+      "from": "/views/app_router.dart",
+      "to": "/viewmodels/detalhe_pedido_viewmodel.dart",
+      "directive": "import"
+    },
+    {
+      "from": "/views/app_router.dart",
+      "to": "/viewmodels/estoque_viewmodel.dart",
+      "directive": "import"
+    },
+    {
+      "from": "/views/app_router.dart",
+      "to": "/viewmodels/historico_estoque_viewmodel.dart",
+      "directive": "import"
+    },
+    {
+      "from": "/views/app_router.dart",
+      "to": "/viewmodels/login_viewmodel.dart",
+      "directive": "import"
+    },
+    {
+      "from": "/views/app_router.dart",
+      "to": "/viewmodels/pedidos_viewmodel.dart",
+      "directive": "import"
+    },
+    {
+      "from": "/views/app_router.dart",
+      "to": "/viewmodels/perfil_cliente_viewmodel.dart",
+      "directive": "import"
+    },
+    {
+      "from": "/views/app_router.dart",
+      "to": "/viewmodels/sessao_viewmodel.dart",
+      "directive": "import"
+    },
+    {
+      "from": "/views/app_router.dart",
+      "to": "/views/acompanhamento_view.dart",
+      "directive": "import"
+    },
+    {
+      "from": "/views/app_router.dart",
+      "to": "/views/cadastro_view.dart",
+      "directive": "import"
+    },
+    {
+      "from": "/views/app_router.dart",
+      "to": "/views/carregando_view.dart",
+      "directive": "import"
+    },
+    {
+      "from": "/views/app_router.dart",
+      "to": "/views/carrinho_view.dart",
+      "directive": "import"
+    },
+    {
+      "from": "/views/app_router.dart",
+      "to": "/views/clientes_view.dart",
+      "directive": "import"
+    },
+    {
+      "from": "/views/app_router.dart",
+      "to": "/views/detalhe_pedido_view.dart",
+      "directive": "import"
+    },
+    {
+      "from": "/views/app_router.dart",
+      "to": "/views/estoque_view.dart",
+      "directive": "import"
+    },
+    {
+      "from": "/views/app_router.dart",
+      "to": "/views/historico_estoque_view.dart",
+      "directive": "import"
+    },
+    {
+      "from": "/views/app_router.dart",
+      "to": "/views/login_view.dart",
+      "directive": "import"
+    },
+    {
+      "from": "/views/app_router.dart",
+      "to": "/views/pedidos_view.dart",
+      "directive": "import"
+    },
+    {
+      "from": "/views/app_router.dart",
+      "to": "/views/perfil_cliente_view.dart",
+      "directive": "import"
+    },
+    {
+      "from": "/views/cadastro/indicador_etapas.dart",
+      "to": "/views/tema.dart",
+      "directive": "import"
+    },
+    {
+      "from": "/views/cadastro_view.dart",
+      "to": "/models/endereco.dart",
+      "directive": "import"
+    },
+    {
+      "from": "/views/cadastro_view.dart",
+      "to": "/viewmodels/cadastro_viewmodel.dart",
+      "directive": "import"
+    },
+    {
+      "from": "/views/cadastro_view.dart",
+      "to": "/viewmodels/sessao_viewmodel.dart",
+      "directive": "import"
+    },
+    {
+      "from": "/views/cadastro_view.dart",
+      "to": "/views/cadastro/campo_cadastro.dart",
+      "directive": "import"
+    },
+    {
+      "from": "/views/cadastro_view.dart",
+      "to": "/views/cadastro/indicador_etapas.dart",
+      "directive": "import"
+    },
+    {
+      "from": "/views/cadastro_view.dart",
+      "to": "/views/tema.dart",
+      "directive": "import"
+    },
+    {
+      "from": "/views/cadastro_view.dart",
+      "to": "/views/widgets/aviso_destaque.dart",
+      "directive": "import"
+    },
+    {
+      "from": "/views/cadastro_view.dart",
+      "to": "/views/widgets/botao_carregando.dart",
+      "directive": "import"
+    },
+    {
+      "from": "/views/cadastro_view.dart",
+      "to": "/views/widgets/botao_sair.dart",
+      "directive": "import"
+    },
+    {
+      "from": "/views/cadastro_view.dart",
+      "to": "/views/widgets/botoes_dialogo.dart",
+      "directive": "import"
+    },
+    {
+      "from": "/views/cadastro_view.dart",
+      "to": "/views/widgets/campo_senha.dart",
+      "directive": "import"
+    },
+    {
+      "from": "/views/cadastro_view.dart",
+      "to": "/views/widgets/formatos.dart",
+      "directive": "import"
+    },
+    {
+      "from": "/views/cadastro_view.dart",
+      "to": "/views/widgets/mascaras.dart",
+      "directive": "import"
+    },
+    {
+      "from": "/views/cadastro_view.dart",
+      "to": "/views/widgets/mensagem_erro.dart",
+      "directive": "import"
+    },
+    {
+      "from": "/views/carregando_view.dart",
+      "to": "/viewmodels/sessao_viewmodel.dart",
+      "directive": "import"
+    },
+    {
+      "from": "/views/carregando_view.dart",
+      "to": "/views/widgets/mensagem_erro.dart",
+      "directive": "import"
+    },
+    {
+      "from": "/views/carrinho_view.dart",
+      "to": "/models/produto.dart",
+      "directive": "import"
+    },
+    {
+      "from": "/views/carrinho_view.dart",
+      "to": "/viewmodels/carrinho_viewmodel.dart",
+      "directive": "import"
+    },
+    {
+      "from": "/views/carrinho_view.dart",
+      "to": "/views/tema.dart",
+      "directive": "import"
+    },
+    {
+      "from": "/views/carrinho_view.dart",
+      "to": "/views/widgets/botao_carregando.dart",
+      "directive": "import"
+    },
+    {
+      "from": "/views/carrinho_view.dart",
+      "to": "/views/widgets/botao_sair.dart",
+      "directive": "import"
+    },
+    {
+      "from": "/views/carrinho_view.dart",
+      "to": "/views/widgets/botoes_dialogo.dart",
+      "directive": "import"
+    },
+    {
+      "from": "/views/carrinho_view.dart",
+      "to": "/views/widgets/entrada_animada.dart",
+      "directive": "import"
+    },
+    {
+      "from": "/views/carrinho_view.dart",
+      "to": "/views/widgets/estado_vazio.dart",
+      "directive": "import"
+    },
+    {
+      "from": "/views/carrinho_view.dart",
+      "to": "/views/widgets/formatos.dart",
+      "directive": "import"
+    },
+    {
+      "from": "/views/carrinho_view.dart",
+      "to": "/views/widgets/icone_produto.dart",
+      "directive": "import"
+    },
+    {
+      "from": "/views/carrinho_view.dart",
+      "to": "/views/widgets/mensagem_erro.dart",
+      "directive": "import"
+    },
+    {
+      "from": "/views/carrinho_view.dart",
+      "to": "/views/widgets/texto_animado.dart",
+      "directive": "import"
+    },
+    {
+      "from": "/views/carrinho_view.dart",
+      "to": "/views/widgets/troca_suave.dart",
+      "directive": "import"
+    },
+    {
+      "from": "/views/clientes_view.dart",
+      "to": "/models/cliente.dart",
+      "directive": "import"
+    },
+    {
+      "from": "/views/clientes_view.dart",
+      "to": "/viewmodels/clientes_viewmodel.dart",
+      "directive": "import"
+    },
+    {
+      "from": "/views/clientes_view.dart",
+      "to": "/views/tema.dart",
+      "directive": "import"
+    },
+    {
+      "from": "/views/clientes_view.dart",
+      "to": "/views/widgets/avatar_iniciais.dart",
+      "directive": "import"
+    },
+    {
+      "from": "/views/clientes_view.dart",
+      "to": "/views/widgets/botao_sair.dart",
+      "directive": "import"
+    },
+    {
+      "from": "/views/clientes_view.dart",
+      "to": "/views/widgets/entrada_animada.dart",
+      "directive": "import"
+    },
+    {
+      "from": "/views/clientes_view.dart",
+      "to": "/views/widgets/estado_vazio.dart",
+      "directive": "import"
+    },
+    {
+      "from": "/views/clientes_view.dart",
+      "to": "/views/widgets/formatos.dart",
+      "directive": "import"
+    },
+    {
+      "from": "/views/clientes_view.dart",
+      "to": "/views/widgets/mensagem_erro.dart",
+      "directive": "import"
+    },
+    {
+      "from": "/views/clientes_view.dart",
+      "to": "/views/widgets/navegacao_admin.dart",
+      "directive": "import"
+    },
+    {
+      "from": "/views/clientes_view.dart",
+      "to": "/views/widgets/troca_suave.dart",
+      "directive": "import"
+    },
+    {
+      "from": "/views/detalhe_pedido/bloco_rota.dart",
+      "to": "/models/deslocamento.dart",
+      "directive": "import"
+    },
+    {
+      "from": "/views/detalhe_pedido/bloco_rota.dart",
+      "to": "/models/pedido.dart",
+      "directive": "import"
+    },
+    {
+      "from": "/views/detalhe_pedido/bloco_rota.dart",
+      "to": "/viewmodels/detalhe_pedido_viewmodel.dart",
+      "directive": "import"
+    },
+    {
+      "from": "/views/detalhe_pedido/bloco_rota.dart",
+      "to": "/views/tema.dart",
+      "directive": "import"
+    },
+    {
+      "from": "/views/detalhe_pedido/bloco_rota.dart",
+      "to": "/views/widgets/mensagem_erro.dart",
+      "directive": "import"
+    },
+    {
+      "from": "/views/detalhe_pedido/bloco_rota.dart",
+      "to": "/views/detalhe_pedido/mapa_rota.dart",
+      "directive": "import"
+    },
+    {
+      "from": "/views/detalhe_pedido/cartao_cliente.dart",
+      "to": "/models/pedido.dart",
+      "directive": "import"
+    },
+    {
+      "from": "/views/detalhe_pedido/cartao_cliente.dart",
+      "to": "/views/widgets/avatar_iniciais.dart",
+      "directive": "import"
+    },
+    {
+      "from": "/views/detalhe_pedido/cartao_cliente.dart",
+      "to": "/views/widgets/formatos.dart",
+      "directive": "import"
+    },
+    {
+      "from": "/views/detalhe_pedido/cartao_cliente.dart",
+      "to": "/views/widgets/linha_dado.dart",
+      "directive": "import"
+    },
+    {
+      "from": "/views/detalhe_pedido/cartao_cliente.dart",
+      "to": "/views/widgets/selo_situacao.dart",
+      "directive": "import"
+    },
+    {
+      "from": "/views/detalhe_pedido/dialogos_pedido.dart",
+      "to": "/models/pedido.dart",
+      "directive": "import"
+    },
+    {
+      "from": "/views/detalhe_pedido/dialogos_pedido.dart",
+      "to": "/viewmodels/detalhe_pedido_viewmodel.dart",
+      "directive": "import"
+    },
+    {
+      "from": "/views/detalhe_pedido/dialogos_pedido.dart",
+      "to": "/views/widgets/botoes_dialogo.dart",
+      "directive": "import"
+    },
+    {
+      "from": "/views/detalhe_pedido/dialogos_pedido.dart",
+      "to": "/views/widgets/mensagem_erro.dart",
+      "directive": "import"
+    },
+    {
+      "from": "/views/detalhe_pedido/historico_pedido.dart",
+      "to": "/models/pedido.dart",
+      "directive": "import"
+    },
+    {
+      "from": "/views/detalhe_pedido/historico_pedido.dart",
+      "to": "/models/situacao_pedido.dart",
+      "directive": "import"
+    },
+    {
+      "from": "/views/detalhe_pedido/historico_pedido.dart",
+      "to": "/views/tema.dart",
+      "directive": "import"
+    },
+    {
+      "from": "/views/detalhe_pedido/historico_pedido.dart",
+      "to": "/views/widgets/formatos.dart",
+      "directive": "import"
+    },
+    {
+      "from": "/views/detalhe_pedido/itens_pedido.dart",
+      "to": "/models/pedido.dart",
+      "directive": "import"
+    },
+    {
+      "from": "/views/detalhe_pedido/itens_pedido.dart",
+      "to": "/views/tema.dart",
+      "directive": "import"
+    },
+    {
+      "from": "/views/detalhe_pedido/itens_pedido.dart",
+      "to": "/views/widgets/formatos.dart",
+      "directive": "import"
+    },
+    {
+      "from": "/views/detalhe_pedido/itens_pedido.dart",
+      "to": "/views/widgets/linha_item_pedido.dart",
+      "directive": "import"
+    },
+    {
+      "from": "/views/detalhe_pedido/mapa_rota.dart",
+      "to": "/models/coordenada.dart",
+      "directive": "import"
+    },
+    {
+      "from": "/views/detalhe_pedido/mapa_rota.dart",
+      "to": "/views/tema.dart",
+      "directive": "import"
+    },
+    {
+      "from": "/views/detalhe_pedido_view.dart",
+      "to": "/models/pedido.dart",
+      "directive": "import"
+    },
+    {
+      "from": "/views/detalhe_pedido_view.dart",
+      "to": "/models/situacao_pedido.dart",
+      "directive": "import"
+    },
+    {
+      "from": "/views/detalhe_pedido_view.dart",
+      "to": "/viewmodels/detalhe_pedido_viewmodel.dart",
+      "directive": "import"
+    },
+    {
+      "from": "/views/detalhe_pedido_view.dart",
+      "to": "/views/detalhe_pedido/bloco_rota.dart",
+      "directive": "import"
+    },
+    {
+      "from": "/views/detalhe_pedido_view.dart",
+      "to": "/views/detalhe_pedido/cartao_cliente.dart",
+      "directive": "import"
+    },
+    {
+      "from": "/views/detalhe_pedido_view.dart",
+      "to": "/views/detalhe_pedido/dialogos_pedido.dart",
+      "directive": "import"
+    },
+    {
+      "from": "/views/detalhe_pedido_view.dart",
+      "to": "/views/detalhe_pedido/historico_pedido.dart",
+      "directive": "import"
+    },
+    {
+      "from": "/views/detalhe_pedido_view.dart",
+      "to": "/views/detalhe_pedido/itens_pedido.dart",
+      "directive": "import"
+    },
+    {
+      "from": "/views/detalhe_pedido_view.dart",
+      "to": "/views/tema.dart",
+      "directive": "import"
+    },
+    {
+      "from": "/views/detalhe_pedido_view.dart",
+      "to": "/views/widgets/abrir_dialogo.dart",
+      "directive": "import"
+    },
+    {
+      "from": "/views/detalhe_pedido_view.dart",
+      "to": "/views/widgets/aviso_destaque.dart",
+      "directive": "import"
+    },
+    {
+      "from": "/views/detalhe_pedido_view.dart",
+      "to": "/views/widgets/botao_sair.dart",
+      "directive": "import"
+    },
+    {
+      "from": "/views/detalhe_pedido_view.dart",
+      "to": "/views/widgets/mensagem_erro.dart",
+      "directive": "import"
+    },
+    {
+      "from": "/views/estoque_view.dart",
+      "to": "/models/produto.dart",
+      "directive": "import"
+    },
+    {
+      "from": "/views/estoque_view.dart",
+      "to": "/viewmodels/estoque_viewmodel.dart",
+      "directive": "import"
+    },
+    {
+      "from": "/views/estoque_view.dart",
+      "to": "/views/tema.dart",
+      "directive": "import"
+    },
+    {
+      "from": "/views/estoque_view.dart",
+      "to": "/views/widgets/abrir_dialogo.dart",
+      "directive": "import"
+    },
+    {
+      "from": "/views/estoque_view.dart",
+      "to": "/views/widgets/botao_sair.dart",
+      "directive": "import"
+    },
+    {
+      "from": "/views/estoque_view.dart",
+      "to": "/views/widgets/botoes_dialogo.dart",
+      "directive": "import"
+    },
+    {
+      "from": "/views/estoque_view.dart",
+      "to": "/views/widgets/entrada_animada.dart",
+      "directive": "import"
+    },
+    {
+      "from": "/views/estoque_view.dart",
+      "to": "/views/widgets/estado_vazio.dart",
+      "directive": "import"
+    },
+    {
+      "from": "/views/estoque_view.dart",
+      "to": "/views/widgets/formatos.dart",
+      "directive": "import"
+    },
+    {
+      "from": "/views/estoque_view.dart",
+      "to": "/views/widgets/icone_produto.dart",
+      "directive": "import"
+    },
+    {
+      "from": "/views/estoque_view.dart",
+      "to": "/views/widgets/mensagem_erro.dart",
+      "directive": "import"
+    },
+    {
+      "from": "/views/estoque_view.dart",
+      "to": "/views/widgets/navegacao_admin.dart",
+      "directive": "import"
+    },
+    {
+      "from": "/views/estoque_view.dart",
+      "to": "/views/widgets/troca_suave.dart",
+      "directive": "import"
+    },
+    {
+      "from": "/views/historico_estoque_view.dart",
+      "to": "/models/movimentacao_estoque.dart",
+      "directive": "import"
+    },
+    {
+      "from": "/views/historico_estoque_view.dart",
+      "to": "/models/tipo_movimentacao.dart",
+      "directive": "import"
+    },
+    {
+      "from": "/views/historico_estoque_view.dart",
+      "to": "/viewmodels/historico_estoque_viewmodel.dart",
+      "directive": "import"
+    },
+    {
+      "from": "/views/historico_estoque_view.dart",
+      "to": "/views/tema.dart",
+      "directive": "import"
+    },
+    {
+      "from": "/views/historico_estoque_view.dart",
+      "to": "/views/widgets/entrada_animada.dart",
+      "directive": "import"
+    },
+    {
+      "from": "/views/historico_estoque_view.dart",
+      "to": "/views/widgets/estado_vazio.dart",
+      "directive": "import"
+    },
+    {
+      "from": "/views/historico_estoque_view.dart",
+      "to": "/views/widgets/formatos.dart",
+      "directive": "import"
+    },
+    {
+      "from": "/views/historico_estoque_view.dart",
+      "to": "/views/widgets/mensagem_erro.dart",
+      "directive": "import"
+    },
+    {
+      "from": "/views/historico_estoque_view.dart",
+      "to": "/views/widgets/troca_suave.dart",
+      "directive": "import"
+    },
+    {
+      "from": "/views/login_view.dart",
+      "to": "/viewmodels/login_viewmodel.dart",
+      "directive": "import"
+    },
+    {
+      "from": "/views/login_view.dart",
+      "to": "/views/tema.dart",
+      "directive": "import"
+    },
+    {
+      "from": "/views/login_view.dart",
+      "to": "/views/widgets/botao_carregando.dart",
+      "directive": "import"
+    },
+    {
+      "from": "/views/login_view.dart",
+      "to": "/views/widgets/campo_senha.dart",
+      "directive": "import"
+    },
+    {
+      "from": "/views/login_view.dart",
+      "to": "/views/widgets/entrada_animada.dart",
+      "directive": "import"
+    },
+    {
+      "from": "/views/login_view.dart",
+      "to": "/views/widgets/mensagem_erro.dart",
+      "directive": "import"
+    },
+    {
+      "from": "/views/pedidos/painel_filtros.dart",
+      "to": "/models/situacao_pedido.dart",
+      "directive": "import"
+    },
+    {
+      "from": "/views/pedidos/painel_filtros.dart",
+      "to": "/viewmodels/pedidos_viewmodel.dart",
+      "directive": "import"
+    },
+    {
+      "from": "/views/pedidos/painel_filtros.dart",
+      "to": "/views/tema.dart",
+      "directive": "import"
+    },
+    {
+      "from": "/views/pedidos_view.dart",
+      "to": "/viewmodels/pedidos_viewmodel.dart",
+      "directive": "import"
+    },
+    {
+      "from": "/views/pedidos_view.dart",
+      "to": "/views/pedidos/painel_filtros.dart",
+      "directive": "import"
+    },
+    {
+      "from": "/views/pedidos_view.dart",
+      "to": "/views/tema.dart",
+      "directive": "import"
+    },
+    {
+      "from": "/views/pedidos_view.dart",
+      "to": "/views/widgets/botao_sair.dart",
+      "directive": "import"
+    },
+    {
+      "from": "/views/pedidos_view.dart",
+      "to": "/views/widgets/cartao_pedido.dart",
+      "directive": "import"
+    },
+    {
+      "from": "/views/pedidos_view.dart",
+      "to": "/views/widgets/entrada_animada.dart",
+      "directive": "import"
+    },
+    {
+      "from": "/views/pedidos_view.dart",
+      "to": "/views/widgets/estado_vazio.dart",
+      "directive": "import"
+    },
+    {
+      "from": "/views/pedidos_view.dart",
+      "to": "/views/widgets/formatos.dart",
+      "directive": "import"
+    },
+    {
+      "from": "/views/pedidos_view.dart",
+      "to": "/views/widgets/mensagem_erro.dart",
+      "directive": "import"
+    },
+    {
+      "from": "/views/pedidos_view.dart",
+      "to": "/views/widgets/navegacao_admin.dart",
+      "directive": "import"
+    },
+    {
+      "from": "/views/pedidos_view.dart",
+      "to": "/views/widgets/troca_suave.dart",
+      "directive": "import"
+    },
+    {
+      "from": "/views/perfil_cliente/cabecalho_cliente.dart",
+      "to": "/models/cliente.dart",
+      "directive": "import"
+    },
+    {
+      "from": "/views/perfil_cliente/cabecalho_cliente.dart",
+      "to": "/views/tema.dart",
+      "directive": "import"
+    },
+    {
+      "from": "/views/perfil_cliente/cabecalho_cliente.dart",
+      "to": "/views/widgets/avatar_iniciais.dart",
+      "directive": "import"
+    },
+    {
+      "from": "/views/perfil_cliente/dados_cliente.dart",
+      "to": "/models/cliente.dart",
+      "directive": "import"
+    },
+    {
+      "from": "/views/perfil_cliente/dados_cliente.dart",
+      "to": "/views/tema.dart",
+      "directive": "import"
+    },
+    {
+      "from": "/views/perfil_cliente/dados_cliente.dart",
+      "to": "/views/widgets/formatos.dart",
+      "directive": "import"
+    },
+    {
+      "from": "/views/perfil_cliente/dados_cliente.dart",
+      "to": "/views/widgets/linha_dado.dart",
+      "directive": "import"
+    },
+    {
+      "from": "/views/perfil_cliente/resumo_cliente.dart",
+      "to": "/viewmodels/perfil_cliente_viewmodel.dart",
+      "directive": "import"
+    },
+    {
+      "from": "/views/perfil_cliente/resumo_cliente.dart",
+      "to": "/views/tema.dart",
+      "directive": "import"
+    },
+    {
+      "from": "/views/perfil_cliente/resumo_cliente.dart",
+      "to": "/views/widgets/formatos.dart",
+      "directive": "import"
+    },
+    {
+      "from": "/views/perfil_cliente_view.dart",
+      "to": "/viewmodels/perfil_cliente_viewmodel.dart",
+      "directive": "import"
+    },
+    {
+      "from": "/views/perfil_cliente_view.dart",
+      "to": "/views/perfil_cliente/cabecalho_cliente.dart",
+      "directive": "import"
+    },
+    {
+      "from": "/views/perfil_cliente_view.dart",
+      "to": "/views/perfil_cliente/dados_cliente.dart",
+      "directive": "import"
+    },
+    {
+      "from": "/views/perfil_cliente_view.dart",
+      "to": "/views/perfil_cliente/resumo_cliente.dart",
+      "directive": "import"
+    },
+    {
+      "from": "/views/perfil_cliente_view.dart",
+      "to": "/views/tema.dart",
+      "directive": "import"
+    },
+    {
+      "from": "/views/perfil_cliente_view.dart",
+      "to": "/views/widgets/botao_sair.dart",
+      "directive": "import"
+    },
+    {
+      "from": "/views/perfil_cliente_view.dart",
+      "to": "/views/widgets/cartao_pedido.dart",
+      "directive": "import"
+    },
+    {
+      "from": "/views/perfil_cliente_view.dart",
+      "to": "/views/widgets/estado_vazio.dart",
+      "directive": "import"
+    },
+    {
+      "from": "/views/perfil_cliente_view.dart",
+      "to": "/views/widgets/formatos.dart",
+      "directive": "import"
+    },
+    {
+      "from": "/views/perfil_cliente_view.dart",
+      "to": "/views/widgets/mensagem_erro.dart",
+      "directive": "import"
+    },
+    {
+      "from": "/views/widgets/avatar_iniciais.dart",
+      "to": "/views/tema.dart",
+      "directive": "import"
+    },
+    {
+      "from": "/views/widgets/aviso_destaque.dart",
+      "to": "/views/tema.dart",
+      "directive": "import"
+    },
+    {
+      "from": "/views/widgets/botao_carregando.dart",
+      "to": "/views/tema.dart",
+      "directive": "import"
+    },
+    {
+      "from": "/views/widgets/botao_sair.dart",
+      "to": "/viewmodels/sessao_viewmodel.dart",
+      "directive": "import"
+    },
+    {
+      "from": "/views/widgets/botoes_dialogo.dart",
+      "to": "/views/tema.dart",
+      "directive": "import"
+    },
+    {
+      "from": "/views/widgets/cartao_pedido.dart",
+      "to": "/models/pedido.dart",
+      "directive": "import"
+    },
+    {
+      "from": "/views/widgets/cartao_pedido.dart",
+      "to": "/views/widgets/selo_situacao.dart",
+      "directive": "import"
+    },
+    {
+      "from": "/views/widgets/entrada_animada.dart",
+      "to": "/views/tema.dart",
+      "directive": "import"
+    },
+    {
+      "from": "/views/widgets/estado_vazio.dart",
+      "to": "/views/tema.dart",
+      "directive": "import"
+    },
+    {
+      "from": "/views/widgets/estado_vazio.dart",
+      "to": "/views/widgets/entrada_animada.dart",
+      "directive": "import"
+    },
+    {
+      "from": "/views/widgets/icone_produto.dart",
+      "to": "/views/tema.dart",
+      "directive": "import"
+    },
+    {
+      "from": "/views/widgets/linha_dado.dart",
+      "to": "/views/tema.dart",
+      "directive": "import"
+    },
+    {
+      "from": "/views/widgets/linha_item_pedido.dart",
+      "to": "/models/item_pedido.dart",
+      "directive": "import"
+    },
+    {
+      "from": "/views/widgets/linha_item_pedido.dart",
+      "to": "/views/tema.dart",
+      "directive": "import"
+    },
+    {
+      "from": "/views/widgets/linha_item_pedido.dart",
+      "to": "/views/widgets/formatos.dart",
+      "directive": "import"
+    },
+    {
+      "from": "/views/widgets/linha_item_pedido.dart",
+      "to": "/views/widgets/icone_produto.dart",
+      "directive": "import"
+    },
+    {
+      "from": "/views/widgets/mensagem_erro.dart",
+      "to": "/views/tema.dart",
+      "directive": "import"
+    },
+    {
+      "from": "/views/widgets/navegacao_admin.dart",
+      "to": "/views/tema.dart",
+      "directive": "import"
+    },
+    {
+      "from": "/views/widgets/selo_situacao.dart",
+      "to": "/models/situacao_pedido.dart",
+      "directive": "import"
+    },
+    {
+      "from": "/views/widgets/selo_situacao.dart",
+      "to": "/views/tema.dart",
+      "directive": "import"
+    },
+    {
+      "from": "/views/widgets/texto_animado.dart",
+      "to": "/views/tema.dart",
+      "directive": "import"
+    },
+    {
+      "from": "/views/widgets/troca_suave.dart",
+      "to": "/views/tema.dart",
+      "directive": "import"
+    }
+  ],
+  "metrics": {
+    "isAcyclic": true,
+    "firstCycle": [],
+    "numNodes": 78,
+    "numEdges": 294,
+    "avgDegree": 3.77,
+    "orphans": [
+      "/models/administrador.dart"
+    ],
+    "ccd": 796,
+    "acd": 10.21,
+    "nccd": 1.9,
+    "totalSloc": 6418,
+    "avgSloc": 82.28
+  }
+}

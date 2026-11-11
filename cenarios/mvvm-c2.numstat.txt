@@ -1,0 +1,10 @@
+4	0	{a => b}/lib/models/pedido.dart
+1	0	{a => b}/lib/models/situacao_pedido.dart
+8	1	{a => b}/lib/services/pedido_service.dart
+17	4	{a => b}/lib/viewmodels/detalhe_pedido_viewmodel.dart
+3	2	{a => b}/lib/viewmodels/pedidos_viewmodel.dart
+6	2	{a => b}/lib/views/acompanhamento_view.dart
+12	1	{a => b}/lib/views/detalhe_pedido/historico_pedido.dart
+40	21	{a => b}/lib/views/detalhe_pedido_view.dart
+4	0	{a => b}/lib/views/widgets/selo_situacao.dart
+30	2	{a => b}/test/viewmodels/detalhe_pedido_viewmodel_test.dart

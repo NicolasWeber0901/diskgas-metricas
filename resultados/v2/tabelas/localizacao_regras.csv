@@ -1,0 +1,49 @@
+tag,arquivo,camada,marcas,externos
+v2/9a8f637,services/cliente_service.dart,services,US16,cloud_firestore
+v2/9a8f637,services/produto_service.dart,services,US08,cloud_firestore firebase_auth
+v2/9a8f637,services/rota_service.dart,services,RF16,dart:async dart:convert dart:io http
+v2/9a8f637,viewmodels/cadastro_viewmodel.dart,viewmodels,RN02 RN03,flutter:foundation
+v2/9a8f637,viewmodels/carrinho_viewmodel.dart,viewmodels,RN01 RN02,dart:async flutter:foundation
+v2/9a8f637,viewmodels/clientes_viewmodel.dart,viewmodels,US16,dart:async flutter:foundation
+v2/9a8f637,viewmodels/detalhe_pedido_viewmodel.dart,viewmodels,RF16 RN04 RN05 RN06,dart:async flutter:foundation
+v2/9a8f637,viewmodels/estoque_viewmodel.dart,viewmodels,US08,dart:async flutter:foundation
+v2/9a8f637,viewmodels/pedidos_viewmodel.dart,viewmodels,US17,dart:async flutter:foundation
+v2/9a8f637,viewmodels/perfil_cliente_viewmodel.dart,viewmodels,US16,dart:async flutter:foundation
+v2/9a8f637,views/acompanhamento_view.dart,ui,RN05,flutter:material go_router provider
+v2/9a8f637,views/clientes_view.dart,ui,US16,flutter:material go_router provider
+v2/9a8f637,views/estoque_view.dart,ui,US08,flutter:material go_router provider
+v2/9a8f637,views/pedidos_view.dart,ui,US17,flutter:material provider
+v2/9a8f637,views/perfil_cliente_view.dart,ui,US16,flutter:material go_router provider
+v2/db11a74,domain/casos_de_uso/aceitar_pedido.dart,domain,RN06,
+v2/db11a74,domain/casos_de_uso/ampliar_tempo.dart,domain,RN06,
+v2/db11a74,domain/casos_de_uso/cadastrar_cliente.dart,domain,RN03,
+v2/db11a74,domain/casos_de_uso/calcular_rota_do_pedido.dart,domain,RF16,
+v2/db11a74,domain/casos_de_uso/enviar_pedido.dart,domain,RN01,
+v2/db11a74,domain/casos_de_uso/filtrar_pedidos.dart,domain,US17,
+v2/db11a74,domain/casos_de_uso/finalizar_entrega.dart,domain,RN04,
+v2/db11a74,domain/casos_de_uso/garantir_produtos_fixos.dart,domain,US08,
+v2/db11a74,domain/casos_de_uso/observar_clientes.dart,domain,US16,
+v2/db11a74,domain/casos_de_uso/observar_produtos.dart,domain,US08,
+v2/db11a74,domain/casos_de_uso/observar_quantidade_pedidos.dart,domain,US16,
+v2/db11a74,domain/casos_de_uso/obter_perfil_cliente.dart,domain,US16,
+v2/db11a74,domain/casos_de_uso/recusar_pedido.dart,domain,RN05,
+v2/db11a74,domain/casos_de_uso/resumir_pedidos_do_cliente.dart,domain,US16,
+v2/db11a74,domain/casos_de_uso/salvar_produto.dart,domain,US08,
+v2/db11a74,domain/casos_de_uso/validar_quantidade.dart,domain,RN01,
+v2/db11a74,domain/entidades/endereco.dart,domain,RN02,
+v2/db11a74,domain/repositorios/cliente_repositorio.dart,domain,US16,
+v2/db11a74,domain/repositorios/produto_repositorio.dart,domain,US08,
+v2/db11a74,domain/repositorios/rota_repositorio.dart,domain,RF16,
+v2/db11a74,infra/cliente_firestore.dart,infra,US16,cloud_firestore
+v2/db11a74,infra/produto_firestore.dart,infra,US08,cloud_firestore firebase_auth
+v2/db11a74,infra/rota_google.dart,infra,RF16,dart:async dart:convert dart:io http
+v2/db11a74,presentation/carrinho_viewmodel.dart,presentation,RN02,dart:async flutter:foundation
+v2/db11a74,presentation/clientes_viewmodel.dart,presentation,US16,dart:async flutter:foundation
+v2/db11a74,presentation/estoque_viewmodel.dart,presentation,US08,dart:async flutter:foundation
+v2/db11a74,presentation/pedidos_viewmodel.dart,presentation,US17,dart:async flutter:foundation
+v2/db11a74,presentation/perfil_cliente_viewmodel.dart,presentation,US16,dart:async flutter:foundation
+v2/db11a74,ui/acompanhamento_view.dart,ui,RN05,flutter:material go_router provider
+v2/db11a74,ui/clientes_view.dart,ui,US16,flutter:material go_router provider
+v2/db11a74,ui/estoque_view.dart,ui,US08,flutter:material go_router provider
+v2/db11a74,ui/pedidos_view.dart,ui,US17,flutter:material provider
+v2/db11a74,ui/perfil_cliente_view.dart,ui,US16,flutter:material go_router provider

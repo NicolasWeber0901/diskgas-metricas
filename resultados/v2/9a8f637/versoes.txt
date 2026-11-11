@@ -1,0 +1,15 @@
+﻿tag: 9a8f637
+commit: 
+versao: mvvm
+data: 2026-11-11 08:53:12 -03:00
+Flutter 3.47.8 ΓÇó channel stable ΓÇó https://github.com/flutter/flutter.git
+Framework ΓÇó revision 737ba8f885 (3 weeks ago) ΓÇó 2026-10-22 21:37:31 -0700
+Engine ΓÇó hash dfd2e6cb7d319db05e3bf1503f3e2ac60f6288a2 (revision cf636b1dfb) (19 days ago) ΓÇó 2026-10-23 02:13:38.000Z
+Tools ΓÇó Dart 3.13.7 ΓÇó DevTools 2.60.0
+
+Dart SDK version: 3.13.7 (stable) (Thu Oct 22 14:28:57 2026 -0700) on "windows_x64"
+
+dart_code_linter 4.4.4
+flutterfire_cli 0.2.7
+lakos 2.0.7
+

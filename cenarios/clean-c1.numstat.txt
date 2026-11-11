@@ -1,0 +1,3 @@
+0	80	a/lib/infra/rota_google.dart => /dev/null
+102	0	/dev/null => b/lib/infra/rota_osrm.dart
+2	2	{a => b}/lib/main.dart

@@ -1,0 +1,595 @@
+diff --git a/a/firestore.rules b/b/firestore.rules
+index 783e3b4..fa5de7f 100644
+--- a/a/firestore.rules
++++ b/b/firestore.rules
+@@ -30,6 +30,10 @@ service cloud.firestore {
+       allow write: if ehAdministrador();
+     }
+ 
++    match /movimentacoes_estoque/{id} {
++      allow read, create: if ehAdministrador();
++    }
++
+     match /pedidos/{pedidoId} {
+       allow read: if logado() &&
+         (resource.data.clienteId == request.auth.uid || ehAdministrador());
+diff --git a/a/lib/main.dart b/b/lib/main.dart
+index 85c42f6..e78fc28 100644
+--- a/a/lib/main.dart
++++ b/b/lib/main.dart
+@@ -25,8 +25,8 @@ Future<void> main() async {
+     firestore,
+   );
+   final clienteService = ClienteService(firestore);
+-  final produtoService = ProdutoService(firestore);
+-  final pedidoService = PedidoService(firestore);
++  final produtoService = ProdutoService(firestore, FirebaseAuth.instance);
++  final pedidoService = PedidoService(firestore, FirebaseAuth.instance);
+   final rotaService = RotaService(
+     http.Client(),
+     const String.fromEnvironment('ROUTES_API_KEY'),
+diff --git a/b/lib/models/movimentacao_estoque.dart b/b/lib/models/movimentacao_estoque.dart
+new file mode 100644
+index 0000000..fe0c4d0
+--- /dev/null
++++ b/b/lib/models/movimentacao_estoque.dart
+@@ -0,0 +1,62 @@
++import 'package:cloud_firestore/cloud_firestore.dart';
++
++import 'tipo_movimentacao.dart';
++
++class MovimentacaoEstoque {
++  final String id;
++  final String produtoId;
++  final String nomeProduto;
++  final TipoMovimentacao tipo;
++  final int quantidade;
++  final int saldo;
++  final DateTime data;
++  final String usuarioId;
++  final String? pedidoId;
++  final String? clienteNome;
++
++  const MovimentacaoEstoque({
++    required this.id,
++    required this.produtoId,
++    required this.nomeProduto,
++    required this.tipo,
++    required this.quantidade,
++    required this.saldo,
++    required this.data,
++    required this.usuarioId,
++    this.pedidoId,
++    this.clienteNome,
++  });
++
++  factory MovimentacaoEstoque.fromMap(String id, Map<String, dynamic> map) {
++    final data = map['data'];
++    return MovimentacaoEstoque(
++      id: id,
++      produtoId: map['produtoId'] as String? ?? '',
++      nomeProduto: map['nomeProduto'] as String? ?? '',
++      tipo: TipoMovimentacao.values.firstWhere(
++        (tipo) => tipo.name == map['tipo'],
++        orElse: () => TipoMovimentacao.entrada,
++      ),
++      quantidade: (map['quantidade'] as num? ?? 0).toInt(),
++      saldo: (map['saldo'] as num? ?? 0).toInt(),
++      data: data is Timestamp ? data.toDate() : DateTime.now(),
++      usuarioId: map['usuarioId'] as String? ?? '',
++      pedidoId: map['pedidoId'] as String?,
++      clienteNome: map['clienteNome'] as String?,
++    );
++  }
++
++  Map<String, dynamic> toMap() {
++    return {
++      'produtoId': produtoId,
++      'nomeProduto': nomeProduto,
++      'tipo': tipo.name,
++      'quantidade': quantidade,
++      'saldo': saldo,
++      'data': Timestamp.fromDate(data),
++      'usuarioId': usuarioId,
++      if (pedidoId != null) 'pedidoId': pedidoId,
++      if (clienteNome != null) 'clienteNome': clienteNome,
++    };
++  }
++}
+diff --git a/b/lib/models/tipo_movimentacao.dart b/b/lib/models/tipo_movimentacao.dart
+new file mode 100644
+index 0000000..90f0b87
+--- /dev/null
++++ b/b/lib/models/tipo_movimentacao.dart
+@@ -0,0 +1,9 @@
++enum TipoMovimentacao {
++  entrada('Entrada'),
++  saida('Saída por entrega'),
++  inicial('Estoque inicial');
++
++  final String rotulo;
++
++  const TipoMovimentacao(this.rotulo);
++}
+diff --git a/a/lib/services/pedido_service.dart b/b/lib/services/pedido_service.dart
+index 12e087b..7eb7c15 100644
+--- a/a/lib/services/pedido_service.dart
++++ b/b/lib/services/pedido_service.dart
+@@ -1,15 +1,19 @@
+ import 'package:cloud_firestore/cloud_firestore.dart';
++import 'package:firebase_auth/firebase_auth.dart';
+ 
+ import '../models/deslocamento.dart';
+ import '../models/item_pedido.dart';
++import '../models/movimentacao_estoque.dart';
+ import '../models/pedido.dart';
++import '../models/tipo_movimentacao.dart';
+ import 'falhas.dart';
+ 
+ /// US06, US07, US10 a US15: grava e acompanha os pedidos em pedidos/{id}.
+ class PedidoService {
+   final FirebaseFirestore _firestore;
++  final FirebaseAuth _auth;
+ 
+-  PedidoService(this._firestore);
++  PedidoService(this._firestore, this._auth);
+ 
+   CollectionReference<Map<String, dynamic>> get _pedidos =>
+       _firestore.collection('pedidos');
+@@ -118,9 +122,30 @@ class PedidoService {
+         for (final item in pedido.itens) {
+           final entregue =
+               quantidadesEntregues[item.produtoId] ?? item.quantidadePedida;
++          final saldo = estoques[item.produtoId]! - entregue;
+           transacao.update(_produtos.doc(item.produtoId), {
+-            'quantidadeEstoque': estoques[item.produtoId]! - entregue,
++            'quantidadeEstoque': saldo,
+           });
++          if (entregue > 0) {
++            transacao.set(
++              _firestore.collection('movimentacoes_estoque').doc(),
++              {
++                ...MovimentacaoEstoque(
++                  id: '',
++                  produtoId: item.produtoId,
++                  nomeProduto: item.nomeProduto,
++                  tipo: TipoMovimentacao.saida,
++                  quantidade: entregue,
++                  saldo: saldo,
++                  data: DateTime.now(),
++                  usuarioId: _auth.currentUser?.uid ?? '',
++                  pedidoId: pedido.id,
++                  clienteNome: pedido.clienteNome,
++                ).toMap(),
++                'data': FieldValue.serverTimestamp(),
++              },
++            );
++          }
+           itensEntregues.add(
+             ItemPedido(
+               produtoId: item.produtoId,
+diff --git a/a/lib/services/produto_service.dart b/b/lib/services/produto_service.dart
+index 8498651..286d885 100644
+--- a/a/lib/services/produto_service.dart
++++ b/b/lib/services/produto_service.dart
+@@ -1,13 +1,17 @@
+ import 'package:cloud_firestore/cloud_firestore.dart';
++import 'package:firebase_auth/firebase_auth.dart';
+ 
++import '../models/movimentacao_estoque.dart';
+ import '../models/produto.dart';
++import '../models/tipo_movimentacao.dart';
+ import 'falhas.dart';
+ 
+-/// US05, US06, US08 (produtos fixos) e US09: produtos e estoque.
++/// US05, US06, US08 (produtos fixos), US09 e US18: produtos e estoque.
+ class ProdutoService {
+   final FirebaseFirestore _firestore;
++  final FirebaseAuth _auth;
+ 
+-  ProdutoService(this._firestore);
++  ProdutoService(this._firestore, this._auth);
+ 
+   static const produtosFixos = [
+     Produto(id: 'gas', nome: 'Gás P13', preco: 120, quantidadeEstoque: 0),
+@@ -22,6 +26,9 @@ class ProdutoService {
+   CollectionReference<Map<String, dynamic>> get _produtos =>
+       _firestore.collection('produtos');
+ 
++  CollectionReference<Map<String, dynamic>> get _movimentacoes =>
++      _firestore.collection('movimentacoes_estoque');
++
+   Stream<List<Produto>> observarProdutos() {
+     return _produtos
+         .orderBy('nome')
+@@ -65,7 +72,22 @@ class ProdutoService {
+ 
+   Future<void> criar(Produto produto) async {
+     try {
+-      await _produtos.add(produto.toMap());
++      final documento = _produtos.doc();
++      final lote = _firestore.batch();
++      lote.set(documento, produto.toMap());
++      if (produto.quantidadeEstoque > 0) {
++        lote.set(
++          _movimentacoes.doc(),
++          _movimentacao(
++            produtoId: documento.id,
++            nomeProduto: produto.nome,
++            tipo: TipoMovimentacao.inicial,
++            quantidade: produto.quantidadeEstoque,
++            saldo: produto.quantidadeEstoque,
++          ),
++        );
++      }
++      await lote.commit();
+     } on FirebaseException {
+       throw const FalhaConexao();
+     }
+@@ -85,11 +107,65 @@ class ProdutoService {
+ 
+   Future<void> registrarEntrada(String id, int quantidade) async {
+     try {
+-      await _produtos.doc(id).update({
+-        'quantidadeEstoque': FieldValue.increment(quantidade),
++      await _firestore.runTransaction((transacao) async {
++        final documento = _produtos.doc(id);
++        final atual = await transacao.get(documento);
++        if (!atual.exists) throw const FalhaConexao();
++        final dados = atual.data()!;
++        final saldo =
++            (dados['quantidadeEstoque'] as num? ?? 0).toInt() + quantidade;
++        transacao.update(documento, {'quantidadeEstoque': saldo});
++        transacao.set(
++          _movimentacoes.doc(),
++          _movimentacao(
++            produtoId: id,
++            nomeProduto: dados['nome'] as String? ?? '',
++            tipo: TipoMovimentacao.entrada,
++            quantidade: quantidade,
++            saldo: saldo,
++          ),
++        );
+       });
++    } on FalhaServico {
++      rethrow;
+     } on FirebaseException {
+       throw const FalhaConexao();
+     }
+   }
++
++  Stream<List<MovimentacaoEstoque>> observarMovimentacoes() {
++    return _movimentacoes
++        .orderBy('data', descending: true)
++        .snapshots()
++        .map(
++          (consulta) => consulta.docs
++              .map(
++                (documento) =>
++                    MovimentacaoEstoque.fromMap(documento.id, documento.data()),
++              )
++              .toList(),
++        );
++  }
++
++  Map<String, dynamic> _movimentacao({
++    required String produtoId,
++    required String nomeProduto,
++    required TipoMovimentacao tipo,
++    required int quantidade,
++    required int saldo,
++  }) {
++    return {
++      ...MovimentacaoEstoque(
++        id: '',
++        produtoId: produtoId,
++        nomeProduto: nomeProduto,
++        tipo: tipo,
++        quantidade: quantidade,
++        saldo: saldo,
++        data: DateTime.now(),
++        usuarioId: _auth.currentUser?.uid ?? '',
++      ).toMap(),
++      'data': FieldValue.serverTimestamp(),
++    };
++  }
+ }
+diff --git a/b/lib/viewmodels/historico_estoque_viewmodel.dart b/b/lib/viewmodels/historico_estoque_viewmodel.dart
+new file mode 100644
+index 0000000..eb44652
+--- /dev/null
++++ b/b/lib/viewmodels/historico_estoque_viewmodel.dart
+@@ -0,0 +1,67 @@
++import 'dart:async';
++
++import 'package:flutter/foundation.dart';
++
++import '../models/movimentacao_estoque.dart';
++import '../services/falhas.dart';
++import '../services/produto_service.dart';
++
++/// US18: entradas e saídas do estoque, da mais recente para a mais antiga.
++class HistoricoEstoqueViewModel extends ChangeNotifier {
++  final ProdutoService _produtoService;
++  StreamSubscription<List<MovimentacaoEstoque>>? _inscricao;
++
++  List<MovimentacaoEstoque> movimentacoes = [];
++  String? produtoSelecionado;
++  bool carregando = true;
++  String? erro;
++
++  HistoricoEstoqueViewModel(this._produtoService);
++
++  void iniciar() {
++    _inscricao = _produtoService.observarMovimentacoes().listen(
++      (lista) {
++        movimentacoes = [...lista]..sort((a, b) => b.data.compareTo(a.data));
++        carregando = false;
++        erro = null;
++        notifyListeners();
++      },
++      onError: (Object _) {
++        carregando = false;
++        erro = const FalhaConexao().mensagem;
++        notifyListeners();
++      },
++    );
++  }
++
++  List<({String id, String nome})> get produtos {
++    final nomes = <String, String>{
++      for (final movimentacao in movimentacoes)
++        movimentacao.produtoId: movimentacao.nomeProduto,
++    };
++    return [
++      for (final produto in nomes.entries)
++        (id: produto.key, nome: produto.value),
++    ]..sort((a, b) => a.nome.toLowerCase().compareTo(b.nome.toLowerCase()));
++  }
++
++  List<MovimentacaoEstoque> get movimentacoesFiltradas {
++    final produto = produtoSelecionado;
++    if (produto == null) return movimentacoes;
++    return [
++      for (final movimentacao in movimentacoes)
++        if (movimentacao.produtoId == produto) movimentacao,
++    ];
++  }
++
++  void escolherProduto(String? produtoId) {
++    produtoSelecionado = produtoId;
++    notifyListeners();
++  }
++
++  @override
++  void dispose() {
++    _inscricao?.cancel();
++    super.dispose();
++  }
++}
+diff --git a/a/lib/views/app_router.dart b/b/lib/views/app_router.dart
+index 80614d8..1282cc2 100644
+--- a/a/lib/views/app_router.dart
++++ b/b/lib/views/app_router.dart
+@@ -12,6 +12,7 @@ import '../viewmodels/carrinho_viewmodel.dart';
+ import '../viewmodels/clientes_viewmodel.dart';
+ import '../viewmodels/detalhe_pedido_viewmodel.dart';
+ import '../viewmodels/estoque_viewmodel.dart';
++import '../viewmodels/historico_estoque_viewmodel.dart';
+ import '../viewmodels/login_viewmodel.dart';
+ import '../viewmodels/pedidos_viewmodel.dart';
+ import '../viewmodels/perfil_cliente_viewmodel.dart';
+@@ -23,6 +24,7 @@ import 'carrinho_view.dart';
+ import 'clientes_view.dart';
+ import 'detalhe_pedido_view.dart';
+ import 'estoque_view.dart';
++import 'historico_estoque_view.dart';
+ import 'login_view.dart';
+ import 'pedidos_view.dart';
+ import 'perfil_cliente_view.dart';
+@@ -151,6 +153,17 @@ GoRouter criarRotas(SessaoViewModel sessao) {
+                   EstoqueViewModel(context.read<ProdutoService>())..iniciar(),
+               child: const EstoqueView(),
+             ),
++            routes: [
++              GoRoute(
++                path: 'historico',
++                builder: (context, state) => ChangeNotifierProvider(
++                  create: (context) =>
++                      HistoricoEstoqueViewModel(context.read<ProdutoService>())
++                        ..iniciar(),
++                  child: const HistoricoEstoqueView(),
++                ),
++              ),
++            ],
+           ),
+         ],
+       ),
+diff --git a/a/lib/views/estoque_view.dart b/b/lib/views/estoque_view.dart
+index 071e6bf..5abe4d1 100644
+--- a/a/lib/views/estoque_view.dart
++++ b/b/lib/views/estoque_view.dart
+@@ -1,4 +1,5 @@
+ import 'package:flutter/material.dart';
++import 'package:go_router/go_router.dart';
+ import 'package:provider/provider.dart';
+ 
+ import '../models/produto.dart';
+@@ -44,7 +45,14 @@ class EstoqueView extends StatelessWidget {
+       appBar: AppBar(
+         automaticallyImplyLeading: false,
+         title: const Text('Estoque'),
+-        actions: const [BotaoSair()],
++        actions: [
++          IconButton(
++            tooltip: 'Histórico de estoque',
++            icon: const Icon(Icons.history_rounded),
++            onPressed: () => context.push('/admin/estoque/historico'),
++          ),
++          const BotaoSair(),
++        ],
+       ),
+       bottomNavigationBar: const NavegacaoAdmin(2),
+       floatingActionButton: FloatingActionButton.extended(
+diff --git a/b/lib/views/historico_estoque_view.dart b/b/lib/views/historico_estoque_view.dart
+new file mode 100644
+index 0000000..a6d141c
+--- /dev/null
++++ b/b/lib/views/historico_estoque_view.dart
+@@ -0,0 +1,156 @@
++import 'package:flutter/material.dart';
++import 'package:provider/provider.dart';
++
++import '../models/movimentacao_estoque.dart';
++import '../models/tipo_movimentacao.dart';
++import '../viewmodels/historico_estoque_viewmodel.dart';
++import 'tema.dart';
++import 'widgets/entrada_animada.dart';
++import 'widgets/estado_vazio.dart';
++import 'widgets/formatos.dart';
++import 'widgets/mensagem_erro.dart';
++import 'widgets/troca_suave.dart';
++
++/// Histórico de entradas e saídas do estoque (US18).
++class HistoricoEstoqueView extends StatelessWidget {
++  const HistoricoEstoqueView({super.key});
++
++  @override
++  Widget build(BuildContext context) {
++    final viewModel = context.watch<HistoricoEstoqueViewModel>();
++    final movimentacoes = viewModel.movimentacoesFiltradas;
++    return Scaffold(
++      appBar: AppBar(title: const Text('Histórico de estoque')),
++      body: TrocaSuave(
++        child: viewModel.carregando
++            ? const Center(child: CircularProgressIndicator())
++            : viewModel.movimentacoes.isEmpty
++            ? viewModel.erro != null
++                  ? Center(child: MensagemErro(viewModel.erro))
++                  : const EstadoVazio(
++                      icone: Icons.history_rounded,
++                      mensagem: 'Nenhuma movimentação registrada.',
++                    )
++            : Column(
++                crossAxisAlignment: CrossAxisAlignment.stretch,
++                children: [
++                  _FiltroProdutos(viewModel),
++                  Expanded(
++                    child: ListView(
++                      padding: const EdgeInsets.only(bottom: 24),
++                      children: [
++                        for (final (indice, movimentacao)
++                            in movimentacoes.indexed)
++                          EntradaAnimada(
++                            ordem: indice,
++                            child: _CartaoMovimentacao(movimentacao),
++                          ),
++                      ],
++                    ),
++                  ),
++                ],
++              ),
++      ),
++    );
++  }
++}
++
++class _FiltroProdutos extends StatelessWidget {
++  final HistoricoEstoqueViewModel viewModel;
++
++  const _FiltroProdutos(this.viewModel);
++
++  @override
++  Widget build(BuildContext context) {
++    return SingleChildScrollView(
++      scrollDirection: Axis.horizontal,
++      padding: const EdgeInsets.fromLTRB(16, 8, 16, 8),
++      child: Row(
++        children: [
++          ChoiceChip(
++            label: const Text('Todos'),
++            selected: viewModel.produtoSelecionado == null,
++            onSelected: (_) => viewModel.escolherProduto(null),
++          ),
++          for (final produto in viewModel.produtos)
++            Padding(
++              padding: const EdgeInsets.only(left: 8),
++              child: ChoiceChip(
++                label: Text(produto.nome),
++                selected: viewModel.produtoSelecionado == produto.id,
++                onSelected: (_) => viewModel.escolherProduto(produto.id),
++              ),
++            ),
++        ],
++      ),
++    );
++  }
++}
++
++class _CartaoMovimentacao extends StatelessWidget {
++  final MovimentacaoEstoque movimentacao;
++
++  const _CartaoMovimentacao(this.movimentacao);
++
++  @override
++  Widget build(BuildContext context) {
++    final textos = Theme.of(context).textTheme;
++    final saida = movimentacao.tipo == TipoMovimentacao.saida;
++    final (icone, cor) = switch (movimentacao.tipo) {
++      TipoMovimentacao.entrada => (
++        Icons.south_west_rounded,
++        CoresDiskGas.verde,
++      ),
++      TipoMovimentacao.inicial => (
++        Icons.inventory_2_outlined,
++        CoresDiskGas.azulAgua,
++      ),
++      TipoMovimentacao.saida => (
++        Icons.north_east_rounded,
++        CoresDiskGas.laranjaEscuro,
++      ),
++    };
++    final cliente = movimentacao.clienteNome;
++    return Card(
++      child: ListTile(
++        isThreeLine: true,
++        leading: CircleAvatar(
++          backgroundColor: cor.withValues(alpha: 0.12),
++          foregroundColor: cor,
++          child: Icon(icone),
++        ),
++        title: Text(movimentacao.nomeProduto, style: textos.titleMedium),
++        subtitle: Column(
++          crossAxisAlignment: CrossAxisAlignment.start,
++          children: [
++            Text(
++              saida && cliente != null
++                  ? 'Entrega do pedido de $cliente'
++                  : movimentacao.tipo.rotulo,
++            ),
++            Text(
++              formatarData(movimentacao.data),
++              style: textos.bodySmall?.copyWith(
++                color: CoresDiskGas.cinzaQuente,
++              ),
++            ),
++          ],
++        ),
++        trailing: Column(
++          mainAxisAlignment: MainAxisAlignment.center,
++          crossAxisAlignment: CrossAxisAlignment.end,
++          children: [
++            Text(
++              '${saida ? '−' : '+'}${movimentacao.quantidade}',
++              style: textos.titleMedium?.copyWith(
++                color: cor,
++                fontWeight: FontWeight.w800,
++              ),
++            ),
++            Text('Saldo: ${movimentacao.saldo}', style: textos.bodySmall),
++          ],
++        ),
++      ),
++    );
++  }
++}

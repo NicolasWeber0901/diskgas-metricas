@@ -1,0 +1,363 @@
+diff --git a/a/lib/models/pedido.dart b/b/lib/models/pedido.dart
+index 45d3dea..178900f 100644
+--- a/a/lib/models/pedido.dart
++++ b/b/lib/models/pedido.dart
+@@ -17,6 +17,7 @@ class Pedido {
+   final Deslocamento? deslocamento;
+   final int? tempoEstimadoMinutos;
+   final String? motivoRecusa;
++  final DateTime? dataSaida;
+   final DateTime? dataEntrega;
+ 
+   const Pedido({
+@@ -31,6 +32,7 @@ class Pedido {
+     this.deslocamento,
+     this.tempoEstimadoMinutos,
+     this.motivoRecusa,
++    this.dataSaida,
+     this.dataEntrega,
+   });
+ 
+@@ -68,6 +70,7 @@ class Pedido {
+           : null,
+       tempoEstimadoMinutos: (map['tempoEstimadoMinutos'] as num?)?.toInt(),
+       motivoRecusa: map['motivoRecusa'] as String?,
++      dataSaida: _data(map['dataSaida']),
+       dataEntrega: _data(map['dataEntrega']),
+     );
+   }
+@@ -90,6 +93,7 @@ class Pedido {
+       if (tempoEstimadoMinutos != null)
+         'tempoEstimadoMinutos': tempoEstimadoMinutos,
+       if (motivoRecusa != null) 'motivoRecusa': motivoRecusa,
++      if (dataSaida != null) 'dataSaida': Timestamp.fromDate(dataSaida!),
+       if (dataEntrega != null) 'dataEntrega': Timestamp.fromDate(dataEntrega!),
+     };
+   }
+diff --git a/a/lib/models/situacao_pedido.dart b/b/lib/models/situacao_pedido.dart
+index b23a48c..5ff7e31 100644
+--- a/a/lib/models/situacao_pedido.dart
++++ b/b/lib/models/situacao_pedido.dart
+@@ -1,6 +1,7 @@
+ enum SituacaoPedido {
+   aguardando('Aguardando'),
+   aceito('Aceito'),
++  saiuParaEntrega('Saiu para entrega'),
+   entregue('Entregue'),
+   recusado('Recusado');
+ 
+diff --git a/a/lib/services/pedido_service.dart b/b/lib/services/pedido_service.dart
+index 12e087b..d80bd71 100644
+--- a/a/lib/services/pedido_service.dart
++++ b/b/lib/services/pedido_service.dart
+@@ -76,6 +76,13 @@ class PedidoService {
+     });
+   }
+ 
++  Future<void> marcarSaida(String id) {
++    return _atualizar(id, {
++      'situacao': 'saiuParaEntrega',
++      'dataSaida': Timestamp.now(),
++    });
++  }
++
+   Future<void> ampliarTempo(String id, int minutos) {
+     return _atualizar(id, {
+       'tempoEstimadoMinutos': FieldValue.increment(minutos),
+@@ -94,7 +101,7 @@ class PedidoService {
+       await _firestore.runTransaction((transacao) async {
+         final documentoPedido = _pedidos.doc(pedido.id);
+         final atual = await transacao.get(documentoPedido);
+-        if (atual.data()?['situacao'] != 'aceito') {
++        if (atual.data()?['situacao'] != 'saiuParaEntrega') {
+           throw const FalhaServico('Este pedido não pode mais ser finalizado.');
+         }
+ 
+diff --git a/a/lib/viewmodels/detalhe_pedido_viewmodel.dart b/b/lib/viewmodels/detalhe_pedido_viewmodel.dart
+index cf50e06..a41eb3e 100644
+--- a/a/lib/viewmodels/detalhe_pedido_viewmodel.dart
++++ b/b/lib/viewmodels/detalhe_pedido_viewmodel.dart
+@@ -86,10 +86,20 @@ class DetalhePedidoViewModel extends ChangeNotifier {
+     return _executar(() => _pedidoService.aceitar(atual.id, tempo));
+   }
+ 
+-  Future<bool> ampliarTempo(String minutosTexto) async {
++  Future<bool> marcarSaida() async {
+     final atual = pedido;
+-    // RN06: só o pedido aceito pode ter o tempo ampliado.
+     if (atual == null || atual.situacao != SituacaoPedido.aceito) {
++      return _falhar('Somente pedidos aceitos podem sair para entrega.');
++    }
++    return _executar(() => _pedidoService.marcarSaida(atual.id));
++  }
++
++  Future<bool> ampliarTempo(String minutosTexto) async {
++    final atual = pedido;
++    // RN06: só o pedido aceito ou que saiu para entrega tem o tempo ampliado.
++    if (atual == null ||
++        (atual.situacao != SituacaoPedido.aceito &&
++            atual.situacao != SituacaoPedido.saiuParaEntrega)) {
+       return _falhar('Somente pedidos aceitos podem ter o tempo ampliado.');
+     }
+     final minutos = int.tryParse(minutosTexto.trim());
+@@ -114,8 +124,11 @@ class DetalhePedidoViewModel extends ChangeNotifier {
+ 
+   Future<bool> finalizarEntrega(Map<String, String> quantidadesTexto) async {
+     final atual = pedido;
+-    if (atual == null || atual.situacao != SituacaoPedido.aceito) {
+-      return _falhar('Somente pedidos aceitos podem ser finalizados.');
++    if (atual?.situacao == SituacaoPedido.aceito) {
++      return _falhar('Marque a saída para entrega antes de finalizar.');
++    }
++    if (atual == null || atual.situacao != SituacaoPedido.saiuParaEntrega) {
++      return _falhar('Somente pedidos que saíram podem ser finalizados.');
+     }
+     final quantidades = <String, int>{};
+     for (final item in atual.itens) {
+diff --git a/a/lib/viewmodels/pedidos_viewmodel.dart b/b/lib/viewmodels/pedidos_viewmodel.dart
+index fde64d8..da1859d 100644
+--- a/a/lib/viewmodels/pedidos_viewmodel.dart
++++ b/b/lib/viewmodels/pedidos_viewmodel.dart
+@@ -117,14 +117,15 @@ class PedidosViewModel extends ChangeNotifier {
+   int _grupo(SituacaoPedido situacao) => switch (situacao) {
+     SituacaoPedido.aguardando => 0,
+     SituacaoPedido.aceito => 1,
+-    SituacaoPedido.entregue || SituacaoPedido.recusado => 2,
++    SituacaoPedido.saiuParaEntrega => 2,
++    SituacaoPedido.entregue || SituacaoPedido.recusado => 3,
+   };
+ 
+   int _comparar(Pedido a, Pedido b) {
+     final grupoA = _grupo(a.situacao);
+     final grupoB = _grupo(b.situacao);
+     if (grupoA != grupoB) return grupoA.compareTo(grupoB);
+-    return grupoA == 2
++    return grupoA == 3
+         ? b.dataCriacao.compareTo(a.dataCriacao)
+         : a.dataCriacao.compareTo(b.dataCriacao);
+   }
+diff --git a/a/lib/views/acompanhamento_view.dart b/b/lib/views/acompanhamento_view.dart
+index 7187b34..8e8ecd2 100644
+--- a/a/lib/views/acompanhamento_view.dart
++++ b/b/lib/views/acompanhamento_view.dart
+@@ -94,12 +94,15 @@ class _CartaoPedido extends StatelessWidget {
+             ],
+           ),
+           if (pedido.situacao == SituacaoPedido.aguardando ||
+-              pedido.situacao == SituacaoPedido.aceito)
++              pedido.situacao == SituacaoPedido.aceito ||
++              pedido.situacao == SituacaoPedido.saiuParaEntrega)
+             Padding(
+               padding: const EdgeInsets.fromLTRB(16, 0, 16, 16),
+               child: _LinhaDoTempo(pedido.situacao),
+             ),
+-          if (pedido.situacao == SituacaoPedido.aceito && tempo != null)
++          if ((pedido.situacao == SituacaoPedido.aceito ||
++                  pedido.situacao == SituacaoPedido.saiuParaEntrega) &&
++              tempo != null)
+             Padding(
+               padding: const EdgeInsets.fromLTRB(16, 0, 16, 16),
+               child: Text.rich(
+@@ -141,6 +144,7 @@ class _LinhaDoTempo extends StatelessWidget {
+     const etapas = [
+       SituacaoPedido.aguardando,
+       SituacaoPedido.aceito,
++      SituacaoPedido.saiuParaEntrega,
+       SituacaoPedido.entregue,
+     ];
+     final atual = etapas.indexOf(situacao);
+diff --git a/a/lib/views/detalhe_pedido/historico_pedido.dart b/b/lib/views/detalhe_pedido/historico_pedido.dart
+index 4c01d1a..26725c9 100644
+--- a/a/lib/views/detalhe_pedido/historico_pedido.dart
++++ b/b/lib/views/detalhe_pedido/historico_pedido.dart
+@@ -22,6 +22,7 @@ class HistoricoPedido extends StatelessWidget {
+   List<_Etapa> get _etapas {
+     final situacao = pedido.situacao;
+     final tempo = pedido.tempoEstimadoMinutos;
++    final saida = pedido.dataSaida;
+     final entrega = pedido.dataEntrega;
+     return [
+       _Etapa(
+@@ -31,15 +32,25 @@ class HistoricoPedido extends StatelessWidget {
+         formatarData(pedido.dataCriacao),
+       ),
+       if (situacao == SituacaoPedido.aceito ||
++          situacao == SituacaoPedido.saiuParaEntrega ||
+           situacao == SituacaoPedido.entregue)
+         _Etapa(
+           Icons.local_shipping_outlined,
+           CoresDiskGas.azulEscuro,
+           'Aceito',
+-          situacao == SituacaoPedido.aceito || tempo == null
++          situacao == SituacaoPedido.aceito ||
++                  situacao == SituacaoPedido.saiuParaEntrega ||
++                  tempo == null
+               ? null
+               : 'Tempo estimado: $tempo min',
+         ),
++      if (saida != null)
++        _Etapa(
++          Icons.delivery_dining_outlined,
++          CoresDiskGas.laranjaEscuro,
++          'Saiu para entrega',
++          formatarData(saida),
++        ),
+       if (situacao == SituacaoPedido.entregue)
+         _Etapa(
+           Icons.check_circle_outline,
+diff --git a/a/lib/views/detalhe_pedido_view.dart b/b/lib/views/detalhe_pedido_view.dart
+index 5fcc2a4..182638a 100644
+--- a/a/lib/views/detalhe_pedido_view.dart
++++ b/b/lib/views/detalhe_pedido_view.dart
+@@ -73,6 +73,34 @@ class DetalhePedidoView extends StatelessWidget {
+     );
+   }
+ 
++  Widget _avisoTempo(Pedido pedido) => AvisoDestaque(
++    icone: Icons.timer_outlined,
++    titulo: 'Tempo estimado de entrega',
++    texto: '${pedido.tempoEstimadoMinutos ?? 0} min',
++    cor: CoresDiskGas.azulEscuro,
++  );
++
++  Widget _botaoAmpliar(
++    BuildContext context,
++    DetalhePedidoViewModel viewModel,
++    bool livre,
++  ) => OutlinedButton(
++    onPressed: livre
++        ? () => _abrirDialogo(
++            context,
++            viewModel,
++            DialogoTexto(
++              titulo: 'Ampliar tempo',
++              rotulo: 'Minutos a mais',
++              confirmar: 'Ampliar',
++              numerico: true,
++              acao: viewModel.ampliarTempo,
++            ),
++          )
++        : null,
++    child: const Text('Ampliar tempo'),
++  );
++
+   List<Widget> _acoes(
+     BuildContext context,
+     DetalhePedidoViewModel viewModel,
+@@ -121,12 +149,18 @@ class DetalhePedidoView extends StatelessWidget {
+         ),
+       ],
+       SituacaoPedido.aceito => [
+-        AvisoDestaque(
+-          icone: Icons.timer_outlined,
+-          titulo: 'Tempo estimado de entrega',
+-          texto: '${pedido.tempoEstimadoMinutos ?? 0} min',
+-          cor: CoresDiskGas.azulEscuro,
++        _avisoTempo(pedido),
++        const SizedBox(height: 16),
++        if (viewModel.erro != null) MensagemErro(viewModel.erro),
++        FilledButton(
++          onPressed: livre ? viewModel.marcarSaida : null,
++          child: const Text('Saiu para entrega'),
+         ),
++        const SizedBox(height: 12),
++        _botaoAmpliar(context, viewModel, livre),
++      ],
++      SituacaoPedido.saiuParaEntrega => [
++        _avisoTempo(pedido),
+         const SizedBox(height: 16),
+         FilledButton(
+           onPressed: livre
+@@ -139,22 +173,7 @@ class DetalhePedidoView extends StatelessWidget {
+           child: const Text('Finalizar entrega'),
+         ),
+         const SizedBox(height: 12),
+-        OutlinedButton(
+-          onPressed: livre
+-              ? () => _abrirDialogo(
+-                  context,
+-                  viewModel,
+-                  DialogoTexto(
+-                    titulo: 'Ampliar tempo',
+-                    rotulo: 'Minutos a mais',
+-                    confirmar: 'Ampliar',
+-                    numerico: true,
+-                    acao: viewModel.ampliarTempo,
+-                  ),
+-                )
+-              : null,
+-          child: const Text('Ampliar tempo'),
+-        ),
++        _botaoAmpliar(context, viewModel, livre),
+       ],
+       SituacaoPedido.entregue || SituacaoPedido.recusado => [],
+     };
+diff --git a/a/lib/views/widgets/selo_situacao.dart b/b/lib/views/widgets/selo_situacao.dart
+index 1552109..937c80b 100644
+--- a/a/lib/views/widgets/selo_situacao.dart
++++ b/b/lib/views/widgets/selo_situacao.dart
+@@ -19,6 +19,10 @@ class SeloSituacao extends StatelessWidget {
+         CoresDiskGas.azulEscuro,
+         Icons.local_shipping_outlined,
+       ),
++      SituacaoPedido.saiuParaEntrega => (
++        CoresDiskGas.laranjaEscuro,
++        Icons.delivery_dining_outlined,
++      ),
+       SituacaoPedido.entregue => (CoresDiskGas.verde, Icons.check_rounded),
+       SituacaoPedido.recusado => (CoresDiskGas.vermelho, Icons.close_rounded),
+     };
+diff --git a/a/test/viewmodels/detalhe_pedido_viewmodel_test.dart b/b/test/viewmodels/detalhe_pedido_viewmodel_test.dart
+index d4cd504..dc48298 100644
+--- a/a/test/viewmodels/detalhe_pedido_viewmodel_test.dart
++++ b/b/test/viewmodels/detalhe_pedido_viewmodel_test.dart
+@@ -192,7 +192,7 @@ void main() {
+ 
+   group('RN04: baixa com a quantidade entregue', () {
+     test('entrega maior que a pedida é aceita se houver estoque', () async {
+-      final pedido = pedidoCom(situacao: SituacaoPedido.aceito);
++      final pedido = pedidoCom(situacao: SituacaoPedido.saiuParaEntrega);
+       when(() => produtoService.buscarProdutos())
+           .thenAnswer((_) async => [gasCom(5)]);
+       await abrir(pedido);
+@@ -205,11 +205,39 @@ void main() {
+     test('entrega acima do estoque é bloqueada e nada é baixado', () async {
+       when(() => produtoService.buscarProdutos())
+           .thenAnswer((_) async => [gasCom(1)]);
+-      await abrir(pedidoCom(situacao: SituacaoPedido.aceito));
++      await abrir(pedidoCom(situacao: SituacaoPedido.saiuParaEntrega));
+ 
+       expect(await viewModel.finalizarEntrega({'gas': '2'}), isFalse);
+       expect(viewModel.erro, 'Estoque insuficiente de Gás P13: há apenas 1.');
+       verifyNever(() => pedidoService.finalizarEntrega(any(), any()));
+     });
+   });
++
++  group('Saída para entrega', () {
++    test(
++      'pedido aceito só pode ser finalizado depois de marcar a saída',
++      () async {
++        when(() => pedidoService.marcarSaida(any())).thenAnswer((_) async {});
++        when(() => produtoService.buscarProdutos())
++            .thenAnswer((_) async => [gasCom(5)]);
++        await abrir(pedidoCom(situacao: SituacaoPedido.aceito));
++
++        expect(await viewModel.finalizarEntrega({'gas': '2'}), isFalse);
++        expect(
++          viewModel.erro,
++          'Marque a saída para entrega antes de finalizar.',
++        );
++        verifyNever(() => pedidoService.finalizarEntrega(any(), any()));
++
++        expect(await viewModel.marcarSaida(), isTrue);
++        verify(() => pedidoService.marcarSaida('pedido-1')).called(1);
++        pedidoObservado.add(
++          pedidoCom(situacao: SituacaoPedido.saiuParaEntrega),
++        );
++        await pumpEventQueue();
++
++        expect(await viewModel.finalizarEntrega({'gas': '2'}), isTrue);
++      },
++    );
++  });
+ }
